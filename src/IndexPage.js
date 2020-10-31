@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Header from './Header'
-import Footer from './Footer'
+import Header from './components/Header'
+import Footer from './components/Footer'
+
 class Indexpage extends Component {
     constructor(props) {
         super(props);
