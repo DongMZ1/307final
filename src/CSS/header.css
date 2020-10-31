@@ -1,0 +1,11 @@
+.header{
+    width: 100%;
+    background-image: url(../pictures/HeaderBackground.jpg);
+    height: 378px;
+    color: white;
+}
+.headerleft{
+    padding-top: 50px;
+    padding-left: 10%;
+    font-family: 'Times New Roman', Times, serif;
+}
