@@ -2,6 +2,7 @@
     background-image: url(../pictures/ai_header.jpg);
     background-repeat: no-repeat;
     background-color: 	#001123;
+    min-width: 1200px;
     height: 378px;
     width: 100%;
     color: white;
@@ -11,3 +12,27 @@
     padding-left: 450px;
     font-family: 'Times New Roman', Times, serif;
 }
+
+.hyperlinkButton{
+    padding-top: 50px;
+    padding-right: 30px;
+    font-family: fantasy;
+}
+
+.input {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 400px;
+}
+
+.goButton {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 40px;
+}
+
+
