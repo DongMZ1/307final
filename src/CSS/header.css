@@ -35,4 +35,20 @@
 	width: 40px;
 }
 
+#hideProspectiveButton {
+    display: none;
+  }
+#prospectiveButton{
+    padding-top: 50px;
+    padding-right: 30px;
+    font-family: fantasy;
+    display: inline;
+}
 
+#prospectiveButton:hover + #hideProspectiveButton {
+    display: inline-block;
+    padding-top: 50px;
+    padding-right: 30px;
+    font-family: fantasy;
+    width: 150px;
+}
