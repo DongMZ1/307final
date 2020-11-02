@@ -14,46 +14,41 @@ import ResearchOverview from './Research/ResearchOverview'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 function App() {
   return (
-    <div>
-      <Header />
       <Router>
+      <Header />
        <Switch>
          {/*homepage*/}
            <Route path = '/' component = {HomePage} exact />
 
          {/*prospectivePages*/}
-           <Route path = "./ProspectivePages/ProspectiveOverview" component = {PerspectiveOverview} />
+
+           <Route path = "/ProspectivePages/ProspectiveOverview" component = {PerspectiveOverview} />
+        
 
          {/*Academic*/}
-           <Route path = "./Academic/AcademicOverview" component = {AcademicOverview} />
+           <Route path = "/Academic/AcademicOverview" component = {AcademicOverview} />
 
           {/*Research*/}
-          <Route path = "./Research/ResearchOverview" component = {ResearchOverview} />
+          <Route path = "/Research/ResearchOverview" component = {ResearchOverview} />
 
           {/*People*/}
-          <Route path = "./People/PeopleFaculty" component = {PeopleFaculty} />
+          <Route path = "/People/PeopleFaculty" component = {PeopleFaculty} />
 
           {/*News*/}
-          <Route path = "./News/News" component = {News} />
+          <Route path = "/News/News" component = {News} />
           
           {/*Empolyment*/}
-          <Route path = "./Employment/EmploymentFaculty" component = {EmploymentFaculty} />
+          <Route path = "/Employment/EmploymentFaculty" component = {EmploymentFaculty} />
 
           {/*Donate*/}
-          <Route path = "./Donate/Donate" component = {Donate} />
+          <Route path = "/Donate/Donate" component = {Donate} />
 
            {/*about*/}
-           <Route path = "./About/AboutContacts" component = {AboutContacts} />
-
-
-
+           <Route path = "/About/AboutContacts" component = {AboutContacts} />
 
        </Switch>
+       <Footer />
        </Router>
-
-
-      <Footer />
-    </div>
   );
 }
 
