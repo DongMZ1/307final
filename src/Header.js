@@ -20,41 +20,15 @@ class Header extends Component {
   }
   render() {
     return (
+      <div>
       <div className="header">
         <div className="headerleft">
           {/* <h1 style={{ textDecoration: "underline", fontSize: "50px" }}> */}
           {/* <h1 style={{ borderBottom: "1px dotted white", fontSize: "50px" }}> */}
           <h1> McGill University </h1>
           <h2> School of Computer Science </h2>
-          <hr></hr>
-          <br />
-          <div>
-            {/* layouy for Prospective button */}
-            <span id="prospectiveButton">Prospective</span>
-            <Link to="/ProspectivePages/ProspectiveOverview">
-              Perspective Overview
-            </Link>
-            <Link to="/Academic/AcademicOverview">Academic</Link>
-            <span className="hyperlinkButton">Research</span>
-            <span className="hyperlinkButton">People</span>
-            <span className="hyperlinkButton">News</span>
-            <span className="hyperlinkButton">Empolyment</span>
-            <span className="hyperlinkButton">Donate</span>
-            <span className="hyperlinkButton">About</span>
-          </div>
-          <br />
-          <form onsubmit="event.preventDefault();" role="search">
-            <input
-              className="input"
-              type="search"
-              placeholder="Search..."
-              autofocus
-              required
-            />
-            <button className="goButton" type="submit">
-              Go
-            </button>
-          </form>
+        </div>
+        </div>
           <div className="react-navbar">
             <Navbar bg="light" expand="lg">
               {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
@@ -88,8 +62,7 @@ class Header extends Component {
                 </Form>
               </Navbar.Collapse>
             </Navbar>
-          </div>
-        </div>
+      </div>
       </div>
     );
   }
