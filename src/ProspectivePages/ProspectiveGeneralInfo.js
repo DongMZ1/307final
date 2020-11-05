@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-class AcademicOverview extends Component {
+class ProspectiveGeneralInfo extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -11,11 +11,11 @@ class AcademicOverview extends Component {
       <p>Nav bar</p>
                 </div>
                 <div class="col-sm-9">
-      <p>real content AcademicOverview</p>
+      <p>real content ProspectiveGeneralInfo</p>
                 </div>
             </div>
         );
     }
 }
  
-export default AcademicOverview;
+export default ProspectiveGeneralInfo;

@@ -9,7 +9,17 @@ import Donate from './Donate/Donate'
 import EmploymentFaculty from './Employment/EmploymentFaculty'
 import News from './News/News'
 import PeopleFaculty from './People/PeopleFaculty'
-import PerspectiveOverview from './ProspectivePages/ProspectiveOverview'
+
+import ProspectiveGeneralInfo from './ProspectivePages/ProspectiveGeneralInfo'
+import ProspectiveCEGEP from './ProspectivePages/ProspectiveCEGEP'
+import ProspectiveChoosingAMajor from './ProspectivePages/ProspectiveChoosingAMajor'
+import ProspectiveFreshman from './ProspectivePages/ProspectiveFreshman'
+import ProspectiveGrad from './ProspectivePages/ProspectiveGrad'
+import ProspectiveInternship from './ProspectivePages/ProspectiveInternship'
+import ProspectiveUndergrad from './ProspectivePages/ProspectiveUndergrad'
+import ProspectiveWhyCS from './ProspectivePages/ProspectiveWhyCS'
+import ProspectiveTransfer from './ProspectivePages/ProspectiveTransfer'
+
 import ResearchOverview from './Research/ResearchOverview'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 function App() {
@@ -22,7 +32,15 @@ function App() {
 
          {/*prospectivePages*/}
 
-           <Route path = "/ProspectivePages/ProspectiveOverview" component = {PerspectiveOverview} />
+           <Route path = "/ProspectivePages/ProspectiveGeneralInfo" component = {ProspectiveGeneralInfo} />
+           <Route path = "/ProspectivePages/ProspectiveCEGEP" component = {ProspectiveCEGEP} />
+           <Route path = "/ProspectivePages/ProspectiveChoosingAMajor" component = {ProspectiveChoosingAMajor} />
+           <Route path = "/ProspectivePages/ProspectiveFreshman" component = {ProspectiveFreshman} />
+           <Route path = "/ProspectivePages/ProspectiveGrad" component = {ProspectiveGrad} />
+           <Route path = "/ProspectivePages/ProspectiveInternship" component = {ProspectiveInternship} />
+           <Route path = "/ProspectivePages/ProspectiveUndergrad" component = {ProspectiveUndergrad} />
+           <Route path = "/ProspectivePages/ProspectiveWhyCS" component = {ProspectiveWhyCS} />
+           <Route path = "/ProspectivePages/ProspectiveTransfer" component = {ProspectiveTransfer} />
         
 
          {/*Academic*/}

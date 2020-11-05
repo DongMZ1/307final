@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
-class AcademicOverview extends Component {
+class ProspectiveWhyCS extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
     }
     render() { 
-        return (  
+        return ( 
             <div class="row">
                 <div class="col-sm-3">
       <p>Nav bar</p>
                 </div>
                 <div class="col-sm-9">
-      <p>real content AcademicOverview</p>
+      <p>real content why CS</p>
                 </div>
             </div>
-        );
+         );
     }
 }
  
-export default AcademicOverview;
+export default ProspectiveWhyCS;

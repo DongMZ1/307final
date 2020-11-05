@@ -1,17 +1,8 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./CSS/header.css";
-import { Link } from "react-router-dom";
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Form, Button, FormControl} from "react-bootstrap";
-import HomePage from "./HomePage";
-import AboutContacts from "./About/AboutContacts";
-import AcademicOverview from "./Academic/AcademicOverview";
-import Donate from "./Donate/Donate";
-import EmploymentFaculty from "./Employment/EmploymentFaculty";
-import News from "./News/News";
-import PeopleFaculty from "./People/PeopleFaculty";
-import PerspectiveOverview from "./ProspectivePages/ProspectiveOverview";
-import ResearchOverview from "./Research/ResearchOverview";
+
 
 class Header extends Component {
   constructor(props) {
@@ -36,10 +27,49 @@ class Header extends Component {
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                   <Nav.Link href="/">Home</Nav.Link>
-                  <Nav.Link href="/ProspectivePages/ProspectiveOverview">Prospective</Nav.Link>
-                  <Nav.Link href="/ProspectivePages/ProspectiveOverview">Perspective Overview</Nav.Link>
+                  {/*Prospective*/}
+                  <NavDropdown title="Prospective" id="basic-nav-dropdown">
+                    <NavDropdown.Item href="/ProspectivePages/ProspectiveGeneralInfo">
+                      General Info
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="/ProspectivePages/ProspectiveWhyCS">
+                      Why CS
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="/ProspectivePages/ProspectiveCEGEP">
+                      CEGEP
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="/ProspectivePages/ProspectiveFreshman">
+                      Freshman
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="/ProspectivePages/ProspectiveChoosingAMajor">
+                      Choosing A Major
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="/ProspectivePages/ProspectiveTransfer">
+                      Transfer
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="/ProspectivePages/ProspectiveInternship">
+                      Internship
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="/ProspectivePages/ProspectiveUndergrad">
+                      Undergrad addmission
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="ProspectiveGrad">
+                      Grad addmission
+                    </NavDropdown.Item>
+                  </NavDropdown>
+
+
+
+
+
+
+                  <Nav.Link href="/ProspectivePages/ProspectiveGeneralInfo">Perspective Overview</Nav.Link>
                   <Nav.Link href="/Academic/AcademicOverview">Academic</Nav.Link>
-                  <NavDropdown title="More" id="basic-nav-dropdown">
+
+
+                  {/*about */} 
+                  <NavDropdown title="About" id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.2">
                       Another action
                     </NavDropdown.Item>
@@ -51,6 +81,8 @@ class Header extends Component {
                       Separated link
                     </NavDropdown.Item>
                   </NavDropdown>
+
+
                 </Nav>
                 <Form inline>
                   <FormControl
