@@ -64,8 +64,6 @@ class Header extends Component {
 
 
 
-                  <Nav.Link href="/ProspectivePages/ProspectiveGeneralInfo">Perspective Overview</Nav.Link>
-                  <Nav.Link href="/Academic/AcademicOverview">Academic</Nav.Link>
 
 
                   {/*about */} 
