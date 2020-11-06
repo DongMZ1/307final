@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./CSS/carousel.css";
 import { Carousel, Card } from "react-bootstrap";
-import Carousel1 from "./pictures/carousel1.png";
-import Carousel2 from "./pictures/carousel2.png";
+import Carousel1 from "./static/img/carousel1.png";
+import Carousel2 from "./static/img/carousel2.png";
 
 class Gallery extends Component {
   constructor(props) {
