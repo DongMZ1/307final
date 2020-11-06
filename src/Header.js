@@ -52,10 +52,10 @@ class Header extends Component {
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="/ProspectivePages/ProspectiveUndergrad">
-                      Undergrad addmission
+                      Undergrad admission
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="ProspectiveGrad">
-                      Grad addmission
+                    <NavDropdown.Item href="/ProspectivePages/ProspectiveGrad">
+                      Grad admission
                     </NavDropdown.Item>
                   </NavDropdown>
 
