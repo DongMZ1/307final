@@ -1,10 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-<<<<<<< Updated upstream
-import IndexPage from './IndexPage';
-=======
 import Header from './Header'
-import Gallery from './Gallery'
+import Gallery from './Gallery';
 import Footer from './Footer'
 import HomePage from './HomePage'
 import AboutContacts from './About/AboutContacts'
@@ -13,13 +10,11 @@ import Donate from './Donate/Donate'
 import EmploymentFaculty from './Employment/EmploymentFaculty'
 import News from './News/News'
 import PeopleFaculty from './People/PeopleFaculty'
->>>>>>> Stashed changes
-
+import PerspectiveOverview from './ProspectivePages/ProspectiveOverview'
+import ResearchOverview from './Research/ResearchOverview'
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 function App() {
   return (
-<<<<<<< Updated upstream
-    <IndexPage />
-=======
       <Router>
       <Header />
       <Gallery />
@@ -29,15 +24,7 @@ function App() {
 
          {/*prospectivePages*/}
 
-           <Route path = "/ProspectivePages/ProspectiveGeneralInfo" component = {ProspectiveGeneralInfo} />
-           <Route path = "/ProspectivePages/ProspectiveCEGEP" component = {ProspectiveCEGEP} />
-           <Route path = "/ProspectivePages/ProspectiveChoosingAMajor" component = {ProspectiveChoosingAMajor} />
-           <Route path = "/ProspectivePages/ProspectiveFreshman" component = {ProspectiveFreshman} />
-           <Route path = "/ProspectivePages/ProspectiveGrad" component = {ProspectiveGrad} />
-           <Route path = "/ProspectivePages/ProspectiveInternship" component = {ProspectiveInternship} />
-           <Route path = "/ProspectivePages/ProspectiveUndergrad" component = {ProspectiveUndergrad} />
-           <Route path = "/ProspectivePages/ProspectiveWhyCS" component = {ProspectiveWhyCS} />
-           <Route path = "/ProspectivePages/ProspectiveTransfer" component = {ProspectiveTransfer} />
+           <Route path = "/ProspectivePages/ProspectiveOverview" component = {PerspectiveOverview} />
         
 
          {/*Academic*/}
@@ -64,7 +51,6 @@ function App() {
        </Switch>
        <Footer />
        </Router>
->>>>>>> Stashed changes
   );
 }
 
