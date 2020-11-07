@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './Header'
+import Gallery from './Gallery'
 import Footer from './Footer'
 import HomePage from './HomePage'
 import AboutContacts from './About/AboutContacts'
@@ -26,6 +27,7 @@ function App() {
   return (
       <Router>
       <Header />
+      <Gallery />
        <Switch>
          {/*homepage*/}
            <Route path = '/' component = {HomePage} exact />
