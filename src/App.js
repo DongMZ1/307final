@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './Header'
-import Gallery from './Gallery';
 import Footer from './Footer'
 import HomePage from './HomePage'
 import AboutContacts from './About/AboutContacts'
@@ -21,14 +20,12 @@ import ProspectiveUndergrad from './ProspectivePages/ProspectiveUndergrad'
 import ProspectiveWhyCS from './ProspectivePages/ProspectiveWhyCS'
 import ProspectiveTransfer from './ProspectivePages/ProspectiveTransfer'
 
-import PerspectiveOverview from './ProspectivePages/ProspectiveOverview'
 import ResearchOverview from './Research/ResearchOverview'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 function App() {
   return (
       <Router>
       <Header />
-      <Gallery />
        <Switch>
          {/*homepage*/}
            <Route path = '/' component = {HomePage} exact />
@@ -44,7 +41,6 @@ function App() {
            <Route path = "/ProspectivePages/ProspectiveUndergrad" component = {ProspectiveUndergrad} />
            <Route path = "/ProspectivePages/ProspectiveWhyCS" component = {ProspectiveWhyCS} />
            <Route path = "/ProspectivePages/ProspectiveTransfer" component = {ProspectiveTransfer} />
-           <Route path = "/ProspectivePages/ProspectiveOverview" component = {PerspectiveOverview} />
         
 
          {/*Academic*/}

@@ -10,26 +10,19 @@
 .headerleft{
     padding-top: 10px;
     /* padding-left: 450px; */
-    padding-left: 0; 
+    padding-left: 10%; 
     font-family: 'Times New Roman', Times, serif;
 }
 
-.logo {
-    width: 450px;
-    height: 50px;
-    background-image: url(../pictures/csheader.png);
-    background-size: cover;
-    background-repeat: none;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2em;
+.headerleft h1{
+    color: white;
+    text-align: center;
 }
 
-/* .customized-nav{
-    background-color:rgba(212, 57, 57, 0.726);
-    position: center;
-} */
+.header h2 {
+    position: relative; 
+    text-align: center;
+}
 
 .hyperlinkButton{
     padding-top: 50px;
