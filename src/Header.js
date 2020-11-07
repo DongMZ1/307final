@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./static/header.css";
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Form, Button, FormControl } from "react-bootstrap";
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Form, Button, FormControl} from "react-bootstrap";
 
 class Header extends Component {
   constructor(props) {
@@ -15,10 +15,10 @@ class Header extends Component {
           <div className="headerleft">
             <div
               class="container-fluid"
-              style={{ backgroundColor: "rgba(212, 57, 57, 0.726)", padding: "20px", marginTop: "100px"}}
+              style={{ padding: "20px", marginTop: "10px" }}
             >
               <div class="row">
-                <div class="container">
+                {/* <div class="container">
                   <div class="row">
                     <div class="col-lg-3"></div>
                     <div class="col-lg-6">
@@ -26,10 +26,14 @@ class Header extends Component {
                     </div>
                     <div class="col-lg-3"></div>
                   </div>
-                </div>
+                </div> */}
                 <div class="container">
                   <div class="row">
-                    <div class="col-lg-1"></div>
+                    <div class="col-lg-1">
+                      McGill
+                      <br></br>
+                      SOCS
+                    </div>
                     <div class="col-lg-10">
                       <Navbar className="customized-nav" bg="light" expand="lg">
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -90,13 +94,33 @@ class Header extends Component {
                               placeholder="Search"
                               className="mr-sm-2"
                             />
-                            <Button variant="outline-danger">Search</Button>
+                            <Button variant="outline-primary">Search</Button>
                           </Form>
                         </Navbar.Collapse>
                       </Navbar>
                     </div>
                     <div class="col-lg-1"></div>
                   </div>
+                </div>
+                <div class="container">
+                  <div class="row" style={{ marginRight: "-30px" }}>
+                    <div class="col-lg-7">
+                      <div className="coverText">
+                        <h3>TEXT AREA</h3>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div className="coverImg">
+                        <h3>IMG AREA</h3>
+                      </div>
+                    </div>
+                    {/* <div class="col-lg-1">
+                        <div className="socials">Insta</div>
+                      </div> */}
+                  </div>
+                </div>
+                <div class="col-lg-1">
+                  <div className="socials">Socials</div>
                 </div>
               </div>
             </div>
