@@ -4,7 +4,7 @@
 `pip install flask` install flask
 `pip install flask-mysqldb` install MySQLdb
 
-### `set FLASK_APP=./src/main.py` it is important!
+### `set FLASK_APP=./src/main.py` It is important!
 
 `set FLASK_DEBUG=1` debug mode active
 
