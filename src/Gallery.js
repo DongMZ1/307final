@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./CSS/carousel.css";
+import "./static/carousel.css";
 import { Carousel, Card } from "react-bootstrap";
 import Carousel1 from "./pictures/carousel1.png";
 import Carousel2 from "./pictures/carousel2.png";

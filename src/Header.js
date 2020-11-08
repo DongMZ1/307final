@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./CSS/header.css";
+import "./static/header.css";
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Form, Button, FormControl } from "react-bootstrap";
 
 class Header extends Component {
