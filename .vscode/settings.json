@@ -1,3 +1,37 @@
 {
-    "python.pythonPath": "c:\\Users\\Hanying Shao\\OneDrive - McGill University\\Fall 2020\\Comp 307\\Project\\307final\\venv\\Scripts\\python.exe"
+    "python.pythonPath": "c:\\Users\\Hanying Shao\\OneDrive - McGill University\\Fall 2020\\Comp 307\\Project\\307final\\venv\\Scripts\\python.exe",
+    "sqltools.connections": [
+        {
+            "database": "cs421",
+            "dialect": "PostgreSQL",
+            "isActive": false,
+            "isConnected": false,
+            "name": "Comp421",
+            "password": "xUW8zy3Y",
+            "port": 5432,
+            "server": "comp421.cs.mcgill.ca",
+            "username": "hshao4",
+            "driver": "PostgreSQL"
+        },
+        {
+            "database": "cs421",
+            "dialect": "PostgreSQL",
+            "name": "Group5",
+            "password": "GrouP&0504",
+            "port": 5432,
+            "server": "comp421.cs.mcgill.ca",
+            "username": "cs421g05",
+            "driver": "PostgreSQL"
+        },
+        {
+            "previewLimit": 50,
+            "server": "fall2020-comp307.cs.mcgill.ca",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "307Group01",
+            "database": "cs307-group01-DB",
+            "username": "cs307-group01",
+            "password": "ng8DCt2qSa7rXHEP"
+        }
+    ]
 }
