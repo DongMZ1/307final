@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import Header from './Header'
-import Footer from './Footer'
-class Indexpage extends Component {
+class AboutContacts extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -9,12 +7,10 @@ class Indexpage extends Component {
     render() { 
         return ( 
             <div>
-                <Header />
-                <Footer />
+                AboutContacts
             </div>
-            
          );
     }
 }
  
-export default Indexpage;
+export default AboutContacts;

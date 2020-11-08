@@ -1,0 +1,9 @@
+.footer{
+    background-image: url(../pictures/HeaderBackground.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: black;
+    height: 150px;
+    width: 100%;
+    min-width: 1200px;
+}
