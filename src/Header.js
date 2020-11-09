@@ -2,8 +2,17 @@ import React, { Component } from "react";
 import { FaFacebook, FaInstagramSquare, FaTwitter } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./static/header.css";
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Form, Button, FormControl} from "react-bootstrap";
-import brain from './pictures/brain.gif';
+import {
+  Navbar,
+  Nav,
+  NavItem,
+  NavDropdown,
+  MenuItem,
+  Form,
+  Button,
+  FormControl,
+} from "react-bootstrap";
+import brain from "./pictures/brain.gif";
 
 class Header extends Component {
   constructor(props) {
@@ -115,7 +124,6 @@ class Header extends Component {
                       <div className="coverImg">
                         {/* <h3>IMG AREA</h3> */}
                         <img src={brain} alt="loading..." />
-                        
                       </div>
                     </div>
                     {/* <div class="col-lg-1">
@@ -124,20 +132,23 @@ class Header extends Component {
                   </div>
                 </div>
                 <div class="row">
-                <div class="col-lg-12">
-                  <div className="socials" style={{position: "fixed"}}>
-                  <ul class="flex-container column">
-  <li class="flex-item"><FaFacebook size="50px" /></li>
-  <li class="flex-item"><FaTwitter size="50px" /></li>
-  <li class="flex-item"><FaInstagramSquare size="50px" /></li>
- 
-  
- 
-</ul>
-                  {/* <FaFacebook className="icons" size="50px" />
+                  <div class="col-lg-12">
+                    <div className="socials" style={{ position: "fixed" }}>
+                      <ul class="flex-container column">
+                        <li class="flex-item">
+                          <FaFacebook size="50px" />
+                        </li>
+                        <li class="flex-item">
+                          <FaTwitter size="50px" />
+                        </li>
+                        <li class="flex-item">
+                          <FaInstagramSquare size="50px" />
+                        </li>
+                      </ul>
+                      {/* <FaFacebook className="icons" size="50px" />
                   <FaInstagramSquare className="icons" size="50px" /> */}
+                    </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>
