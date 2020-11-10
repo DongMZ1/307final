@@ -6,6 +6,7 @@ class ProspectiveFreshman extends Component {
     }
     render() { 
         return ( <div class="row">
+            <ScrollToTopOnMount />
         <div class="col-sm-3">
 
         <div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical">
@@ -29,3 +30,13 @@ class ProspectiveFreshman extends Component {
 }
  
 export default ProspectiveFreshman;
+
+class ScrollToTopOnMount extends React.Component {
+    componentDidMount() {
+      window.scrollTo(0, 600);
+    }
+  
+    render() {
+      return null;
+    }
+  }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-class PeopleFaculty extends Component {
+class AcademicGrad extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -11,9 +11,11 @@ class PeopleFaculty extends Component {
             <div class="col-sm-3">
   
             <div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical">
-  <a class="nav-link active" id="" data-toggle="pill" href="PeopleFaculty" role="tab">People Faculty</a>
-  <a class="nav-link" id="" data-toggle="pill" href="PeopleStaff" role="tab">People Staff</a>
-  <a class="nav-link" id="" data-toggle="pill" href="PeopleCommunity" role="tab">People Community</a>
+  <a class="nav-link" id="" data-toggle="pill" href="AcademicUndergrad" role="tab">Academic Undergraduate</a>
+  <a class="nav-link active" id="" data-toggle="pill" href="AcademicGrad" role="tab">Academic Graduate</a>
+  <a class="nav-link" id="" data-toggle="pill" href="AcademicCourses" role="tab">Academic Course</a>
+  <a class="nav-link" id="" data-toggle="pill" href="AcademicTeachingAss" role="tab">Academic Teaching Assistant</a>
+  <a class="nav-link" id="" data-toggle="pill" href="AcademicFunding" role="tab">Academic Funding</a>
 </div>
 
             </div>
@@ -21,11 +23,11 @@ class PeopleFaculty extends Component {
   <p>real content Major</p>
             </div>
         </div>
-         );
+      );
     }
 }
  
-export default PeopleFaculty;
+export default AcademicGrad;
 
 class ScrollToTopOnMount extends React.Component {
     componentDidMount() {

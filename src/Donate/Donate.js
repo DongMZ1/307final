@@ -6,9 +6,22 @@ class Donate extends Component {
     }
     render() { 
         return ( 
-            <div>Donate</div>
+            <div>       
+                <ScrollToTopOnMount />
+                Donate
+                </div>
          );
     }
 }
  
 export default Donate;
+
+class ScrollToTopOnMount extends React.Component {
+    componentDidMount() {
+      window.scrollTo(0, 600);
+    }
+  
+    render() {
+      return null;
+    }
+  }

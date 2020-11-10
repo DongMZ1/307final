@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-class EmploymentFaculty extends Component {
+class EmploymentResearch extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
     }
     render() { 
-        return ( 
+        return (
             <div class="row">
                 <ScrollToTopOnMount />
                 <div class="col-sm-3">
       
                 <div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical">
-      <a class="nav-link active" id="" data-toggle="pill" href="EmploymentFaculty" role="tab">Empolyment Faculty</a>
+      <a class="nav-link" id="" data-toggle="pill" href="EmploymentFaculty" role="tab">Empolyment Faculty</a>
       <a class="nav-link" id="" data-toggle="pill" href="EmploymentLecturer" role="tab">Empolyment Course Lecturer</a>
       <a class="nav-link" id="" data-toggle="pill" href="EmploymentPP" role="tab">Empolyment Priority Points</a>
-      <a class="nav-link" id="" data-toggle="pill" href="EmploymentResearch" role="tab">Empolyment Research</a>
+      <a class="nav-link active" id="" data-toggle="pill" href="EmploymentResearch" role="tab">Empolyment Research</a>
       <a class="nav-link" id="" data-toggle="pill" href="EmploymentStudents" role="tab">Empolyment Students</a>
     </div>
 
@@ -23,11 +23,11 @@ class EmploymentFaculty extends Component {
       <p>real content Major</p>
                 </div>
             </div>
-         );
+          );
     }
 }
  
-export default EmploymentFaculty;
+export default EmploymentResearch;
 
 class ScrollToTopOnMount extends React.Component {
     componentDidMount() {

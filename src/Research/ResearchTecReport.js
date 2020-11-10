@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-class PeopleFaculty extends Component {
+class ResearchTecReport extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -11,9 +11,8 @@ class PeopleFaculty extends Component {
             <div class="col-sm-3">
   
             <div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical">
-  <a class="nav-link active" id="" data-toggle="pill" href="PeopleFaculty" role="tab">People Faculty</a>
-  <a class="nav-link" id="" data-toggle="pill" href="PeopleStaff" role="tab">People Staff</a>
-  <a class="nav-link" id="" data-toggle="pill" href="PeopleCommunity" role="tab">People Community</a>
+  <a class="nav-link" id="" data-toggle="pill" href="ResearchArea" role="tab">Research Area</a>
+  <a class="nav-link active" id="" data-toggle="pill" href="ResearchTecReport" role="tab">Research Tech Report</a>
 </div>
 
             </div>
@@ -25,7 +24,7 @@ class PeopleFaculty extends Component {
     }
 }
  
-export default PeopleFaculty;
+export default ResearchTecReport;
 
 class ScrollToTopOnMount extends React.Component {
     componentDidMount() {

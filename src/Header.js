@@ -45,12 +45,18 @@ class Header extends Component {
                       <br></br>
                       SOCS
                     </div>
-                    <div class="col-lg-10">
+                    <div class="col-lg-11">
                       <Navbar className="customized-nav" bg="light" expand="lg">
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                           <Nav className="mr-auto">
+
+                            {/*Home*/}
                             <Nav.Link href="/">Home</Nav.Link>
+
+
+
+
                             {/*Prospective*/}
                             <NavDropdown
                               title="Prospective"
@@ -85,19 +91,136 @@ class Header extends Component {
                                 Grad addmission
                               </NavDropdown.Item>
                             </NavDropdown>
-                            {/*about */}
-                            <NavDropdown title="About" id="basic-nav-dropdown">
-                              <NavDropdown.Item href="#action/3.2">
-                                Another action
+
+                           
+
+
+                           {/*academic */}
+                           <NavDropdown
+                              title="Academic"
+                              id="AcademicButton"
+                            >
+                              <NavDropdown.Item href="/Academic/AcademicUndergrad">
+                                Undergraduate
                               </NavDropdown.Item>
-                              <NavDropdown.Item href="#action/3.3">
-                                Something
+                              <NavDropdown.Item href="/Academic/AcademicGrad">
+                                Graduate
+                              </NavDropdown.Item>
+                              <NavDropdown.Item href="/Academic/AcademicCourses">
+                                Courses
+                              </NavDropdown.Item>
+                              <NavDropdown.Item href="/Academic/AcademicTeachingAss">
+                                Teaching Assistance
+                              </NavDropdown.Item>
+                              <NavDropdown.Item href="/Academic/AcademicFunding">
+                                Funding
+                              </NavDropdown.Item>
+                                                     
+                            </NavDropdown>
+
+                           
+                             {/*Research */}
+                            <NavDropdown title="Research" id="ResearchButton">
+                              <NavDropdown.Item href="/Research/ResearchArea">
+                                Area
+                              </NavDropdown.Item>
+                              <NavDropdown.Item href="/Research/ResearchTecReport">
+                                Tech Report
+                              </NavDropdown.Item>
+                    
+                          </NavDropdown>
+
+                          {/*People */}
+                          <NavDropdown title="People" id="PeopleButton">
+                              <NavDropdown.Item href="/People/PeopleFaculty">
+                                Faculty
+                              </NavDropdown.Item>
+                              <NavDropdown.Item href="/People/PeopleStaff">
+                                Staff
+                              </NavDropdown.Item>
+                              <NavDropdown.Item href="/People/PeopleCommunity">
+                                Community
+                              </NavDropdown.Item>
+                    
+                          </NavDropdown>
+                                 
+
+                                  {/*News */}
+                            <NavDropdown title="News" id="news">
+                              <NavDropdown.Item href="/News/News">
+                                News
+                              </NavDropdown.Item>
+                              <NavDropdown.Item href="/News/Events">
+                                Events
+                              </NavDropdown.Item>
+                    
+                          </NavDropdown>
+
+
+                          {/*Employment */}
+                          <NavDropdown
+                              title="Employment"
+                              id=""
+                            >
+                              <NavDropdown.Item href="/Employment/EmploymentFaculty">
+                                Faculty
+                              </NavDropdown.Item>
+                              <NavDropdown.Item href="/Employment/EmploymentLecturer">
+                                Course Lecturer
+                              </NavDropdown.Item>
+                              <NavDropdown.Item href="/Employment/EmploymentPP">
+                                Priority Points
                               </NavDropdown.Item>
                               <NavDropdown.Divider />
-                              <NavDropdown.Item href="#action/3.4">
-                                Separated link
+                              <NavDropdown.Item href="/Employment/EmploymentResearch">
+                                Research
                               </NavDropdown.Item>
+                              <NavDropdown.Item href="/Employment/EmploymentStudents">
+                                Students
+                              </NavDropdown.Item>
+                                                     
                             </NavDropdown>
+                            
+                            {/*Donate*/}
+                            <Nav.Link href="/Donate/Donate">Donate</Nav.Link>
+
+                            {/*about */}
+                            <NavDropdown title="About" id="">
+                              <NavDropdown.Item href="/About/AboutContacts">
+                                Contacts
+                              </NavDropdown.Item>
+                              <NavDropdown.Item href="/About/AboutFacilities">
+                                Facilities
+                              </NavDropdown.Item>
+                              <NavDropdown.Divider />
+
+                              <NavDropdown.Item href="/About/AboutVF">
+                                Visitor Form
+                              </NavDropdown.Item>
+                              <NavDropdown.Item href="/About/AboutRoomR">
+                                Room Reservation
+                              </NavDropdown.Item>
+                              <NavDropdown.Item href="/About/AboutWebM">
+                                WebMail
+                              </NavDropdown.Item>
+                              <NavDropdown.Divider />
+
+                              <NavDropdown.Item href="/About/AboutInternal">
+                                Internal
+                              </NavDropdown.Item>
+                              <NavDropdown.Divider />
+
+                              <NavDropdown.Item href="/About/AboutTechSupport">
+                                Tech Support
+                              </NavDropdown.Item>
+                              <NavDropdown.Item href="/About/AboutAdminInfor">
+                                Admin Information
+                              </NavDropdown.Item>
+
+
+                            </NavDropdown>
+
+
                           </Nav>
                           <Form inline>
                             <FormControl
