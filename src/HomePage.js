@@ -9,7 +9,6 @@ class HomePage extends Component {
             <div>
                This is HomePage;
             </div>
-            
          );
     }
 }
