@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
 import re
-
+import os
 
 
 app = Flask(__name__)
@@ -14,10 +14,13 @@ app.secret_key = 'cs307grp01pass' #password you may change
 app.config['MYSQL_HOST'] = 'comp421.cs.mcgill.ca'
 app.config['MYSQL_USER'] = 'hshao4'
 app.config['MYSQL_PASSWORD'] = 'xUW8zy3Y'
+app.config['MYSQL_PORT'] = 5432
 app.config['MYSQL_DB'] = 'cs421'
 
 # Intialize MySQL
 mysql = MySQL(app)
+
+
 
 @app.route('/login/', methods=['GET', 'POST'])
 def login():
