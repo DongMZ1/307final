@@ -216,13 +216,13 @@ class Header extends Component {
                     <div className="socials" style={{ position: "fixed" }}>
                       <ul class="flex-container column">
                         <li class="flex-item">
-                          <FaFacebook size="50px" />
+                          <FaFacebook size="30px" />
                         </li>
                         <li class="flex-item">
-                          <FaTwitter size="50px" />
+                          <FaTwitter size="30px" />
                         </li>
                         <li class="flex-item">
-                          <FaInstagramSquare size="50px" />
+                          <FaInstagramSquare size="30px" />
                         </li>
                       </ul>
                     </div>
