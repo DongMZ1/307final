@@ -18,12 +18,24 @@
     color: white;
     text-align: center;
 } */
+#footerLogo {
+  background-image: url(../pictures/logo-footer.png);
+  display: block;
+  /* max-width: 100%;
+  max-height: 100%; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 .site-footer {
-  background-color: #90cfe287;
+  background-color: #699faf9c;
   padding: 45px 0 20px;
   font-size: 15px;
-  line-height: 24px;
+  line-height: 20px;
   color: #737373;
 }
 .site-footer hr {
@@ -81,6 +93,7 @@
 }
 .copyright-text {
   margin: 0;
+  color: white;
 }
 @media (max-width: 991px) {
   .site-footer [class^="col-"] {
@@ -105,13 +118,13 @@
   display: inline-block;
   margin-bottom: 4px;
 }
-.social-icons li.title {
+/* .social-icons li.title {
   margin-right: 15px;
   text-transform: uppercase;
   color: #96a2b2;
   font-weight: 700;
   font-size: 13px;
-}
+} */
 .social-icons a {
   background-color: #eceeef;
   color: #818a91;

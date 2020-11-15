@@ -29,34 +29,16 @@ class Header extends Component {
               style={{ padding: "20px", marginTop: "10px" }}
             >
               <div class="row">
-                {/* <div class="container">
-                  <div class="row">
-                    <div class="col-lg-3"></div>
-                    <div class="col-lg-6">
-                      <div className="logo"></div>
-                    </div>
-                    <div class="col-lg-3"></div>
-                  </div>
-                </div> */}
                 <div class="container">
                   <div class="row">
-                    <div class="col-lg-1">
-                      McGill
-                      <br></br>
-                      SOCS
-                    </div>
+                    <div class="col-lg-1"></div>
                     <div class="col-lg-11">
                       <Navbar className="customized-nav" bg="light" expand="lg">
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                           <Nav className="mr-auto">
-
                             {/*Home*/}
                             <Nav.Link href="/">Home</Nav.Link>
-
-
-
-
                             {/*Prospective*/}
                             <NavDropdown
                               title="Prospective"
@@ -92,14 +74,8 @@ class Header extends Component {
                               </NavDropdown.Item>
                             </NavDropdown>
 
-                           
-
-
-                           {/*academic */}
-                           <NavDropdown
-                              title="Academic"
-                              id="AcademicButton"
-                            >
+                            {/*academic */}
+                            <NavDropdown title="Academic" id="AcademicButton">
                               <NavDropdown.Item href="/Academic/AcademicUndergrad">
                                 Undergraduate
                               </NavDropdown.Item>
@@ -115,11 +91,9 @@ class Header extends Component {
                               <NavDropdown.Item href="/Academic/AcademicFunding">
                                 Funding
                               </NavDropdown.Item>
-                                                     
                             </NavDropdown>
 
-                           
-                             {/*Research */}
+                            {/*Research */}
                             <NavDropdown title="Research" id="ResearchButton">
                               <NavDropdown.Item href="/Research/ResearchArea">
                                 Area
@@ -127,11 +101,10 @@ class Header extends Component {
                               <NavDropdown.Item href="/Research/ResearchTecReport">
                                 Tech Report
                               </NavDropdown.Item>
-                    
-                          </NavDropdown>
+                            </NavDropdown>
 
-                          {/*People */}
-                          <NavDropdown title="People" id="PeopleButton">
+                            {/*People */}
+                            <NavDropdown title="People" id="PeopleButton">
                               <NavDropdown.Item href="/People/PeopleFaculty">
                                 Faculty
                               </NavDropdown.Item>
@@ -141,11 +114,9 @@ class Header extends Component {
                               <NavDropdown.Item href="/People/PeopleCommunity">
                                 Community
                               </NavDropdown.Item>
-                    
-                          </NavDropdown>
-                                 
+                            </NavDropdown>
 
-                                  {/*News */}
+                            {/*News */}
                             <NavDropdown title="News" id="news">
                               <NavDropdown.Item href="/News/News">
                                 News
@@ -153,15 +124,10 @@ class Header extends Component {
                               <NavDropdown.Item href="/News/Events">
                                 Events
                               </NavDropdown.Item>
-                    
-                          </NavDropdown>
+                            </NavDropdown>
 
-
-                          {/*Employment */}
-                          <NavDropdown
-                              title="Employment"
-                              id=""
-                            >
+                            {/*Employment */}
+                            <NavDropdown title="Employment" id="">
                               <NavDropdown.Item href="/Employment/EmploymentFaculty">
                                 Faculty
                               </NavDropdown.Item>
@@ -178,9 +144,8 @@ class Header extends Component {
                               <NavDropdown.Item href="/Employment/EmploymentStudents">
                                 Students
                               </NavDropdown.Item>
-                                                     
                             </NavDropdown>
-                            
+
                             {/*Donate*/}
                             <Nav.Link href="/Donate/Donate">Donate</Nav.Link>
 
@@ -216,11 +181,7 @@ class Header extends Component {
                               <NavDropdown.Item href="/About/AboutAdminInfor">
                                 Admin Information
                               </NavDropdown.Item>
-
-
                             </NavDropdown>
-
-
                           </Nav>
                           <Form inline>
                             <FormControl
@@ -245,13 +206,9 @@ class Header extends Component {
                     </div>
                     <div class="col-lg-4">
                       <div className="coverImg">
-                        {/* <h3>IMG AREA</h3> */}
                         <img src={brain} alt="loading..." />
                       </div>
                     </div>
-                    {/* <div class="col-lg-1">
-                        <div className="socials">Insta</div>
-                      </div> */}
                   </div>
                 </div>
                 <div class="row">
@@ -268,8 +225,6 @@ class Header extends Component {
                           <FaInstagramSquare size="50px" />
                         </li>
                       </ul>
-                      {/* <FaFacebook className="icons" size="50px" />
-                  <FaInstagramSquare className="icons" size="50px" /> */}
                     </div>
                   </div>
                 </div>
