@@ -31,8 +31,6 @@ class Header extends Component {
               <div class="row">
                 <div class="container">
                   <div class="row">
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-11">
                       <Navbar className="customized-nav" bg="light" expand="lg">
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
@@ -193,7 +191,6 @@ class Header extends Component {
                           </Form>
                         </Navbar.Collapse>
                       </Navbar>
-                    </div>
                     <div class="col-lg-1"></div>
                   </div>
                 </div>
@@ -213,19 +210,6 @@ class Header extends Component {
                 </div>
                 <div class="row">
                   <div class="col-lg-12">
-                    <div className="socials" style={{ position: "fixed" }}>
-                      <ul class="flex-container column">
-                        <li class="flex-item">
-                          <FaFacebook size="30px" />
-                        </li>
-                        <li class="flex-item">
-                          <FaTwitter size="30px" />
-                        </li>
-                        <li class="flex-item">
-                          <FaInstagramSquare size="30px" />
-                        </li>
-                      </ul>
-                    </div>
                   </div>
                 </div>
               </div>
