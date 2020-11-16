@@ -38,10 +38,9 @@ class Footer extends Component {
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <ul class="social-icons">
-                            <li><a class="facebook" href="#"><i class="fa fa-facebook"><FaFacebook /></i></a></li>
-                            <li><a class="twitter" href="#"><i class="fa fa-twitter"><FaTwitter /></i></a></li>
-                            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"><FaDribbble /></i></a></li>
-                            <li><a class="insta" href="#"><i class="fa fa-instagram"><FaInstagramSquare /></i></a></li>   
+                            <li><a class="facebook" href="https://www.facebook.com/McGillCS/"><i class="fa fa-facebook"><FaFacebook /></i></a></li>
+                            <li><a class="twitter" href="https://twitter.com/mcgillscience/"><i class="fa fa-twitter"><FaTwitter /></i></a></li>
+                            <li><a class="insta" href="https://www.instagram.com/mcgillu/"><i class="fa fa-instagram"><FaInstagramSquare /></i></a></li>   
                             </ul>
                         </div>
                         </div>

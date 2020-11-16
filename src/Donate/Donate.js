@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Spring} from 'react-spring/renderprops'
 class Donate extends Component {
     constructor(props) {
         super(props);
@@ -6,10 +7,16 @@ class Donate extends Component {
     }
     render() { 
         return ( 
-            <div>       
+          <Spring
+          from={{ opacity: 0 }}
+          to={{ opacity: 1 }}>
+          {props => 
+            <div style={props}>       
                 <ScrollToTopOnMount />
                 Donate
                 </div>
+                 }
+                 </Spring>
          );
     }
 }

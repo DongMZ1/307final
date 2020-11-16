@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { FaFacebook, FaInstagramSquare, FaTwitter } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./static/header.css";
+import {Spring} from 'react-spring/renderprops'
+import { FaSchool } from "react-icons/fa";
 import {
   Navbar,
   Nav,
@@ -21,7 +23,11 @@ class Header extends Component {
   }
   render() {
     return (
-      <div>
+      <Spring
+  from={{ opacity: 0 }}
+  to={{ opacity: 1 }}>
+  {props => 
+      <div style={props}>
         <div className="header">
           <div className="headerleft">
             <div
@@ -198,7 +204,9 @@ class Header extends Component {
                   <div class="row" style={{ marginRight: "-30px" }}>
                     <div class="col-lg-7">
                       <div className="coverText">
-                        <h3>TEXT AREA</h3>
+                        <h3>School of Computer Science</h3>
+                        <br/>
+                        <span style = {{fontFamily: "unset", fontSize : "72px"}}>@ Mcgill </span><i class='fas fa-school' style ={{fontSize: '72px'}}><FaSchool /></i>
                       </div>
                     </div>
                     <div class="col-lg-4">
@@ -217,6 +225,9 @@ class Header extends Component {
           </div>
         </div>
       </div>
+
+  }
+  </Spring>
     );
   }
 }

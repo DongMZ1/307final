@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Spring} from 'react-spring/renderprops'
 class EmploymentStudents extends Component {
     constructor(props) {
         super(props);
@@ -6,7 +7,11 @@ class EmploymentStudents extends Component {
     }
     render() { 
         return (  
-            <div class="row">
+          <Spring
+          from={{ opacity: 0 }}
+          to={{ opacity: 1 }}>
+          {props => 
+            <div class="row" style={props}>
                 <ScrollToTopOnMount />
                 <div class="col-sm-3">
       
@@ -23,6 +28,8 @@ class EmploymentStudents extends Component {
       <p>real content Major</p>
                 </div>
             </div>
+             }
+             </Spring>
         );
     }
 }

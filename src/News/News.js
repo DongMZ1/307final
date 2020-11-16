@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
+import {Spring} from 'react-spring/renderprops'
 class News extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
     }
     render() { 
-        return (<div class="row">
+        return (
+            <Spring
+            from={{ opacity: 0 }}
+            to={{ opacity: 1 }}>
+            {props => 
+        <div class="row" style={props}>
             <ScrollToTopOnMount />
         <div class="col-sm-3">
 
@@ -19,6 +25,8 @@ class News extends Component {
 <p>real content Major</p>
         </div>
     </div>
+     }
+     </Spring>
         );
     }
 }
