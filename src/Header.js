@@ -28,16 +28,7 @@ class Header extends Component {
   to={{ opacity: 1 }}>
   {props => 
       <div style={props}>
-        <div className="header">
-          <div className="headerleft">
-            <div
-              class="container-fluid"
-              style={{ padding: "20px", marginTop: "10px" }}
-            >
-              <div class="row">
-                <div class="container">
-                  <div class="row">
-                      <Navbar className="customized-nav" bg="light" expand="lg">
+        <Navbar className="customized-nav" bg="light" expand="lg">
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                           <Nav className="mr-auto">
@@ -186,6 +177,21 @@ class Header extends Component {
                                 Admin Information
                               </NavDropdown.Item>
                             </NavDropdown>
+                              
+                              {/*account*/}
+                            <NavDropdown title="Account" id="accountManager">
+                              <NavDropdown.Item href="">
+                                Login
+                              </NavDropdown.Item>
+                              <NavDropdown.Item href="">
+                                Sign Up
+                              </NavDropdown.Item>
+
+                              <NavDropdown.Item href="">
+                                Account Manage (IT worker only)
+                              </NavDropdown.Item>
+                            </NavDropdown>
+
                           </Nav>
                           <Form inline>
                             <FormControl
@@ -197,6 +203,15 @@ class Header extends Component {
                           </Form>
                         </Navbar.Collapse>
                       </Navbar>
+        <div className="header">
+          <div className="headerleft">
+            <div
+              class="container-fluid"
+              style={{ padding: "20px", marginTop: "10px" }}
+            >
+              <div class="row">
+                <div class="container">
+                  <div class="row">
                     <div class="col-lg-1"></div>
                   </div>
                 </div>
