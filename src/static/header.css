@@ -18,6 +18,20 @@
     background: linear-gradient(to bottom right, #ffffff 0%, #ccffff 100%);
 }
 
+.dropdown, #btn-link {
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.dropdown:hover, #btn-link:hover {
+    background-color: rgba(122, 226, 245, 0.705);
+    color: black;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
 .coverImg {
     border-radius: 50%;
     width: 450px;

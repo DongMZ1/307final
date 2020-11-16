@@ -17,7 +17,7 @@ class Footer extends Component {
                         <div class="col-xs-6 col-md-1">
                         </div>
                         <div class="col-xs-6 col-md-3">
-                            <h6>Quick Links</h6>
+                            <h6><b>Quick Links</b></h6>
                             <ul class="footer-links">
                             <li><a href="">About Us</a></li>
                             <li><a href="">Contact Us</a></li>
@@ -25,7 +25,7 @@ class Footer extends Component {
                             </ul>
                         </div>
                         <div class="col-xs-6 col-md-2">
-                            <h6>About</h6>
+                            <h6><b>About</b></h6>
                             <ul class="footer-links">
                             <li><a href="">McGill CS</a></li>
                             </ul>
