@@ -20,6 +20,7 @@ import AcademicGrad from './Academic/AcademicGrad'
 import AcademicFunding from './Academic/AcademicFunding'
 import AcademicTeachingAss from './Academic/AcademicTeachingAss'
 import AcademicCourses from './Academic/AcademicCourses'
+import AUinfor from './Academic/AUinfor'
 
 import Donate from './Donate/Donate'
 
@@ -76,6 +77,7 @@ function App() {
            <Route path = "/Academic/AcademicFunding" component = {AcademicFunding} />
            <Route path = "/Academic/AcademicTeachingAss" component = {AcademicTeachingAss} />
            <Route path = "/Academic/AcademicCourses" component = {AcademicCourses} />
+           <Route path = "/Academic/AUinfor" component = {AUinfor} />
 
           {/*Research*/}
           <Route path = "/Research/ResearchArea" component = {ResearchArea} />

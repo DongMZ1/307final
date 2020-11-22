@@ -30,7 +30,7 @@ class ProspectiveUndergrad extends Component {
 
         </div>
         <div class="col-sm-9">
-<p>real content admission undergrad</p>
+        hello
         </div>
     </div>
      }
