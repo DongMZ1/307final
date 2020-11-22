@@ -31,7 +31,6 @@ class HomePage extends Component {
 
     return (
       <div className="home">
-        This is HomePage;
         <Carousel>
           
           <Carousel.Item className="wrapper">

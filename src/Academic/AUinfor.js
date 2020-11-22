@@ -1,13 +1,15 @@
+
 import React, { Component } from 'react';
 import {Spring} from 'react-spring/renderprops'
 import {Button, Collapse} from 'react-bootstrap'
 import "../static/bodycomponent.css";
-class AcademicGrad extends Component {
+import ReactPlayer from "react-player"
+class AUinfor extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      Undergraduate: false,
-      Graduate: true,
+      Undergraduate: true,
+      Graduate: false,
       Course: false,
       TeachingAss: false,
       Funding: false
@@ -49,7 +51,7 @@ handleUndergraduate() {
   }));
 }
     render() { 
-        return ( 
+        return (  
           <Spring
           from={{ opacity: 0 }}
           to={{ opacity: 1 }}>
@@ -57,17 +59,19 @@ handleUndergraduate() {
             <div class="row" style={props}>
                 <ScrollToTopOnMount />
             <div class="col-sm-2">
-  
-             {/*Undergradute button*/}
-             <div>
+            
+
+
+           {/*Undergradute button*/}
+            <div>
            <Button className="btn btn-blue" onClick={this.handleUndergraduate}>
                Undergraduate
            </Button>
 
            <Collapse in={this.state.Undergraduate}>
            <div class="nav flex-column nav-pills" id="ColUnder" role="tablist" aria-orientation="vertical">
-      <a class="nav-link active" id="" data-toggle="pill" href="AcademicUndergrad" role="tab">Overview</a>
-      <a class="nav-link" id="" data-toggle="pill" href="Auinfor" role="tab">Information for incoming students</a>
+      <a class="nav-link" id="" data-toggle="pill" href="AcademicUndergrad" role="tab">Overview</a>
+      <a class="nav-link active" id="" data-toggle="pill" href="Auinfor" role="tab">Information for incoming students</a>
       <a class="nav-link" id="" data-toggle="pill" href="" role="tab">Remote Learning</a>
       <a class="nav-link" id="" data-toggle="pill" href="" role="tab">FAQ</a>
       <a class="nav-link" id="" data-toggle="pill" href="" role="tab">Advising</a>
@@ -153,18 +157,48 @@ handleUndergraduate() {
      </div>
      
 
+
+
+
+
+
+
             </div>
+
+
+
+
+
             <div class="col-sm-9">
-  <p>real content Major</p>
+            <div className = "body">
+              <h1 style ={{color: "green"}}>Information for Incoming Undergraduate Students</h1>
+              <h2 style ={{color: "red"}}>Welcome to the School of Computer Science!</h2>
+              <p>As you plan to begin your studies at McGill, you might have many questions. We hope to answer some of them below.</p>
+              <ul>What is Computer Science? Overview / Brochure</ul>
+              <ul>I want to study computer science. What courses should I take at McGill during my first year? Streams / U1 Courses / Play Video Below</ul>
+              <ul>Computer Science Undergraduate Orientation - Presentation Slides</ul>
+              <ul>Computer Science - Quick Tips / Course Prereqs / Software Engineering Courses</ul>
+              <ul>If you have any questions, please fill out the following form, and we will get back to you!</ul>
+              <br></br>
+              
+              <ReactPlayer
+        url="https://www.youtube.com/watch?v=tXOL13JabH8"
+      />
+
+             <br></br>
+
+             <ReactPlayer
+        url="https://www.youtube.com/watch?v=LYmOhuw3GSQ"
+      />
+              </div>
             </div>
         </div>
          }
          </Spring>
-      );
+        );
     }
 }
- 
-export default AcademicGrad;
+export default AUinfor;
 
 class ScrollToTopOnMount extends React.Component {
     componentDidMount() {
