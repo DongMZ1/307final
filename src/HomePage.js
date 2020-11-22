@@ -33,49 +33,39 @@ class HomePage extends Component {
       <div className="home">
         This is HomePage;
         <Carousel>
-          
-          <Carousel.Item className="wrapper">
-            
+          <Carousel.Item className="wrapper" interval={2000}>
             <img
               //   className="h-75 d-inline-block"
               src={bot}
               alt="Third slide"
             />
-          <div className="overlay">
-            <div className="desc">
-                Robotics at McGill! Click to learn more! More Description here.
+            <div className="overlay">
+              <div className="desc">
+                  Robotics at McGill! Click to learn more! More Description here.
+              </div>
             </div>
-          </div>
-        
-  
-
-            <Carousel.Caption>
-              <h3>First slide label</h3>
+            <Carousel.Caption className="caption">
+              {/* <h3>First slide label</h3> */}
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </Carousel.Caption>
           </Carousel.Item>
-  
-          
-          <Carousel.Item>
+          <Carousel.Item interval={2000}>
             <img
-              //   className="h-75 d-inline-block"
               src={covid}
               alt="Third slide"
             />
-
-            <Carousel.Caption>
+            <Carousel.Caption className="caption">
               <h3>Second slide label</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item>
+          <Carousel.Item interval={2000}>
             <img
               //   className="h-75 d-inline-block"
               src={ml}
               alt="Third slide"
             />
-
-            <Carousel.Caption>
+            <Carousel.Caption className="caption">
               <h3>Third slide label</h3>
               <p>
                 Praesent commodo cursus magna, vel scelerisque nisl consectetur.
