@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import Header from './Header'
+import ScrollToTop from './ScrollToTop'
 import Footer from './Footer'
 import HomePage from './HomePage'
 import React from "react";
@@ -54,6 +55,7 @@ import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 function App() {
   return (
       <Router>
+      <ScrollToTop />
       <Header />
        <Switch>
          {/*homepage*/}

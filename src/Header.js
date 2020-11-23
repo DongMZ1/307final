@@ -6,6 +6,7 @@ import { Spring } from "react-spring/renderprops";
 import { FaSchool } from "react-icons/fa";
 import { Navbar, Nav, NavDropdown, Form, Button, FormControl } from "react-bootstrap";
 import brain from "./pictures/brain.gif";
+import logo from "./pictures/logo.png";
 
 class Header extends Component {
   constructor(props) {
@@ -47,6 +48,12 @@ class Header extends Component {
         {(props) => (
           <div style={props}>
             <Navbar className="customized-nav" bg="light" expand="lg">
+            {/* <div className="logo"></div> */}
+            <Navbar.Brand>
+ 
+          <img src={logo} style={{width:200, marginTop: -7}} />
+       
+        </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">

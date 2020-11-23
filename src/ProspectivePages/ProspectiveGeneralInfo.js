@@ -14,27 +14,25 @@ class ProspectiveGeneralInfo extends Component {
           {props => 
             <div class="row" style={props}>
                 <ScrollToTopOnMount />
-                <div class="col-sm-3">
-      
+                <div class="col-md-2" style={{backgroundColor: "aliceblue"}}>
                 <div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical">
-      <a class="nav-link active" id="" data-toggle="pill" href="ProspectiveGeneralInfo" role="tab">General Info</a>
-      <a class="nav-link" id="" data-toggle="pill" href="ProspectiveWhyCS" role="tab">Why CS</a>
-      <a class="nav-link" id="" data-toggle="pill" href="ProspectiveCEGEP" role="tab">CEGEP</a>
-      <a class="nav-link" id="" data-toggle="pill" href="ProspectiveFreshman" role="tab">Freshman</a>
-      <a class="nav-link" id="" data-toggle="pill" href="ProspectiveChoosingAMajor" role="tab">Choosing A Major</a>
-      <a class="nav-link" id="" data-toggle="pill" href="ProspectiveTransfer" role="tab">Transfer</a>
-      <a class="nav-link" id="" data-toggle="pill" href="ProspectiveInternship" role="tab">Internship</a>
-      <a class="nav-link" id="" data-toggle="pill" href="ProspectiveUndergrad" role="tab">Undergraduate Admission</a>
-      <a class="nav-link" id="" data-toggle="pill" href="ProspectiveGrad" role="tab">Graduate Admission</a>
-    </div>
-
-
+                  <div class="tab-name">Prospective</div>
+                  <a class="nav-link active" id="" data-toggle="pill" href="ProspectiveGeneralInfo" role="tab">General Info</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="ProspectiveWhyCS" role="tab">Why CS</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="ProspectiveCEGEP" role="tab">CEGEP</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="ProspectiveFreshman" role="tab">Freshman</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="ProspectiveChoosingAMajor" role="tab">Choosing A Major</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="ProspectiveTransfer" role="tab">Transfer</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="ProspectiveInternship" role="tab">Internship</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="ProspectiveUndergrad" role="tab">Undergraduate Admission</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="ProspectiveGrad" role="tab">Graduate Admission</a>
                 </div>
-                <div class="col-sm-9">
+                </div>
+                <div class="col-md-10 right-column">
                  <div className = "body">
                            <h1>McGill School of Computer Science</h1>
-                           <p>McGill University is one of the top research universities in Canada and is the only Canadian university to rank consistently among the top 25 universities in the world (based on Times and QS rankings). The School of Computer Science currently stands second in Canada for its research funding. Our professors have received most of the top awards in Computer Science, while our students go on to become top-notch research and industry leaders. A graduate degree from the McGill School of Computer Science is recognized in both the academic and industrial worlds as a proof of excellence.</p>
-                           <p>Our department is currently 34 faculty members strong, 60 Ph.D. students, and 100 Masters students. All of our Ph.D. students and most of our Masters students are funded through teaching assistantships or research assistantships. Approximately half our graduate students are Canadian and the other half are from abroad.</p>
+                           <p><a href="https://www.mcgill.ca/">McGill University</a> is one of the top research universities in Canada and is the only Canadian university to rank consistently among the top 25 universities in the world (based on <a href="http://www.google.ca">Times and QS rankings</a>). The School of Computer Science currently stands second in Canada for its research funding. Our professors have received most of the top awards in Computer Science, while our students go on to become top-notch research and industry leaders. A graduate degree from the McGill School of Computer Science is recognized in both the academic and industrial worlds as a proof of excellence.</p>
+                           <p>Our department is currently 34 <a href="http://www.google.ca">faculty members</a> strong, 60 Ph.D. students, and 100 Masters students. All of our Ph.D. students and most of our Masters students are funded through teaching assistantships or research assistantships. Approximately half our graduate students are Canadian and the other half are from abroad.</p>
                            <h2>Location</h2>
                            <p>McGill is an English language university located in the heart of Montreal, the second largest French-speaking city in the world. Montreal has a reputation for its cosmopolitan atmosphere, history, cultural and sport activities, and excellent restaurants. The cultural offerings of the city include a symphony orchestra, ballet, opera, several theaters and museums. For outdoor recreation, Mount Royal, a wooded mountain with a lake and parks located very close to the university, along with the St. Lawrence river, the many lakes and parks around the island of Montreal, provide opportunity for a wide variety of activities. Montreal consistently ranks among the most livable cities in the world, and the cost of living is among the lowest for cities of its size. The city is extremely safe and has an excellent public transportation system. Note that although speaking French is useful to fully enjoy your experience in Montreal, it is by no means necessary, as English is also spoken fluently by most of the population. More information can be found on the McGill Prospective Students web page, while information on Montreal is available from Montreal International.</p>
                            <h2>The Academic Year</h2>
