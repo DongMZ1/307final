@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Spring} from 'react-spring/renderprops'
 class ProspectiveCEGEP extends Component {
     constructor(props) {
         super(props);
@@ -6,7 +7,12 @@ class ProspectiveCEGEP extends Component {
     }
     render() { 
         return (
-            <div class="row">
+          <Spring
+          from={{ opacity: 0 }}
+          to={{ opacity: 1 }}>
+          {props => 
+            <div class="row" style={props}>
+                <ScrollToTopOnMount />
                 <div class="col-sm-3">
       
                 <div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical">
@@ -26,8 +32,20 @@ class ProspectiveCEGEP extends Component {
       <p>real content ProspectiveCEGEP</p>
                 </div>
             </div>
+             }
+             </Spring>
           );
     }
 }
  
 export default ProspectiveCEGEP;
+
+class ScrollToTopOnMount extends React.Component {
+    componentDidMount() {
+      window.scrollTo(0, 600);
+    }
+  
+    render() {
+      return null;
+    }
+  }

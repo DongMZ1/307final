@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
+import {Spring} from 'react-spring/renderprops'
 class ProspectiveUndergrad extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
     }
     render() { 
-        return ( <div class="row">
+        return ( 
+          <Spring
+          from={{ opacity: 0 }}
+          to={{ opacity: 1 }}>
+          {props => 
+        <div class="row" style={props}>
+            <ScrollToTopOnMount />
         <div class="col-sm-3">
 
         <div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical">
@@ -23,10 +30,23 @@ class ProspectiveUndergrad extends Component {
 
         </div>
         <div class="col-sm-9">
-<p>real content admission undergrad</p>
+        hello
         </div>
-    </div> );
+    </div>
+     }
+     </Spring>
+    );
     }
 }
  
 export default ProspectiveUndergrad;
+
+class ScrollToTopOnMount extends React.Component {
+    componentDidMount() {
+      window.scrollTo(0, 600);
+    }
+  
+    render() {
+      return null;
+    }
+  }
