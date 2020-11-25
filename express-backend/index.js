@@ -7,11 +7,11 @@ app.use(express.json());
 app.use(cors());
 const db = mysql.createConnection(
   {
-    user:"hshao4",
-    host:"comp421.cs.mcgill.ca",
-    password: "xUW8zy3Y",
+    user:"cs307-group01",
+    host:"fall2020-comp307.cs.mcgill.ca",
+    password: "ng8DCt2qSa7rXHEP",
     port: 5432,
-    database:"cs421"
+    database:"cs307-group01-DB"
   }
 );
 

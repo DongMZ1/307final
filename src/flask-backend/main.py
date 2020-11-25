@@ -11,11 +11,11 @@ app = Flask(__name__)
 app.secret_key = 'cs307grp01pass' #password you may change
 
 # Enter your database connection details below
-app.config['MYSQL_HOST'] = 'comp421.cs.mcgill.ca'
-app.config['MYSQL_USER'] = 'hshao4'
-app.config['MYSQL_PASSWORD'] = 'xUW8zy3Y'
+app.config['MYSQL_HOST'] = 'fall2020-comp307.cs.mcgill.ca'
+app.config['MYSQL_USER'] = 'cs307-group01'
+app.config['MYSQL_PASSWORD'] = 'ng8DCt2qSa7rXHEP'
 app.config['MYSQL_PORT'] = 5432
-app.config['MYSQL_DB'] = 'cs421'
+app.config['MYSQL_DB'] = 'cs307-group01-DB'
 
 # Intialize MySQL
 mysql = MySQL(app)
