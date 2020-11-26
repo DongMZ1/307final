@@ -1,8 +1,6 @@
-// import logo from './logo.svg';
-
 import './App.css';
-import IndexPage from './IndexPage';
-import LoginPage from './Login/LoginPage';
+// import IndexPage from './IndexPage';
+// import LoginPage from './Login/LoginPage';
 import RegisterPage from './Login/RegisterPage';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Header from './Header'
@@ -56,7 +54,7 @@ import ProspectiveTransfer from './ProspectivePages/ProspectiveTransfer'
 import ResearchArea from './Research/ResearchArea'
 import ResearchTecReport from './Research/ResearchTecReport'
 
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+// import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 function App() {
   return (
       <Router>
@@ -66,8 +64,8 @@ function App() {
          {/*homepage*/}
            <Route path = '/' component = {HomePage} exact />
          {/*prospectivePages*/}
-          <Route path = "/login" component = {LoginPage} />
-           <Route path = "/register" component = {RegisterPage} />
+          {/* <Route path = "/login" component = {LoginPage} />
+           <Route path = "/register" component = {RegisterPage} /> */}
            <Route path = "/ProspectivePages/ProspectiveGeneralInfo" component = {ProspectiveGeneralInfo} />
            <Route path = "/ProspectivePages/ProspectiveCEGEP" component = {ProspectiveCEGEP} />
            <Route path = "/ProspectivePages/ProspectiveChoosingAMajor" component = {ProspectiveChoosingAMajor} />
