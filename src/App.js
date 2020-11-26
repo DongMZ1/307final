@@ -1,6 +1,6 @@
 
 import './App.css';
-import IndexPage from './IndexPage';
+//import IndexPage from './IndexPage';
 import LoginPage from './Login/LoginPage';
 import RegisterPage from './Login/RegisterPage';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
@@ -26,7 +26,7 @@ import ProspectiveWhyCS from './ProspectivePages/ProspectiveWhyCS'
 import ProspectiveTransfer from './ProspectivePages/ProspectiveTransfer'
 
 import ResearchOverview from './Research/ResearchOverview'
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
 function App() {
   return (
       <Router>
@@ -37,7 +37,7 @@ function App() {
            <Route path = '/' component = {HomePage} exact />
 
          {/*prospectivePages*/}
-          <Route path = "/login" component = {LoginPage} />
+            <Route path = "/login" component = {LoginPage} />
            <Route path = "/register" component = {RegisterPage} />
            <Route path = "/ProspectivePages/ProspectiveGeneralInfo" component = {ProspectiveGeneralInfo} />
            <Route path = "/ProspectivePages/ProspectiveCEGEP" component = {ProspectiveCEGEP} />
