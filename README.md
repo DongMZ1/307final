@@ -4,6 +4,10 @@
 `pip install flask` install flask
 `pip install flask-mysqldb` install MySQLdb
 
+### Before run the repo:
+
+## `npm install` to download all dependencies! 
+
 ### `set FLASK_APP=./src/main.py` It is important!
 
 `set FLASK_DEBUG=1` debug mode active
