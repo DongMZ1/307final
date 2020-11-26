@@ -171,13 +171,13 @@ class Header extends Component {
             <h2>Sign up</h2>
             <form className="contact-form form-validate3" novalidate="novalidate">
               <div className="form-group">
-                <input className="form-control" type="text" name="studentid" id="name" placeholder="Student ID" required="" autocomplete="off" aria-required="true" />
+                <input className="form-control" type="text" name="studentid" id="name" placeholder="Student ID" autocomplete="off" aria-required="true" required/>
               </div>
               <div className="form-group">
-                <input className="form-control" type="email" name="email" placeholder="E-mail" required="" autocomplete="off" aria-required="true" />
+                <input className="form-control" type="email" name="email" placeholder="E-mail" autocomplete="off" aria-required="true" required/>
               </div>
               <div className="form-group">
-                <input type="password" name="pass" className="form-control" placeholder="Password" required="" autocomplete="off" aria-required="true" />
+                <input type="password" name="pass" className="form-control" placeholder="Password" autocomplete="off" aria-required="true" required/>
               </div>
               <input className="btn btn-md btn-primary btn-center" id="sign_up" type="button" value="Sign Up" />
             </form>
@@ -226,10 +226,10 @@ class Header extends Component {
 
             <form className="contact-form form-validate4" novalidate="novalidate">
               <div className="form-group">
-                <input className="form-control" type="email" name="email" placeholder="E-mail" required="" autocomplete="off" aria-required="true" />
+                <input className="form-control" type="email" name="email" placeholder="E-mail" autocomplete="off"  required/>
               </div>
               <div className="form-group">
-                <input type="password" name="pass" className="form-control" placeholder="Password" required="" autocomplete="off" aria-required="true" />
+                <input type="password" name="pass" className="form-control" placeholder="Password" autocomplete="off"  required/>
               </div>
               <input className="btn btn-md btn-primary btn-center" id="login_btn" type="button" value="Login" />
             </form>
