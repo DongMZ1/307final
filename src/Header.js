@@ -116,13 +116,13 @@ class Header extends Component {
                               />
                               <Button variant="outline-danger">Search</Button>
                             </Form>
-                            
+
                           </Navbar.Collapse>
                           <Button variant="outline-danger" id="signup" onClick={this.onOpenModal}>SignUp</Button>
                           <Button variant="outline-danger" id="login" onClick={this.onOpenModalLogin}>Login</Button>
-                          
+
                         </Navbar>
-                        
+
                       </div>
                       <div class="col-lg-1"></div>
                     </div>
@@ -150,29 +150,28 @@ class Header extends Component {
               },
               content: {
                 position: 'absolute',
-                top: '20%',
-                left: '30%',
-                right: '30%',
-                bottom: '20%',
+                top: '25%',
+                left: '35%',
+                right: '35%',
+                bottom: '25%',
                 border: '1px solid #ccc',
                 background: '#fff',
                 overflow: 'auto',
-                
+
                 borderRadius: '4px',
                 outline: 'none',
-                
+
               }
 
             }
           }
         >
           <div className="modal-body">
-          <Button variant="outline-danger" id = "x" onClick={this.onCloseModal}> X </Button>
-            <h2>Get Started Absolutely<span> Free!</span></h2>
-            <span className="subtitle">No credit card needed</span>
+            <Button variant="outline-danger" id="x" onClick={this.onCloseModal}> X </Button>
+            <h2>Sign up</h2>
             <form className="contact-form form-validate3" novalidate="novalidate">
               <div className="form-group">
-                <input className="form-control" type="text" name="name" id="name" placeholder="First Name" required="" autocomplete="off" aria-required="true" />
+                <input className="form-control" type="text" name="studentid" id="name" placeholder="Student ID" required="" autocomplete="off" aria-required="true" />
               </div>
               <div className="form-group">
                 <input className="form-control" type="email" name="email" placeholder="E-mail" required="" autocomplete="off" aria-required="true" />
@@ -182,13 +181,13 @@ class Header extends Component {
               </div>
               <input className="btn btn-md btn-primary btn-center" id="sign_up" type="button" value="Sign Up" />
             </form>
-            
+
           </div>
         </Modal>
 
 
 
-        <Modal open={login} onRequestClose={this.onCloseModalclose}
+        <Modal isOpen={login} onRequestClose={this.onCloseModalclose}
           shouldCloseOnOverlayClick={true}
           animationType="fade"
           transparent={true}
@@ -205,26 +204,26 @@ class Header extends Component {
               },
               content: {
                 position: 'absolute',
-                top: '20%',
-                left: '30%',
-                right: '30%',
-                bottom: '20%',
+                top: '25%',
+                left: '35%',
+                right: '35%',
+                bottom: '25%',
                 border: '1px solid #ccc',
                 background: '#fff',
                 overflow: 'auto',
-                
+
                 borderRadius: '4px',
                 outline: 'none',
-                
+
               }
 
             }
           }
-          >
+        >
           <div className="modal-body">
-            <h2>Login and Get <span>Started</span></h2>
-            <Button variant="outline-danger" id = "x" onClick={this.onCloseModalclose}> X </Button>
-            <span className="subtitle">Just fill in the form below</span>
+            <Button variant="outline-danger" id="x" onClick={this.onCloseModalclose}> X </Button>
+            <h2>Login</h2>
+
             <form className="contact-form form-validate4" novalidate="novalidate">
               <div className="form-group">
                 <input className="form-control" type="email" name="email" placeholder="E-mail" required="" autocomplete="off" aria-required="true" />
