@@ -1,17 +1,49 @@
 import React, { Component } from "react";
+import { FaFacebook, FaInstagramSquare, FaTwitter } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./static/header.css";
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Form, Button, FormControl } from "react-bootstrap";
+import { Spring } from "react-spring/renderprops";
+import { FaSchool } from "react-icons/fa";
+import { Navbar, Nav, NavDropdown, Form, Button, FormControl } from "react-bootstrap";
+import brain from "./pictures/brain.gif";
+import logo from "./pictures/logo.png";
 import Modal from "react-modal";
 import "./static/Modal.css";
 
 class Header extends Component {
   constructor(props) {
     super(props);
+    this.toggle = this.toggle.bind(this);
+    this.onMouseEnter = this.onMouseEnter.bind(this);
+    this.onMouseLeave = this.onMouseLeave.bind(this);
     this.state = {
+      dropdownPerspective: false,
+      dropdownAcademic: false,
+      dropdownResearch: false,
+      dropdownPeople: false, 
+      dropdownNews: false,
+      dropdownEmployment: false, 
+      dropdownAbout: false, 
+      dropdownAccount: false,
       sign: false,
       login: false,
     };
+  }
+
+  toggle(menuItem) {
+    // this.setState(prevState => ({
+    //   show: !prevState.show
+    // }));
+    this.setState({[menuItem]: !this.state[menuItem]})
+  }
+
+  onMouseEnter(menuItem) {
+    // this.setState({show: true});
+    this.setState({[menuItem]: true})
+  }
+
+  onMouseLeave(menuItem) {
+    this.setState({[menuItem]: false})
   }
 
   onOpenModal = () => {
