@@ -5,6 +5,7 @@ const mysql = require("mysql");
 const app = express();
 app.use(express.json());
 app.use(cors());
+console.log("login server running --------------------!!!!!!!!!")
 const db = mysql.createConnection(
   {
     user:"cs307-group01",
@@ -15,14 +16,14 @@ const db = mysql.createConnection(
   }
 );
 
-db.connect(function(err){
+/*db.connect(function(err){
     if(err) throw err;
     console.log("Connected!");
-})
+})*/
 
 
 app.post("/register", (req,res) =>{
-    const studentid = req.body.studentid;
+  const studentid = req.body.studentid;
   const username = req.body.username;
   const password = req.body.password;
 
@@ -40,7 +41,7 @@ app.post("/register", (req,res) =>{
 app.post('/login',(req,res) =>{
   const username = req.body.username;
   const passwrod = req.body.password;
-
+  //console.log("login server running ")
   db.query(
     "SELECT FROM users WHERE email = ? and passcode = ?; ",
     [username,passwrod],

@@ -9,6 +9,11 @@ import brain from "./pictures/brain.gif";
 import logo from "./pictures/logo.png";
 import Modal from "react-modal";
 import "./static/Modal.css";
+//import 'static/login.css'
+//import { useState } from "react";
+import Axios from "axios";
+//import { FormWithConstraints, FieldFeedbacks, Async, FieldFeedback } from 'react-form-with-constraints';
+//import { DisplayFields } from 'react-form-with-constraints-tools';
 
 
 class Header extends Component {
@@ -27,9 +32,40 @@ class Header extends Component {
       dropdownAbout: false,
       dropdownAccount: false,
       sign: false,
-      login: false
+      login: false,
+      username: "",
+      password: "",
+      LoginStatus: "",
+      studentidReg: 0,
+      usernameReg: "",
+      passwordReg: ""
     };
   }
+
+  Login = () => {
+    Axios.post("http://localhost:3001/login", {
+      username: this.state.username,
+      password: this.state.password,
+    }).then((response) => {
+      if (response.data.message) {
+        this.setState({ LoginStatus: response.data.message })
+      }
+      else {
+        this.setState({ LoginStatus: response.data[0].username })
+      }
+      console.log(response);
+    });
+  };
+
+  Register = () => {
+    Axios.post("http://localhost:3001/register", {
+        studentid: this.state.studentidReg,
+        username: this.state.usernameReg,
+        password: this.state.passwordReg,
+    }).then((response) => {
+        console.log(response);
+    });
+};
 
   onOpenModal = () => {
     this.setState({ sign: true });
@@ -64,6 +100,7 @@ class Header extends Component {
   }
 
   render() {
+
     const { login, sign } = this.state;
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
@@ -323,17 +360,29 @@ class Header extends Component {
               <div className="modal-body">
                 <Button variant="outline-danger" id="x" onClick={this.onCloseModal}> X </Button>
                 <h2>Sign up</h2>
-                <form className="contact-form form-validate3" novalidate="novalidate">
+                <form className="contact-form form-validate3" novalidate="novalidate" method="post">
                   <div className="form-group">
-                    <input className="form-control" type="text" name="studentid" id="name" placeholder="Student ID" autocomplete="off" aria-required="true" required />
+                    <input className="form-control" type="text" name="studentid" id="studentid" placeholder="Student ID" autocomplete="off" 
+                    onChange={(event) => {
+                      this.setState({StudentidReg: event.target.value});
+                  }}
+                    required />
                   </div>
                   <div className="form-group">
-                    <input className="form-control" type="email" name="email" placeholder="E-mail" autocomplete="off" aria-required="true" required />
+                    <input className="form-control" type="email" name="username" id = "username" placeholder="McGill E-mail" autocomplete="off"  
+                    onChange={(event) => {
+                      this.setState({UsernameReg: event.target.value});
+                  }}
+                    required />
                   </div>
                   <div className="form-group">
-                    <input type="password" name="pass" className="form-control" placeholder="Password" autocomplete="off" aria-required="true" required />
+                    <input type="password" name="password" id = "password" className="form-control" placeholder="Password" autocomplete="off" 
+                    onChange={(event) => {
+                      this.setState({PasswordReg: event.target.value});
+                  }}
+                    required />
                   </div>
-                  <input className="btn btn-md btn-primary btn-center" id="sign_up" type="button" value="Sign Up" />
+                  <input className="btn btn-md btn-primary btn-center" id="sign_up" type="submit" value="Sign Up" onClick = {this.Register}/>
                 </form>
 
               </div>
@@ -377,15 +426,25 @@ class Header extends Component {
               <div className="modal-body">
                 <Button variant="outline-danger" id="x" onClick={this.onCloseModalclose}> X </Button>
                 <h2>Login</h2>
-
-                <form className="contact-form form-validate4" novalidate="novalidate">
+                <form className="contact-form form-validate4" novalidate="novalidate" action="/" method = "post">
                   <div className="form-group">
-                    <input className="form-control" type="email" name="email" placeholder="E-mail" autocomplete="off" required />
+                    <input className="form-control" type="email" name="username" id="username" placeholder="E-mail" autocomplete="off"
+                      onChange={
+                        (event) => {
+                          this.setState({username : event.target.value});
+                        }} required />
                   </div>
                   <div className="form-group">
-                    <input type="password" name="pass" className="form-control" placeholder="Password" autocomplete="off" required />
+                    <input type="password" name="password" id="password" className="form-control" placeholder="Password" autocomplete="off"
+                     onChange={
+                      (event) => {
+                        this.setState({password : event.target.value});
+                      }}
+                     required />
                   </div>
-                  <input className="btn btn-md btn-primary btn-center" id="login_btn" type="button" value="Login" />
+                  <div class="msg">{this.state.LoginStatus}</div>
+                  <input className="btn btn-md btn-primary btn-center" id="login_btn" type="submit" value="Login" 
+                  onClick = {this.Login}/>
                 </form>
               </div>
             </Modal>
