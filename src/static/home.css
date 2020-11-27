@@ -25,25 +25,9 @@
   object-fit: cover;
 }
 
-
-/* .carousel-inner > .item {
-    height: 400px;
-    object-fit: cover;
- }
-
- .carousel-item > img { 
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
-    /* position: absolute; 
-    object-fit: cover;
-    top: 0; 
-    left: 0; 
-    min-height: 300px; 
-  } */
-
   .caption {
     background-color: rgba(0, 0, 0, 0.433); 
+    z-index: 0;
   }
 
  .carousel-control-prev-icon {
