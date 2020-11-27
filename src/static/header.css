@@ -120,6 +120,16 @@
     margin-left: 130px;
 }
 
+#prospectiveButton:hover + #hideProspectiveButton {
+    display: inline-block;
+    padding-top: 50px;
+    padding-right: 30px;
+    font-family: fantasy;
+    width: 150px;
+}
+Button{
+    margin:10px;
+}
 /* div {
     background: linear-gradient(to bottom right, #ffffff 0%, #ccffff 100%);
 } */
