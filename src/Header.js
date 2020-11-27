@@ -72,9 +72,9 @@ class Header extends Component {
             <Navbar className="customized-nav" bg="light" expand="lg">
               {/* <div className="logo"></div> */}
               <Navbar.Brand>
-
-                <img src={logo} style={{ width: 200, marginTop: -7 }} />
-
+                <a href="http://www.google.ca">
+                  <img src={logo} style={{ width: 200, marginTop: -7 }}></img>
+                </a>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
