@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Spring} from 'react-spring/renderprops'
 class ProspectiveTransfer extends Component {
     constructor(props) {
         super(props);
@@ -6,7 +7,12 @@ class ProspectiveTransfer extends Component {
     }
     render() { 
         return ( 
-            <div class="row">
+          <Spring
+          from={{ opacity: 0 }}
+          to={{ opacity: 1 }}>
+          {props => 
+            <div class="row" style={props}>
+                <ScrollToTopOnMount />
         <div class="col-sm-3">
 
         <div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical">
@@ -25,9 +31,22 @@ class ProspectiveTransfer extends Component {
         <div class="col-sm-9">
 <p>real content Transfer</p>
         </div>
-    </div> );
+    </div>
+     }
+     </Spring>
+    );
          
     }
 }
  
 export default ProspectiveTransfer;
+
+class ScrollToTopOnMount extends React.Component {
+    componentDidMount() {
+      window.scrollTo(0, 600);
+    }
+  
+    render() {
+      return null;
+    }
+  }

@@ -171,7 +171,7 @@ class Header extends Component {
             <h2>Sign up</h2>
             <form className="contact-form form-validate3" novalidate="novalidate">
               <div className="form-group">
-                <input className="form-control" type="text" name="studentid" id="name" placeholder="Student ID" autocomplete="off" aria-required="true" required/>
+                <input className="form-control" type="text" name="studentid" id="name" placeholder="Student ID" autocomplete="off"  required/>
               </div>
               <div className="form-group">
                 <input className="form-control" type="email" name="email" placeholder="E-mail" autocomplete="off" aria-required="true" required/>
