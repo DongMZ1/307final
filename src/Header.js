@@ -9,7 +9,7 @@ import brain from "./pictures/brain.gif";
 import logo from "./pictures/logo.png";
 import Modal from "react-modal";
 import "./static/Modal.css";
-import ValidatedLoginForm from "./Login/ValidatedLoginForm"
+import ValidatedLogin from "./Login/ValidatedLogin"
 //import 'static/login.css'
 //import { useState } from "react";
 import Axios from "axios";
@@ -361,7 +361,7 @@ class Header extends Component {
               <div className="modal-body">
                 <Button variant="outline-danger" id="x" onClick={this.onCloseModal}> X </Button>
                 <h2>Sign up</h2>
-                <form className="contact-form form-validate3" novalidate="novalidate" method="post">
+                <form className="contact-form form-validate3" noValidate="novalidate" method="post">
                   <div className="form-group">
                     <input className="form-control" type="text" name="studentid" id="studentid" placeholder="Student ID" autocomplete="off" 
                     onChange={(event) => {
@@ -447,7 +447,7 @@ class Header extends Component {
                   <input className="btn btn-md btn-primary btn-center" id="login_btn" type="submit" value="Login" 
                   onClick = {this.Login}/>
                     </form>*/}
-                    <ValidatedLoginForm/>
+                    <ValidatedLogin/>
               </div>
             </Modal>
           </div>

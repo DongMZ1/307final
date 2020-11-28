@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-console.log("login server running --------------------!!!!!!!!!")
+
 const db = mysql.createConnection(
   {
     user:"cs307-group01",
@@ -40,14 +40,22 @@ app.post("/register", (req,res) =>{
 });
 
 app.post('/login',(req,res) =>{
+  
   const username = req.body.username;
-  const passwrod = req.body.password;
-  //console.log("login server running ")
+  const password = req.body.password;
+  console.log("login server running -!!!!!!!!!");
+  console.log("username is", username);
+  console.log("password is", password);
+  
+  
   db.query(
     "SELECT FROM users WHERE email = ? and passcode = ?; ",
-    [username,passwrod],
+    [username,password],
     (err, result) =>{
       if(err){
+        console.log("login server running -!!!!!!!!!");
+        console.log("username is", username);
+        console.log("password is", password);
         console.log({err: err});
       }
       else{
@@ -69,8 +77,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.listen(3000,()=>{
-  console.log("running on 3000 server");
+app.listen(3001,()=>{
+  console.log("running on 3001 server");
 });
 
 module.exports = app;
