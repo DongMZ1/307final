@@ -1,8 +1,9 @@
 const cors = require("cors");
 const express = require('express');
 const mysql = require("mysql");
-
+const path = require('path');
 const app = express();
+
 app.use(express.json());
 app.use(cors());
 console.log("login server running --------------------!!!!!!!!!")
@@ -62,8 +63,14 @@ app.post('/login',(req,res) =>{
 
 } );
 
-app.listen(3001,()=>{
-  console.log("running on 3001 server");
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+app.listen(3000,()=>{
+  console.log("running on 3000 server");
 });
 
 module.exports = app;

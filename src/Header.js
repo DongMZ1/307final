@@ -9,6 +9,7 @@ import brain from "./pictures/brain.gif";
 import logo from "./pictures/logo.png";
 import Modal from "react-modal";
 import "./static/Modal.css";
+import ValidatedLoginForm from "./Login/ValidatedLoginForm"
 //import 'static/login.css'
 //import { useState } from "react";
 import Axios from "axios";
@@ -341,10 +342,10 @@ class Header extends Component {
                   },
                   content: {
                     position: 'absolute',
-                    top: '25%',
+                    top: '20%',
                     left: '35%',
                     right: '35%',
-                    bottom: '25%',
+                    bottom: '20%',
                     border: '1px solid #ccc',
                     background: '#fff',
                     overflow: 'auto',
@@ -407,10 +408,10 @@ class Header extends Component {
                   },
                   content: {
                     position: 'absolute',
-                    top: '25%',
+                    top: '20%',
                     left: '35%',
                     right: '35%',
-                    bottom: '25%',
+                    bottom: '20%',
                     border: '1px solid #ccc',
                     background: '#fff',
                     overflow: 'auto',
@@ -426,7 +427,7 @@ class Header extends Component {
               <div className="modal-body">
                 <Button variant="outline-danger" id="x" onClick={this.onCloseModalclose}> X </Button>
                 <h2>Login</h2>
-                <form className="contact-form form-validate4" novalidate="novalidate" action="/" method = "post">
+                {/*<form className="contact-form form-validate4" novalidate="novalidate" action="/" method = "post">
                   <div className="form-group">
                     <input className="form-control" type="email" name="username" id="username" placeholder="E-mail" autocomplete="off"
                       onChange={
@@ -440,12 +441,13 @@ class Header extends Component {
                       (event) => {
                         this.setState({password : event.target.value});
                       }}
-                     required />
-                  </div>
+                    required />
+                    </div>
                   <div class="msg">{this.state.LoginStatus}</div>
                   <input className="btn btn-md btn-primary btn-center" id="login_btn" type="submit" value="Login" 
                   onClick = {this.Login}/>
-                </form>
+                    </form>*/}
+                    <ValidatedLoginForm/>
               </div>
             </Modal>
           </div>
