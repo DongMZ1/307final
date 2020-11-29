@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import "./static/home.css";
-//import "bootstrap/dist/css/bootstrap.min.css";
-// import "bootstrap.css";
 import { Carousel } from "react-bootstrap";
+import { FaUserGraduate, FaCalendarAlt, FaNewspaper } from "react-icons/fa";
 import bot  from './pictures/bot.jpg'; 
 import covid from './pictures/covid.jpg'; 
 import ml from './pictures/ml.jpg'; 
@@ -22,10 +23,10 @@ class HomePage extends Component {
       slideToScroll: 2,
       cssEase: "linear",
     };
-
+    Aos.init({ duration: 3000 });
     return (
       <div className="home">
-        <Carousel>
+        <Carousel data-aos="fade-left">
           <Carousel.Item className="wrapper" interval={2000}>
             <img
               src={bot}
@@ -80,29 +81,32 @@ class HomePage extends Component {
           </Carousel.Item>
         </Carousel>
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-sm" style={{padding: "8%"}}>
-            <div class="button_base b07_3d_double_roll">
-                <div>COVID-19 Information</div>
-                <div>COVID-19 Information</div>
-                <div>COVID-19 Information</div>
-                <div>COVID-19 Information</div>
-            </div>
-            </div>
-            <div class="col-sm" style={{padding: "8%"}}>
+          <div class="row justify-content-center" style={{marginTop: "-20px"}}>
+            <div class="col-sm" style={{padding: "6%"}} data-aos="fade-right">
+              <FaUserGraduate id="icons" style={{ fontSize: "30px"}}/>
               <div class="button_base b07_3d_double_roll">
                 <div>Teaching @ CS</div>
                 <div>Teaching @ CS</div>
                 <div>Teaching @ CS</div>
-                <div>Teaching @ CS</div>
+                <div>Teaching @ CS</div>    
             </div>
             </div>
-            <div class="col-sm" style={{padding: "8%"}}>
+            <div class="col-sm" style={{padding: "6%"}} data-aos="fade-up">
+              <FaCalendarAlt id="icons" style={{ fontSize: "30px"}}/>
               <div class="button_base b07_3d_double_roll">
-                  <div>Events @ CS</div>
-                  <div>Events @ CS</div>
-                  <div>Events @ CS</div>
-                  <div>Events @ CS</div>
+                <div>Events @ CS</div>
+                <div>Events @ CS</div>
+                <div>Events @ CS</div>
+                <div>Events @ CS</div>
+            </div>
+            </div>
+            <div class="col-sm" style={{padding: "6%"}} data-aos="fade-left">
+              <FaNewspaper id="icons" style={{ fontSize: "30px"}}/>
+              <div class="button_base b07_3d_double_roll">
+                  <div>Postings @ CS</div>
+                  <div>Postings @ CS</div>
+                  <div>Postings @ CS</div>
+                  <div>Postings @ CS</div>
               </div>
             </div>
           </div>

@@ -48,14 +48,10 @@ class Header extends Component {
   };
 
   toggle(menuItem) {
-    // this.setState(prevState => ({
-    //   show: !prevState.show
-    // }));
     this.setState({ [menuItem]: !this.state[menuItem] })
   }
 
   onMouseEnter(menuItem) {
-    // this.setState({show: true});
     this.setState({ [menuItem]: true })
   }
 
@@ -70,7 +66,6 @@ class Header extends Component {
         {(props) => (
           <div style={props}>
             <Navbar className="customized-nav" bg="light" expand="lg">
-              {/* <div className="logo"></div> */}
               <Navbar.Brand>
                 <a href="http://www.google.ca">
                   <img src={logo} style={{ width: 200, marginTop: -7 }}></img>

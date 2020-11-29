@@ -49,3 +49,7 @@ a:not([href]):not([class]) {
     -moz-transition: all 0.4s;
     transition: all 0.4s;
 }
+
+.btn-primary {
+    background-color: rgba(42, 118, 218, 0.829) !important
+}
