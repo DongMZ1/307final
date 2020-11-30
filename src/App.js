@@ -8,7 +8,7 @@ import Header from './Header'
 import ScrollToTop from './ScrollToTop'
 import Footer from './Footer'
 import HomePage from './HomePage'
-import React from "react";
+import React, {useState} from "react";
 
 import AboutContacts from './About/AboutContacts'
 import AboutFacilities from './About/AboutFacilities'
@@ -55,13 +55,23 @@ import ProspectiveTransfer from './ProspectivePages/ProspectiveTransfer'
 import ResearchArea from './Research/ResearchArea'
 import ResearchTecReport from './Research/ResearchTecReport'
 
+
 // import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 function App() {
+  const [logStatus, setlogStatus] = useState(false);
+  const[username, setusername] = useState("");
+  const setLoginStatus = (loggedin) => {
+    setlogStatus(loggedin);
+  }
+
+  const setUsername = (username) => {
+    setusername(username);
+  }
   
   return (
       <Router>
       <ScrollToTop />
-      <Header />
+      <Header LoginStatusTopCall={setLoginStatus} UsernameTopCall={setUsername} loginTop = {logStatus} usernameTop={username}/>
        <Switch>
          {/*homepage*/}
            <Route path = '/' component = {HomePage} exact />

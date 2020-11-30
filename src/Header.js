@@ -36,18 +36,20 @@ class Header extends Component {
       dropdownAccount: false,
       sign: false,
       login: false,
-      loggedin: false,
-      username: ""
+      loggedin: this.props.loginTop,
+      username: this.props.usernameTop
     };
   }
 
 
   setLoginStatus = (loggedin) => {
     this.setState({ loggedin: loggedin });
+    this.props.LoginStatusTopCall(loggedin);
   }
 
   setUsername = (username) => {
     this.setState({ username: username })
+    this.props.UsernameTopCall(username)
   }
 
   LogOut = () => {
