@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Spring} from 'react-spring/renderprops'
 import { useLocation } from "react-router-dom";
 
@@ -11,7 +11,7 @@ const Welcome = ()=>  {
           {props => 
           <div class="row" style={props}>
             <ScrollToTopOnMount />
-        <div class="col-sm-9">
+        <div >
           <p>Welcome! User! {`${location.state.username}`} </p>
         </div>
     </div> 
