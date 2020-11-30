@@ -12,10 +12,11 @@ import PropTypes from 'prop-types';
 
 
 
-function ValidatedLogin() {
-  
+function ValidatedLogin(props) {
+
   let history = useHistory();
-  
+
+
 
   const ValidatedLoginForm = () => (
 
@@ -29,16 +30,16 @@ function ValidatedLogin() {
           if (response.data.message) {
             //console.log("what??")
             setFieldValue('LoginStatus', response.data.message);
-            setErrors("Wrong Password!");
+            props.LoginStatusCallBack(false);
           }
           else {
             //console.log("username is ",response.data.username )
-            history.push("/welcome",{ username: response.data.username });
-            
+            history.push("/welcome", { username: response.data.username });
+            props.LoginStatusCallBack(true);
             //setFieldValue('LoginStatus', response.data);
           }
           //console.log(response);
-          
+
         });
 
         setTimeout(() => {
@@ -47,7 +48,7 @@ function ValidatedLogin() {
         }, 500);
       }
 
-    }
+      }
 
       //********Using Yum for validation********/
 
@@ -116,6 +117,6 @@ function ValidatedLogin() {
 
 ValidatedLogin.contextTypes = {
   router: PropTypes.object.isRequired
- }
+}
 
 export default ValidatedLogin;

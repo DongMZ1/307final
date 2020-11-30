@@ -34,18 +34,26 @@ class Header extends Component {
       dropdownAccount: false,
       sign: false,
       login: false,
-      loggedin: this.props.loggedin
+      loggedin: false
     };
   }
 
-  IsLoggedIn = () => {
-    if (this.props.loggedin) {
-      this.setState({ loggedin: true });
-    }
-    else {
-      this.setState({ loggedin: false });
-    }
+  async getResponse() {
+    fetch('http://localhost:3001/login')
+      .then((response) => {
+        if (response.data.message) {
+          this.setState({ loggedin: false, sign: false, login: false });
+        }
+        else {
+          this.setState({ loggedin: true, sign: false, login: false });
+        }
+      })
   }
+
+  setLoginStatus = (loggedin) => {
+    this.setState({ loggedin: loggedin });
+  }
+
 
 
 
@@ -264,18 +272,24 @@ class Header extends Component {
                         <Button variant="light" id="signup" onClick={this.onOpenModal}>SignUp</Button>
                       </NavDropdown.Item>
 
-                      <NavDropdown.Item >
+                      {this.state.loggedin ? (
+                        
+                        <NavDropdown.Item >
+                          <Button  variant="outline-danger" id="logout" onClick={this.LogOut}>Logout</Button>
+                        </NavDropdown.Item>
+                        
+                      ) : (
+                        <>
+                          <NavDropdown.Item >
+                            <Button disabled={this.state.loggedin} variant="light" id="login" onClick={this.onOpenModalLogin}>Login</Button>
+                          </NavDropdown.Item>
+                          <NavDropdown.Item >
+                          <Button variant="dark" id="login" onClick={this.onOpenModalLogin}>Account Managers</Button>
+                          </NavDropdown.Item>
+                        </>
+                        )
+                      }
 
-                        <Button disabled={this.state.loggedin} variant="light" id="login" onClick={this.onOpenModalLogin}>Login</Button>
-
-                      </NavDropdown.Item>
-                      <NavDropdown.Item >
-                        <Button disabled={!this.state.loggedin} variant="light" id="login" onClick={this.LogOut}>Logout</Button>
-                      </NavDropdown.Item>
-                      <NavDropdown.Item >
-                        <Button disabled={this.state.loggedin} variant="dark" id="login" onClick={this.onOpenModalLogin}>Account Managers</Button>
-
-                      </NavDropdown.Item>
                     </NavDropdown>
                   </Nav>
                   <Form inline>
@@ -456,7 +470,7 @@ class Header extends Component {
               <input className="btn btn-md btn-primary btn-center" id="login_btn" type="submit" value="Login" 
               onClick = {this.Login}/>
                 </form>*/}
-                <ValidatedLogin />
+                <ValidatedLogin LoginStatusCallBack={this.setLoginStatus} />
               </div>
             </Modal>
           </>
