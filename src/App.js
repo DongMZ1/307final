@@ -57,6 +57,7 @@ import ResearchTecReport from './Research/ResearchTecReport'
 
 // import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 function App() {
+  
   return (
       <Router>
       <ScrollToTop />

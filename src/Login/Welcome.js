@@ -1,6 +1,7 @@
 import React from 'react';
 import {Spring} from 'react-spring/renderprops'
 import { useLocation } from "react-router-dom";
+import Header from "../Header";
 
 const Welcome = ()=>  {
   const location = useLocation();

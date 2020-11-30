@@ -4,7 +4,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import "./ValidatedStyle.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState } from "react";
+//import { useState } from "react";
 import Axios from "axios";
 
 import { useHistory } from "react-router-dom";
@@ -15,46 +15,24 @@ import PropTypes from 'prop-types';
 function ValidatedLogin() {
   
   let history = useHistory();
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [LoginStatus, setLoginStatus] = useState("");
-  const login = () => {
-    Axios.post("http://localhost:3001/login", {
-      username: username,
-      password: password,
-    }).then((response) => {
-      if (response.data.message !== "") {
-        console.log("what??")
-        setLoginStatus(response.data.message)
-      }
-      else {
-        console.log("why??")
-        this.context.router.history.push({
-          pathname: "http://localhost:3000//welcome",
-          state: { username: response.data.username }
-        });
-      }
-      console.log(response);
-    });
-  };
-
+  
 
   const ValidatedLoginForm = () => (
-    
 
     <Formik
       initialValues={{ email: "", password: "", LoginStatus: "" }}
-      onSubmit={(values, { setSubmitting, setFieldValue }) => {
+      onSubmit={(values, { setSubmitting, setFieldValue, setErrors }) => {
         Axios.post("http://localhost:3001/login", {
           username: values.email,
           password: values.password,
         }).then((response) => {
           if (response.data.message) {
-            console.log("what??")
+            //console.log("what??")
             setFieldValue('LoginStatus', response.data.message);
+            setErrors("Wrong Password!");
           }
           else {
-            console.log("username is ",response.data.username )
+            //console.log("username is ",response.data.username )
             history.push("/welcome",{ username: response.data.username });
             
             //setFieldValue('LoginStatus', response.data);
@@ -64,10 +42,12 @@ function ValidatedLogin() {
         });
 
         setTimeout(() => {
-          console.log("Logging in", values);
+          //console.log("Logging in", values);
           setSubmitting(false);
         }, 500);
-      }}
+      }
+
+    }
 
       //********Using Yum for validation********/
 

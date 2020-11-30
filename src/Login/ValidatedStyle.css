@@ -53,5 +53,9 @@ h1 {
 
   .msg{
     color:red;
-    
+    margin:5px;
+  }
+
+  .hideDiv{
+    display: none;
   }

@@ -34,46 +34,42 @@ class Header extends Component {
       dropdownAccount: false,
       sign: false,
       login: false,
-      username: "",
-      password: "",
-      LoginStatus: "",
-      studentidReg: 0,
-      usernameReg: "",
-      passwordReg: ""
+      loggedin: this.props.loggedin
     };
   }
 
-  Login = () => {
-    Axios.post("http://localhost:3001/login", {
-      username: this.state.username,
-      password: this.state.password,
-    }).then((response) => {
-      if (response.data.message) {
-        this.setState({ LoginStatus: response.data.message })
-      }
-      else {
-        this.setState({ LoginStatus: response.data[0].username })
-      }
-      console.log(response);
-    });
-  };
+  IsLoggedIn = () => {
+    if (this.props.loggedin) {
+      this.setState({ loggedin: true });
+    }
+    else {
+      this.setState({ loggedin: false });
+    }
+  }
 
-  Register = () => {
-    Axios.post("http://localhost:3001/register", {
-        studentid: this.state.studentidReg,
-        username: this.state.usernameReg,
-        password: this.state.passwordReg,
-    }).then((response) => {
-        console.log(response);
-    });
-};
+
+
+  LogOut = () => {
+    this.setState({ loggedin: false });
+  }
 
   onOpenModal = () => {
     this.setState({ sign: true });
+    this.setState({ login: false });
   };
 
   onOpenModalLogin = () => {
     this.setState({ login: true });
+    this.setState({ sign: false });
+    if (this.props.loggedin) {
+      this.setState({
+        loggedin: true,
+        sign: false
+      });
+    }
+    else {
+      this.setState({ loggedin: false });
+    }
   };
 
   onCloseModal = () => {
@@ -100,231 +96,243 @@ class Header extends Component {
     this.setState({ [menuItem]: false })
   }
 
+
+
   render() {
 
     const { login, sign } = this.state;
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
         {(props) => (
-          <div style={props}>
-            <Navbar className="customized-nav" bg="light" expand="lg">
-              {/* <div className="logo"></div> */}
-              <Navbar.Brand>
+          <>
+            <div style={props}>
+              <Navbar className="customized-nav" bg="light" expand="lg">
+                {/* <div className="logo"></div> */}
+                <Navbar.Brand>
 
-                <img src={logo} style={{ width: 200, marginTop: -7 }} />
+                  <img src={logo} style={{ width: 200, marginTop: -7 }} />
 
-              </Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
-                  {/*Home*/}
-                  <Nav.Link href="/" id="btn-link">Home</Nav.Link>
-                  {/*Prospective*/}
-                  <NavDropdown title="Prospective" id="basic-nav-dropdown" onMouseOver={this.onMouseEnter.bind(this, 'dropdownPerspective')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownPerspective')} show={this.state.dropdownPerspective} toggle={this.toggle.bind(this, 'dropdownPerspective')}>
-                    <NavDropdown.Item href="/ProspectivePages/ProspectiveGeneralInfo">
-                      General Info
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                  <Nav className="mr-auto">
+                    {/*Home*/}
+                    <Nav.Link href="/" id="btn-link">Home</Nav.Link>
+                    {/*Prospective*/}
+                    <NavDropdown title="Prospective" id="basic-nav-dropdown" onMouseOver={this.onMouseEnter.bind(this, 'dropdownPerspective')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownPerspective')} show={this.state.dropdownPerspective} toggle={this.toggle.bind(this, 'dropdownPerspective')}>
+                      <NavDropdown.Item href="/ProspectivePages/ProspectiveGeneralInfo">
+                        General Info
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/ProspectivePages/ProspectiveWhyCS">
-                      Why CS
+                      <NavDropdown.Item href="/ProspectivePages/ProspectiveWhyCS">
+                        Why CS
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/ProspectivePages/ProspectiveCEGEP">
-                      CEGEP
+                      <NavDropdown.Item href="/ProspectivePages/ProspectiveCEGEP">
+                        CEGEP
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/ProspectivePages/ProspectiveFreshman">
-                      Freshman
+                      <NavDropdown.Item href="/ProspectivePages/ProspectiveFreshman">
+                        Freshman
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/ProspectivePages/ProspectiveChoosingAMajor">
-                      Choosing A Major
+                      <NavDropdown.Item href="/ProspectivePages/ProspectiveChoosingAMajor">
+                        Choosing A Major
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/ProspectivePages/ProspectiveTransfer">
-                      Transfer
+                      <NavDropdown.Item href="/ProspectivePages/ProspectiveTransfer">
+                        Transfer
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/ProspectivePages/ProspectiveInternship">
-                      Internship
+                      <NavDropdown.Item href="/ProspectivePages/ProspectiveInternship">
+                        Internship
                     </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="/ProspectivePages/ProspectiveUndergrad">
-                      Undergrad addmission
+                      <NavDropdown.Divider />
+                      <NavDropdown.Item href="/ProspectivePages/ProspectiveUndergrad">
+                        Undergrad addmission
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="ProspectiveGrad">
-                      Grad addmission
+                      <NavDropdown.Item href="ProspectiveGrad">
+                        Grad addmission
                     </NavDropdown.Item>
-                  </NavDropdown>
+                    </NavDropdown>
 
-                  {/*academic */}
-                  <NavDropdown title="Academic" id="AcademicButton" onMouseOver={this.onMouseEnter.bind(this, 'dropdownAcademic')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownAcademic')} show={this.state.dropdownAcademic} toggle={this.toggle.bind(this, 'dropdownAcademic')}>
-                    <NavDropdown.Item href="/Academic/AcademicUndergrad">
-                      Undergraduate
+                    {/*academic */}
+                    <NavDropdown title="Academic" id="AcademicButton" onMouseOver={this.onMouseEnter.bind(this, 'dropdownAcademic')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownAcademic')} show={this.state.dropdownAcademic} toggle={this.toggle.bind(this, 'dropdownAcademic')}>
+                      <NavDropdown.Item href="/Academic/AcademicUndergrad">
+                        Undergraduate
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/Academic/AcademicGrad">
-                      Graduate
+                      <NavDropdown.Item href="/Academic/AcademicGrad">
+                        Graduate
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/Academic/AcademicCourses">
-                      Courses
+                      <NavDropdown.Item href="/Academic/AcademicCourses">
+                        Courses
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/Academic/AcademicTeachingAss">
-                      Teaching Assistance
+                      <NavDropdown.Item href="/Academic/AcademicTeachingAss">
+                        Teaching Assistance
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/Academic/AcademicFunding">
-                      Funding
+                      <NavDropdown.Item href="/Academic/AcademicFunding">
+                        Funding
                     </NavDropdown.Item>
-                  </NavDropdown>
+                    </NavDropdown>
 
-                  {/*Research */}
-                  <NavDropdown title="Research" id="ResearchButton" onMouseOver={this.onMouseEnter.bind(this, 'dropdownResearch')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownResearch')} show={this.state.dropdownResearch} toggle={this.toggle.bind(this, 'dropdownResearch')}>
-                    <NavDropdown.Item href="/Research/ResearchArea">
-                      Area
+                    {/*Research */}
+                    <NavDropdown title="Research" id="ResearchButton" onMouseOver={this.onMouseEnter.bind(this, 'dropdownResearch')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownResearch')} show={this.state.dropdownResearch} toggle={this.toggle.bind(this, 'dropdownResearch')}>
+                      <NavDropdown.Item href="/Research/ResearchArea">
+                        Area
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/Research/ResearchTecReport">
-                      Tech Report
+                      <NavDropdown.Item href="/Research/ResearchTecReport">
+                        Tech Report
                     </NavDropdown.Item>
-                  </NavDropdown>
+                    </NavDropdown>
 
-                  {/*People */}
-                  <NavDropdown title="People" id="PeopleButton" onMouseOver={this.onMouseEnter.bind(this, 'dropdownPeople')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownPeople')} show={this.state.dropdownPeople} toggle={this.toggle.bind(this, 'dropdownPeople')}>
-                    <NavDropdown.Item href="/People/PeopleFaculty">
-                      Faculty
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="/People/PeopleStaff">
-                      Staff
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="/People/PeopleCommunity">
-                      Community
-                    </NavDropdown.Item>
-                  </NavDropdown>
+                    {/*People */}
 
-                  {/*News */}
-                  <NavDropdown title="News" id="news" onMouseOver={this.onMouseEnter.bind(this, 'dropdownNews')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownNews')} show={this.state.dropdownNews} toggle={this.toggle.bind(this, 'dropdownNews')}>
-                    <NavDropdown.Item href="/News/News">News</NavDropdown.Item>
-                    <NavDropdown.Item href="/News/Events">
-                      Events
+                    <NavDropdown title="People" id="PeopleButton" onMouseOver={this.onMouseEnter.bind(this, 'dropdownPeople')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownPeople')} show={this.state.dropdownPeople} toggle={this.toggle.bind(this, 'dropdownPeople')}>
+                      <NavDropdown.Item href="/People/PeopleFaculty">
+                        Faculty
                     </NavDropdown.Item>
-                  </NavDropdown>
+                      <NavDropdown.Item href="/People/PeopleStaff">
+                        Staff
+                    </NavDropdown.Item>
+                      <NavDropdown.Item href="/People/PeopleCommunity">
+                        Community
+                    </NavDropdown.Item>
+                    </NavDropdown>
 
-                  {/*Employment */}
-                  <NavDropdown title="Employment" id="" onMouseOver={this.onMouseEnter.bind(this, 'dropdownEmployment')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownEmployment')} show={this.state.dropdownEmployment} toggle={this.toggle.bind(this, 'dropdownEmployment')}>
-                    <NavDropdown.Item href="/Employment/EmploymentFaculty">
-                      Faculty
+                    {/*News */}
+                    <NavDropdown title="News" id="news" onMouseOver={this.onMouseEnter.bind(this, 'dropdownNews')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownNews')} show={this.state.dropdownNews} toggle={this.toggle.bind(this, 'dropdownNews')}>
+                      <NavDropdown.Item href="/News/News">News</NavDropdown.Item>
+                      <NavDropdown.Item href="/News/Events">
+                        Events
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/Employment/EmploymentLecturer">
-                      Course Lecturer
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="/Employment/EmploymentPP">
-                      Priority Points
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="/Employment/EmploymentResearch">
-                      Research
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="/Employment/EmploymentStudents">
-                      Students
-                    </NavDropdown.Item>
-                  </NavDropdown>
+                    </NavDropdown>
 
-                  {/*Donate*/}
-                  <Nav.Link href="/Donate/Donate" id="btn-link">Donate</Nav.Link>
+                    {/*Employment */}
+                    <NavDropdown title="Employment" id="" onMouseOver={this.onMouseEnter.bind(this, 'dropdownEmployment')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownEmployment')} show={this.state.dropdownEmployment} toggle={this.toggle.bind(this, 'dropdownEmployment')}>
+                      <NavDropdown.Item href="/Employment/EmploymentFaculty">
+                        Faculty
+                    </NavDropdown.Item>
+                      <NavDropdown.Item href="/Employment/EmploymentLecturer">
+                        Course Lecturer
+                    </NavDropdown.Item>
+                      <NavDropdown.Item href="/Employment/EmploymentPP">
+                        Priority Points
+                    </NavDropdown.Item>
+                      <NavDropdown.Divider />
+                      <NavDropdown.Item href="/Employment/EmploymentResearch">
+                        Research
+                    </NavDropdown.Item>
+                      <NavDropdown.Item href="/Employment/EmploymentStudents">
+                        Students
+                    </NavDropdown.Item>
+                    </NavDropdown>
 
-                  {/*about */}
-                  <NavDropdown title="About" id="" onMouseOver={this.onMouseEnter.bind(this, 'dropdownAbout')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownAbout')} show={this.state.dropdownAbout} toggle={this.toggle.bind(this, 'dropdownAbout')}>
-                    <NavDropdown.Item href="/About/AboutContacts">
-                      Contacts
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="/About/AboutFacilities">
-                      Facilities
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
+                    {/*Donate*/}
+                    <Nav.Link href="/Donate/Donate" id="btn-link">Donate</Nav.Link>
 
-                    <NavDropdown.Item href="/About/AboutVF">
-                      Visitor Form
+                    {/*about */}
+                    <NavDropdown title="About" id="" onMouseOver={this.onMouseEnter.bind(this, 'dropdownAbout')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownAbout')} show={this.state.dropdownAbout} toggle={this.toggle.bind(this, 'dropdownAbout')}>
+                      <NavDropdown.Item href="/About/AboutContacts">
+                        Contacts
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/About/AboutRoomR">
-                      Room Reservation
+                      <NavDropdown.Item href="/About/AboutFacilities">
+                        Facilities
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/About/AboutWebM">
-                      WebMail
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
+                      <NavDropdown.Divider />
 
-                    <NavDropdown.Item href="/About/AboutInternal">
-                      Internal
+                      <NavDropdown.Item href="/About/AboutVF">
+                        Visitor Form
                     </NavDropdown.Item>
-                    <NavDropdown.Divider />
+                      <NavDropdown.Item href="/About/AboutRoomR">
+                        Room Reservation
+                    </NavDropdown.Item>
+                      <NavDropdown.Item href="/About/AboutWebM">
+                        WebMail
+                    </NavDropdown.Item>
+                      <NavDropdown.Divider />
 
-                    <NavDropdown.Item href="/About/AboutTechSupport">
-                      Tech Support
+                      <NavDropdown.Item href="/About/AboutInternal">
+                        Internal
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/About/AboutAdminInfor">
-                      Admin Information
-                    </NavDropdown.Item>
-                  </NavDropdown>
+                      <NavDropdown.Divider />
 
-                  {/*account*/}
-                  <NavDropdown title="Account" id="accountManager" onMouseOver={this.onMouseEnter.bind(this, 'dropdownAccount')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownAccount')} show={this.state.dropdownAccount} toggle={this.toggle.bind(this, 'dropdownAccount')}>
-                    <NavDropdown.Item >
-                      <Button variant="outline-danger" id="signup" onClick={this.onOpenModal}>SignUp</Button>
+                      <NavDropdown.Item href="/About/AboutTechSupport">
+                        Tech Support
                     </NavDropdown.Item>
-                    <NavDropdown.Item >
-                      <Button variant="outline-danger" id="login" onClick={this.onOpenModalLogin}>Login</Button>
+                      <NavDropdown.Item href="/About/AboutAdminInfor">
+                        Admin Information
                     </NavDropdown.Item>
+                    </NavDropdown>
 
-                    <NavDropdown.Item href="">
-                      Account Manage (IT worker only)
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                </Nav>
-                <Form inline>
-                  <FormControl
-                    type="text"
-                    placeholder="Search"
-                    className="mr-sm-2"
-                  />
-                  <Button variant="outline-primary">Search</Button>
-                </Form>
-              </Navbar.Collapse>
-            </Navbar>
-            <div className="header">
-              <div className="headerleft">
-                <div
-                  class="container-fluid"
-                  style={{ padding: "20px", marginTop: "10px" }}
-                >
-                  <div class="row">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-lg-1"></div>
-                      </div>
-                    </div>
-                    <div class="container">
-                      <div class="row" style={{ marginRight: "-30px" }}>
-                        <div class="col-lg-7">
-                          <div className="coverText">
-                            <h3>School of Computer Science</h3>
-                            <br />
-                            <span
-                              style={{ fontFamily: "unset", fontSize: "72px" }}
-                            >
-                              @ McGill{" "}
-                            </span>
-                            <FaSchool
-                              style={{ fontSize: "72px", marginBottom: "45px" }}
-                            ></FaSchool>
-                          </div>
-                        </div>
-                        <div class="col-lg-4">
-                          <div className="coverImg">
-                            <img src={brain} alt="loading..." />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    {/*account*/}
+                    <NavDropdown title="Account" id="accountManager" onMouseOver={this.onMouseEnter.bind(this, 'dropdownAccount')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownAccount')} show={this.state.dropdownAccount} toggle={this.toggle.bind(this, 'dropdownAccount')}>
+                      <NavDropdown.Item >
+                        <Button variant="light" id="signup" onClick={this.onOpenModal}>SignUp</Button>
+                      </NavDropdown.Item>
+
+                      <NavDropdown.Item >
+
+                        <Button disabled={this.state.loggedin} variant="light" id="login" onClick={this.onOpenModalLogin}>Login</Button>
+
+                      </NavDropdown.Item>
+                      <NavDropdown.Item >
+                        <Button disabled={!this.state.loggedin} variant="light" id="login" onClick={this.LogOut}>Logout</Button>
+                      </NavDropdown.Item>
+                      <NavDropdown.Item >
+                        <Button disabled={this.state.loggedin} variant="dark" id="login" onClick={this.onOpenModalLogin}>Account Managers</Button>
+
+                      </NavDropdown.Item>
+                    </NavDropdown>
+                  </Nav>
+                  <Form inline>
+                    <FormControl
+                      type="text"
+                      placeholder="Search"
+                      className="mr-sm-2"
+                    />
+                    <Button variant="outline-primary">Search</Button>
+                  </Form>
+                </Navbar.Collapse>
+              </Navbar>
+              <div className="header">
+                <div className="headerleft">
+                  <div
+                    class="container-fluid"
+                    style={{ padding: "20px", marginTop: "10px" }}
+                  >
                     <div class="row">
-                      <div class="col-lg-12"></div>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-lg-1"></div>
+                        </div>
+                      </div>
+                      <div class="container">
+                        <div class="row" style={{ marginRight: "-30px" }}>
+                          <div class="col-lg-7">
+                            <div className="coverText">
+                              <h3>School of Computer Science</h3>
+                              <br />
+                              <span
+                                style={{ fontFamily: "unset", fontSize: "72px" }}
+                              >
+                                @ McGill{" "}
+                              </span>
+                              <FaSchool
+                                style={{ fontSize: "72px", marginBottom: "45px" }}
+                              ></FaSchool>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div className="coverImg">
+                              <img src={brain} alt="loading..." />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-12"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <Modal isOpen={sign}
+              ariaHideApp={false}
               onRequestClose={this.onCloseModal}
               shouldCloseOnOverlayClick={true}
               animationType="fade"
@@ -363,27 +371,27 @@ class Header extends Component {
                 <h2>Sign up</h2>
                 <form className="contact-form form-validate3" noValidate="novalidate" method="post">
                   <div className="form-group">
-                    <input className="form-control" type="text" name="studentid" id="studentid" placeholder="Student ID" autocomplete="off" 
-                    onChange={(event) => {
-                      this.setState({StudentidReg: event.target.value});
-                  }}
-                    required />
+                    <input className="form-control" type="text" name="studentid" id="studentid" placeholder="Student ID" autocomplete="off"
+                      onChange={(event) => {
+                        this.setState({ StudentidReg: event.target.value });
+                      }}
+                      required />
                   </div>
                   <div className="form-group">
-                    <input className="form-control" type="email" name="username" id = "username" placeholder="McGill E-mail" autocomplete="off"  
-                    onChange={(event) => {
-                      this.setState({UsernameReg: event.target.value});
-                  }}
-                    required />
+                    <input className="form-control" type="email" name="username" id="username" placeholder="McGill E-mail" autocomplete="off"
+                      onChange={(event) => {
+                        this.setState({ UsernameReg: event.target.value });
+                      }}
+                      required />
                   </div>
                   <div className="form-group">
-                    <input type="password" name="password" id = "password" className="form-control" placeholder="Password" autocomplete="off" 
-                    onChange={(event) => {
-                      this.setState({PasswordReg: event.target.value});
-                  }}
-                    required />
+                    <input type="password" name="password" id="password" className="form-control" placeholder="Password" autocomplete="off"
+                      onChange={(event) => {
+                        this.setState({ PasswordReg: event.target.value });
+                      }}
+                      required />
                   </div>
-                  <input className="btn btn-md btn-primary btn-center" id="sign_up" type="submit" value="Sign Up" onClick = {this.Register}/>
+                  <input className="btn btn-md btn-primary btn-center" id="sign_up" type="submit" value="Sign Up" onClick={this.Register} />
                 </form>
 
               </div>
@@ -392,6 +400,7 @@ class Header extends Component {
 
 
             <Modal isOpen={login} onRequestClose={this.onCloseModalclose}
+              ariaHideApp={false}
               shouldCloseOnOverlayClick={true}
               animationType="fade"
               transparent={true}
@@ -428,29 +437,29 @@ class Header extends Component {
                 <Button variant="outline-danger" id="x" onClick={this.onCloseModalclose}> X </Button>
                 <h2>Login</h2>
                 {/*<form className="contact-form form-validate4" novalidate="novalidate" action="/" method = "post">
-                  <div className="form-group">
-                    <input className="form-control" type="email" name="username" id="username" placeholder="E-mail" autocomplete="off"
-                      onChange={
-                        (event) => {
-                          this.setState({username : event.target.value});
-                        }} required />
-                  </div>
-                  <div className="form-group">
-                    <input type="password" name="password" id="password" className="form-control" placeholder="Password" autocomplete="off"
-                     onChange={
-                      (event) => {
-                        this.setState({password : event.target.value});
-                      }}
-                    required />
-                    </div>
-                  <div class="msg">{this.state.LoginStatus}</div>
-                  <input className="btn btn-md btn-primary btn-center" id="login_btn" type="submit" value="Login" 
-                  onClick = {this.Login}/>
-                    </form>*/}
-                    <ValidatedLogin/>
+              <div className="form-group">
+                <input className="form-control" type="email" name="username" id="username" placeholder="E-mail" autocomplete="off"
+                  onChange={
+                    (event) => {
+                      this.setState({username : event.target.value});
+                    }} required />
+              </div>
+              <div className="form-group">
+                <input type="password" name="password" id="password" className="form-control" placeholder="Password" autocomplete="off"
+                 onChange={
+                  (event) => {
+                    this.setState({password : event.target.value});
+                  }}
+                required />
+                </div>
+              <div class="msg">{this.state.LoginStatus}</div>
+              <input className="btn btn-md btn-primary btn-center" id="login_btn" type="submit" value="Login" 
+              onClick = {this.Login}/>
+                </form>*/}
+                <ValidatedLogin />
               </div>
             </Modal>
-          </div>
+          </>
         )}
       </Spring>
     );
