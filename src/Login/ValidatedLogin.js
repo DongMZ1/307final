@@ -16,8 +16,6 @@ function ValidatedLogin(props) {
 
   let history = useHistory();
 
-
-
   const ValidatedLoginForm = () => (
 
     <Formik
@@ -34,8 +32,9 @@ function ValidatedLogin(props) {
           }
           else {
             //console.log("username is ",response.data.username )
-            history.push("/welcome", { username: response.data.username });
+            //history.push("/welcome", { username: response.data.username });
             props.LoginStatusCallBack(true);
+            props.UsernameCallBack(response.data.username)
             //setFieldValue('LoginStatus', response.data);
           }
           //console.log(response);

@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import Header from "../Header";
 
 const Welcome = ()=>  {
-  const location = useLocation();
+  
         return (
           <Spring
           from={{ opacity: 0 }}
@@ -13,7 +13,7 @@ const Welcome = ()=>  {
           <div class="row" style={props}>
             <ScrollToTopOnMount />
         <div >
-          <p>Welcome! User! {`${location.state.username}`} </p>
+          <p>Welcome! User! </p>
         </div>
     </div> 
      }

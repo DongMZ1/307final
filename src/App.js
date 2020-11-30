@@ -1,9 +1,9 @@
 import './App.css';
 // import IndexPage from './IndexPage';
 // import LoginPage from './Login/LoginPage';
-import RegisterPage from './Login/RegisterPage';
+// import RegisterPage from './Login/RegisterPage';
 import Welcome from './Login/Welcome'
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, withRouter} from 'react-router-dom';
 import Header from './Header'
 import ScrollToTop from './ScrollToTop'
 import Footer from './Footer'

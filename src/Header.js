@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FaFacebook, FaInstagramSquare, FaTwitter } from "react-icons/fa";
+//import { FaFacebook, FaInstagramSquare, FaTwitter } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./static/header.css";
 import { Spring } from "react-spring/renderprops";
@@ -12,9 +12,11 @@ import "./static/Modal.css";
 import ValidatedLogin from "./Login/ValidatedLogin"
 //import 'static/login.css'
 //import { useState } from "react";
-import Axios from "axios";
+//import Axios from "axios";
 //import { FormWithConstraints, FieldFeedbacks, Async, FieldFeedback } from 'react-form-with-constraints';
 //import { DisplayFields } from 'react-form-with-constraints-tools';
+//import {browserHistory} from "react-router-dom";
+//import Welcome from "./Login/Welcome"
 
 
 class Header extends Component {
@@ -34,28 +36,19 @@ class Header extends Component {
       dropdownAccount: false,
       sign: false,
       login: false,
-      loggedin: false
+      loggedin: false,
+      username: ""
     };
   }
 
-  async getResponse() {
-    fetch('http://localhost:3001/login')
-      .then((response) => {
-        if (response.data.message) {
-          this.setState({ loggedin: false, sign: false, login: false });
-        }
-        else {
-          this.setState({ loggedin: true, sign: false, login: false });
-        }
-      })
-  }
 
   setLoginStatus = (loggedin) => {
     this.setState({ loggedin: loggedin });
   }
 
-
-
+  setUsername = (username) => {
+    this.setState({ username: username })
+  }
 
   LogOut = () => {
     this.setState({ loggedin: false });
@@ -112,6 +105,7 @@ class Header extends Component {
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
         {(props) => (
+
           <>
             <div style={props}>
               <Navbar className="customized-nav" bg="light" expand="lg">
@@ -268,25 +262,30 @@ class Header extends Component {
 
                     {/*account*/}
                     <NavDropdown title="Account" id="accountManager" onMouseOver={this.onMouseEnter.bind(this, 'dropdownAccount')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownAccount')} show={this.state.dropdownAccount} toggle={this.toggle.bind(this, 'dropdownAccount')}>
-                      <NavDropdown.Item >
-                        <Button variant="light" id="signup" onClick={this.onOpenModal}>SignUp</Button>
-                      </NavDropdown.Item>
+
 
                       {this.state.loggedin ? (
-                        
-                        <NavDropdown.Item >
-                          <Button  variant="outline-danger" id="logout" onClick={this.LogOut}>Logout</Button>
-                        </NavDropdown.Item>
-                        
-                      ) : (
                         <>
-                          <NavDropdown.Item >
-                            <Button disabled={this.state.loggedin} variant="light" id="login" onClick={this.onOpenModalLogin}>Login</Button>
+                          <NavDropdown.Item href="/welcome">
+                            Welcome! {`${this.state.username}`}
                           </NavDropdown.Item>
                           <NavDropdown.Item >
-                          <Button variant="dark" id="login" onClick={this.onOpenModalLogin}>Account Managers</Button>
+                            <Button variant="outline-danger" id="logout" onClick={this.LogOut}>Logout</Button>
                           </NavDropdown.Item>
                         </>
+
+                      ) : (
+                          <>
+                            <NavDropdown.Item >
+                              <Button variant="light" id="signup" onClick={this.onOpenModal}>SignUp</Button>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item >
+                              <Button disabled={this.state.loggedin} variant="light" id="login" onClick={this.onOpenModalLogin}>Login</Button>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item >
+                              <Button variant="dark" id="login" onClick={this.onOpenModalLogin}>Account Managers</Button>
+                            </NavDropdown.Item>
+                          </>
                         )
                       }
 
@@ -345,7 +344,7 @@ class Header extends Component {
                 </div>
               </div>
             </div>
-            <Modal isOpen={sign}
+            <Modal isOpen={sign & !this.state.loggedin}
               ariaHideApp={false}
               onRequestClose={this.onCloseModal}
               shouldCloseOnOverlayClick={true}
@@ -413,7 +412,8 @@ class Header extends Component {
 
 
 
-            <Modal isOpen={login} onRequestClose={this.onCloseModalclose}
+            <Modal isOpen={login & !this.state.loggedin}
+              onRequestClose={this.onCloseModalclose}
               ariaHideApp={false}
               shouldCloseOnOverlayClick={true}
               animationType="fade"
@@ -470,7 +470,7 @@ class Header extends Component {
               <input className="btn btn-md btn-primary btn-center" id="login_btn" type="submit" value="Login" 
               onClick = {this.Login}/>
                 </form>*/}
-                <ValidatedLogin LoginStatusCallBack={this.setLoginStatus} />
+                <ValidatedLogin LoginStatusCallBack={this.setLoginStatus} UsernameCallBack={this.setUsername} />
               </div>
             </Modal>
           </>
