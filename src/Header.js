@@ -84,14 +84,10 @@ class Header extends Component {
   };
 
   toggle(menuItem) {
-    // this.setState(prevState => ({
-    //   show: !prevState.show
-    // }));
     this.setState({ [menuItem]: !this.state[menuItem] })
   }
 
   onMouseEnter(menuItem) {
-    // this.setState({show: true});
     this.setState({ [menuItem]: true })
   }
 
@@ -107,25 +103,23 @@ class Header extends Component {
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
         {(props) => (
-
-          <>
-            <div style={props}>
-              <Navbar className="customized-nav" bg="light" expand="lg">
-                {/* <div className="logo"></div> */}
-                <Navbar.Brand>
-
-                  <img src={logo} style={{ width: 200, marginTop: -7 }} />
-
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                  <Nav className="mr-auto">
-                    {/*Home*/}
-                    <Nav.Link href="/" id="btn-link">Home</Nav.Link>
-                    {/*Prospective*/}
-                    <NavDropdown title="Prospective" id="basic-nav-dropdown" onMouseOver={this.onMouseEnter.bind(this, 'dropdownPerspective')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownPerspective')} show={this.state.dropdownPerspective} toggle={this.toggle.bind(this, 'dropdownPerspective')}>
-                      <NavDropdown.Item href="/ProspectivePages/ProspectiveGeneralInfo">
-                        General Info
+        <>
+          <div style={props}>
+            <Navbar className="customized-nav" bg="light" expand="lg">
+              <Navbar.Brand>
+                <a href="http://www.google.ca">
+                  <img src={logo} style={{ width: 200, marginTop: -7 }}></img>
+                </a>
+              </Navbar.Brand>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="mr-auto">
+                  {/*Home*/}
+                  <Nav.Link href="/" id="btn-link">Home</Nav.Link>
+                  {/*Prospective*/}
+                  <NavDropdown title="Prospective" id="basic-nav-dropdown" onMouseOver={this.onMouseEnter.bind(this, 'dropdownPerspective')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownPerspective')} show={this.state.dropdownPerspective} toggle={this.toggle.bind(this, 'dropdownPerspective')}>
+                    <NavDropdown.Item href="/ProspectivePages/ProspectiveGeneralInfo">
+                      General Info
                     </NavDropdown.Item>
                       <NavDropdown.Item href="/ProspectivePages/ProspectiveWhyCS">
                         Why CS

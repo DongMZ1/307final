@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Spring} from 'react-spring/renderprops'
 import "../static/bodycomponent.css";
+
 class ProspectiveGeneralInfo extends Component {
     constructor(props) {
         super(props);
@@ -46,7 +47,6 @@ class ProspectiveGeneralInfo extends Component {
                            <h2>Student Accommodation</h2>
                            <p>Off-campus housing is the most popular among McGill graduate students, as it is usually affordable, convenient, and easy to find. The Off-Campus Housing Service keeps a computerized list of available housing within walking distance of McGill, or easily accessible by metro and bus lines. Most listings are checked to ensure minimum standards of cleanliness and state of repair. Rental rates vary according to accommodation desired, but are considered very reasonable in comparison with most North American cities. The University maintains a limited number of apartment units in several nearby locations. Housing request forms can be obtained from the Graduate Housing office.</p>
                  </div>
-
                 </div>
             </div>
              }

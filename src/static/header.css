@@ -31,7 +31,7 @@
     transition: all 0.4s;
 }
 
-.dropdown:hover, #btn-link:hover {
+.dropdown:hover, .dropdown-item:hover, #btn-link:hover {
     background-color: rgba(122, 226, 245, 0.705);
     color: black;
     -webkit-transition: all 0.4s;
