@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import {Spring} from 'react-spring/renderprops'
-class Welcome extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  }
-    }
-    render() { 
-      
+import { useLocation } from "react-router-dom";
+
+const Welcome = ()=>  {
+  const location = useLocation();
         return (
           <Spring
           from={{ opacity: 0 }}
@@ -15,12 +12,12 @@ class Welcome extends Component {
           <div class="row" style={props}>
             <ScrollToTopOnMount />
         <div class="col-sm-9">
-        <p>Welcome! User!</p>
+          <p>Welcome! User! {`${location.state.username}`} </p>
         </div>
     </div> 
      }
      </Spring>);
-    }
+    
 }
  
 export default Welcome;

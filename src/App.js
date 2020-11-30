@@ -67,7 +67,7 @@ function App() {
          {/*prospectivePages*/}
           {/* <Route path = "/login" component = {LoginPage} />
            <Route path = "/register" component = {RegisterPage} /> */}
-           <Route path = '/welcome' component = {Welcome}/>
+           <Route path = "/welcome" component = {Welcome}/>
            <Route path = "/ProspectivePages/ProspectiveGeneralInfo" component = {ProspectiveGeneralInfo} />
            <Route path = "/ProspectivePages/ProspectiveCEGEP" component = {ProspectiveCEGEP} />
            <Route path = "/ProspectivePages/ProspectiveChoosingAMajor" component = {ProspectiveChoosingAMajor} />

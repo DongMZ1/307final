@@ -47,7 +47,15 @@ app.post('/login',(req,res) =>{
   console.log("username is", username);
   console.log("password is", password);
   
+  if(username == "hello@m.com"){
+    res.send({username: username})
+  }
+  else{
+    res.send({message:"Wrong username/password, Please try again!"})
+  }
   
+
+  /*
   db.query(
     "SELECT FROM users WHERE email = ? and passcode = ?; ",
     [username,password],
@@ -67,7 +75,7 @@ app.post('/login',(req,res) =>{
         }
       }
     }
-  )
+  )*/
 
 } );
 

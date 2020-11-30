@@ -1,14 +1,20 @@
 import React from "react";
 import { Formik } from "formik";
-import * as EmailValidator from "email-validator";
+//import * as EmailValidator from "email-validator";
 import * as Yup from "yup";
 import "./ValidatedStyle.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import Axios from "axios";
 
-function ValidatedLogin() {
+import { useHistory } from "react-router-dom";
+import PropTypes from 'prop-types';
 
+
+
+function ValidatedLogin() {
+  
+  let history = useHistory();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [LoginStatus, setLoginStatus] = useState("");
@@ -17,62 +23,52 @@ function ValidatedLogin() {
       username: username,
       password: password,
     }).then((response) => {
-      if (response.data.message) {
+      if (response.data.message !== "") {
+        console.log("what??")
         setLoginStatus(response.data.message)
       }
       else {
-        setLoginStatus(response.data[0].username)
+        console.log("why??")
+        this.context.router.history.push({
+          pathname: "http://localhost:3000//welcome",
+          state: { username: response.data.username }
+        });
       }
       console.log(response);
     });
   };
 
 
-
   const ValidatedLoginForm = () => (
+    
 
     <Formik
-      initialValues={{ email: "", password: "" }}
-      onSubmit={(values, { setSubmitting }) => {
+      initialValues={{ email: "", password: "", LoginStatus: "" }}
+      onSubmit={(values, { setSubmitting, setFieldValue }) => {
         Axios.post("http://localhost:3001/login", {
           username: values.email,
           password: values.password,
         }).then((response) => {
           if (response.data.message) {
-            setLoginStatus(response.data.message)
+            console.log("what??")
+            setFieldValue('LoginStatus', response.data.message);
           }
           else {
-            setLoginStatus(response.data[0].username)
+            console.log("username is ",response.data.username )
+            history.push("/welcome",{ username: response.data.username });
+            
+            //setFieldValue('LoginStatus', response.data);
           }
-          console.log(response);
+          //console.log(response);
+          
         });
-
 
         setTimeout(() => {
           console.log("Logging in", values);
           setSubmitting(false);
         }, 500);
       }}
-      //********Handling validation messages yourself*******/
-      // validate={values => {
-      //   let errors = {};
-      //   if (!values.email) {
-      //     errors.email = "Required";
-      //   } else if (!EmailValidator.validate(values.email)) {
-      //     errors.email = "Invalid email address";
-      //   }
 
-      //   const passwordRegex = /(?=.*[0-9])/;
-      //   if (!values.password) {
-      //     errors.password = "Required";
-      //   } else if (values.password.length < 8) {
-      //     errors.password = "Password must be 8 characters long.";
-      //   } else if (!passwordRegex.test(values.password)) {
-      //     errors.password = "Invalida password. Must contain one number";
-      //   }
-
-      //   return errors;
-      // }}
       //********Using Yum for validation********/
 
       validationSchema={Yup.object().shape({
@@ -122,7 +118,7 @@ function ValidatedLogin() {
             {errors.password && touched.password && (
               <div className="input-feedback">{errors.password}</div>
             )}
-            <div class="msg">{LoginStatus}</div>
+            <div class="msg">{values.LoginStatus}</div>
             <button type="submit" className="btn btn-md btn-primary btn-center"
               disabled={isSubmitting}>
               Login
@@ -137,5 +133,9 @@ function ValidatedLogin() {
     ValidatedLoginForm()
   )
 }
+
+ValidatedLogin.contextTypes = {
+  router: PropTypes.object.isRequired
+ }
 
 export default ValidatedLogin;
