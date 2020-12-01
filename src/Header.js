@@ -252,9 +252,9 @@ class Header extends Component {
                       </div>
                     </div>
                     <div class="container">
-                      <div class="row" style={{ marginRight: "-30px" }}>
+                      <div class="row">
                         <div class="col-lg-7">
-                          <div className="coverText">
+                          <div className="coverText" data-aos="zoom-in">
                             <h3>School of Computer Science</h3>
                             <br />
                             <span
@@ -267,7 +267,7 @@ class Header extends Component {
                             ></FaSchool>
                           </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-5">
                           <div className="coverImg">
                             <img src={brain} alt="loading..." />
                           </div>
