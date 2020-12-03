@@ -28,10 +28,8 @@ a:not([href]):not([class]) {
 }
 
 .nav {
-    width: 200px;
     font-size: medium;
     background-color: transparent;
-    /* padding-left: 10%; */
     padding-top: 5%;
     padding-right: 0;
     display: block;
@@ -52,4 +50,37 @@ a:not([href]):not([class]) {
 
 .btn-primary {
     background-color: rgba(42, 118, 218, 0.829) !important
+}
+
+.card {
+    background: transparent; 
+}
+
+.accordion {
+    background: transparent; 
+}
+
+.accordion .card-header {
+    background: #79bfee5b;
+    /* background:rgba(42, 118, 218, 0.829); */
+    color: whitesmoke;
+}
+
+.btn-link {
+    color: rgb(3, 103, 157);
+    background: transparent;
+}
+
+
+.research-image {
+    width: 65%;
+    height: auto;
+    border-radius: 50%;
+    margin-left: 100px;
+}
+
+.list-group-item {
+    padding: 0; 
+    border: none;
+    background: transparent;
 }

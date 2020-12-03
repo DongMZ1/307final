@@ -49,7 +49,7 @@ class HomePage extends Component {
                 
                   
                   <br></br>
-                  <button type="button" class="btn btn-primary" href="https://mcgillrobotics.com/">Read More</button>
+                  <button type="button" class="btn btn-primary"><a href="https://mcgillrobotics.com/" style={{color: "whitesmoke"}}>Read More</a></button>
               </div>
             </div>
             <Carousel.Caption className="caption">
@@ -70,7 +70,7 @@ class HomePage extends Component {
                
                 
                 <br></br>
-                <button type="button" class="btn btn-primary" href="https://www.cs.ubc.ca/news/2020/10/how-ai-helping-battle-against-covid-19">Read More</button>
+                <button type="button" class="btn btn-primary"><a href="https://www.cs.ubc.ca/news/2020/10/how-ai-helping-battle-against-covid-19" style={{color: "whitesmoke"}}>Read More</a></button>
               </div>
             </div>
             <Carousel.Caption className="caption">
@@ -90,7 +90,7 @@ class HomePage extends Component {
                 status = {!this.state.loggedin}//true == cannot edit, false == editable
                 />
                 <br></br>
-                <button type="button" class="btn btn-primary" href="https://www.mcgillai.com/">Read More</button>
+                <button type="button" class="btn btn-primary"><a href="https://www.mcgillai.com/" style={{color: "whitesmoke"}}>Read More</a></button>
               </div>
             </div>
             <Carousel.Caption className="caption">
