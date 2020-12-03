@@ -55,23 +55,34 @@ import ProspectiveTransfer from './ProspectivePages/ProspectiveTransfer'
 import ResearchArea from './Research/ResearchArea'
 import ResearchTecReport from './Research/ResearchTecReport'
 import Editable from "./Editable";
+import { Session } from 'bc-react-session';
+//import Cookies from 'js-cookie';
 
 // import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 function App() {
-  const [logStatus, setlogStatus] = useState(false);
-  const[username, setusername] = useState("");
-  const setLoginStatus = (loggedin) => {
-    setlogStatus(loggedin);
-  }
+  // const [logStatus, setlogStatus] = useState(false);
+  // const[username, setusername] = useState("");
+    //const session = Session.get();
+    //console.log("APP page session:", session);
+  // const { payload } = Session.get();
+  // setlogStatus(session.isValid);
+  // if(logStatus){
+  //   setusername(payload.username);
+  // }
+  // const setLoginStatus = (loggedin) => {
+  //   setlogStatus(loggedin);
+  // }
+  
 
-  const setUsername = (username) => {
-    setusername(username);
-  }
+  // const setUsername = (username) => {
+  //   setusername(username);
+  // }
+  //console.log("asdfasdfasdf:", Cookies.get('username'))
   
   return (
       <Router>
       <ScrollToTop />
-      <Header LoginStatusTopCall={setLoginStatus} UsernameTopCall={setUsername} loginTop = {logStatus} usernameTop={username}/>
+      <Header/>
        <Switch>
          {/*homepage*/}
            <Route path = '/' component = {HomePage} exact />

@@ -8,12 +8,16 @@ import bot  from './pictures/bot.jpg';
 import covid from './pictures/covid.jpg'; 
 import ml from './pictures/ml.jpg'; 
 import Editable from './Editable';
+import { Session } from 'bc-react-session';
 
 class HomePage extends Component {
+  
   constructor(props) {
     super(props);
+    const session = Session.get();
+    console.log(session);
     this.state = {
-      loggedin: false
+      loggedin: session.isValid
     };
   }
   render() {

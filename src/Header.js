@@ -10,6 +10,7 @@ import logo from "./pictures/logo.png";
 import Modal from "react-modal";
 import "./static/Modal.css";
 import ValidatedLogin from "./Login/ValidatedLogin"
+import { Session } from 'bc-react-session';
 //import 'static/login.css'
 //import { useState } from "react";
 //import Axios from "axios";
@@ -25,6 +26,19 @@ class Header extends Component {
     this.toggle = this.toggle.bind(this);
     this.onMouseEnter = this.onMouseEnter.bind(this);
     this.onMouseLeave = this.onMouseLeave.bind(this);
+    // Session.start(
+    //   {
+    //     payload: {
+    //       logstatus: true,
+    //       username: ""
+    //     },
+    //     expiration: 10
+    //   }
+    // );
+    // Session.onExpiration((session) => session.destroy());
+    const session = Session.get();
+    const { payload } = Session.get();
+
     this.state = {
       dropdownPerspective: false,
       dropdownAcademic: false,
@@ -36,25 +50,55 @@ class Header extends Component {
       dropdownAccount: false,
       sign: false,
       login: false,
-      loggedin: this.props.loginTop,
-      username: this.props.usernameTop
+      loggedin: session.isValid,
+      username: payload.username
     };
   }
 
+  
 
   setLoginStatus = (loggedin) => {
-    this.setState({ loggedin: loggedin });
-    this.props.LoginStatusTopCall(loggedin);
+    //this.props.LoginStatusTopCall(loggedin);
+    this.setState({ loggedin: true });
+    if (loggedin) {
+       
+      Session.start(
+        {
+            payload: {
+              //logstatus: true,
+              username: ""
+            }
+          }
+        );
+        alert("Congradulation! you are logged in!")
+      //console.log(Session.get());
+      //Session.onExpiration((session) => session.destroy());
+      
+    }
   }
 
+
   setUsername = (username) => {
-    this.setState({ username: username })
-    this.props.UsernameTopCall(username)
+    Session.setPayload({
+      username: username
+    });
+    this.setState({ username: Session.get().payload.username })
+    window.location.reload(); 
+    //this.props.UsernameTopCall(username)
+  
+    //console.log(session.isValid); // will be true if is not expired or innactive
+    //console.log(payload);
   }
 
   LogOut = () => {
     this.setState({ loggedin: false });
+    Session.destroy();
+    alert("You are logged out!");
+    window.location.reload(); 
+    //console.log(Session.get());
   }
+
+  
 
   onOpenModal = () => {
     this.setState({ sign: true });
@@ -103,23 +147,23 @@ class Header extends Component {
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
         {(props) => (
-        <>
-          <div style={props}>
-            <Navbar className="customized-nav" bg="light" expand="lg">
-              <Navbar.Brand>
-                <a href="http://www.google.ca">
-                  <img src={logo} style={{ width: 200, marginTop: -7 }}></img>
-                </a>
-              </Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
-                  {/*Home*/}
-                  <Nav.Link href="/" id="btn-link">Home</Nav.Link>
-                  {/*Prospective*/}
-                  <NavDropdown title="Prospective" id="basic-nav-dropdown" onMouseOver={this.onMouseEnter.bind(this, 'dropdownPerspective')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownPerspective')} show={this.state.dropdownPerspective} toggle={this.toggle.bind(this, 'dropdownPerspective')}>
-                    <NavDropdown.Item href="/ProspectivePages/ProspectiveGeneralInfo">
-                      General Info
+          <>
+            <div style={props}>
+              <Navbar className="customized-nav" bg="light" expand="lg">
+                <Navbar.Brand>
+                  <a href="http://www.google.ca">
+                    <img src={logo} style={{ width: 200, marginTop: -7 }}></img>
+                  </a>
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                  <Nav className="mr-auto">
+                    {/*Home*/}
+                    <Nav.Link href="/" id="btn-link">Home</Nav.Link>
+                    {/*Prospective*/}
+                    <NavDropdown title="Prospective" id="basic-nav-dropdown" onMouseOver={this.onMouseEnter.bind(this, 'dropdownPerspective')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownPerspective')} show={this.state.dropdownPerspective} toggle={this.toggle.bind(this, 'dropdownPerspective')}>
+                      <NavDropdown.Item href="/ProspectivePages/ProspectiveGeneralInfo">
+                        General Info
                     </NavDropdown.Item>
                       <NavDropdown.Item href="/ProspectivePages/ProspectiveWhyCS">
                         Why CS
