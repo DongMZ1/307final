@@ -51,57 +51,62 @@ class Header extends Component {
       sign: false,
       login: false,
       loggedin: session.isValid,
-      username: payload.username
+      username: payload.name
     };
   }
 
-  
+
 
   setLoginStatus = (loggedin) => {
     //this.props.LoginStatusTopCall(loggedin);
-    this.setState({ loggedin: true });
     if (loggedin) {
-       
+      this.setState({ loggedin: true });
       Session.start(
         {
-            payload: {
-              //logstatus: true,
-              username: ""
-            }
+          payload: {
+            //logstatus: true,
+            username: ""
           }
-        );
-        //alert("Congradulation! you are logged in!")
+        }
+      );
+      //alert("Congradulation! you are logged in!")
       //console.log(Session.get());
-      Session.onExpiration((session) =>{
+      Session.onExpiration((session) => {
         session.destroy();
         alert("Session Expires! Please login again!")
-      } );
-      
+      });
+
     }
   }
 
 
-  setUsername = (username) => {
-    Session.setPayload({
-      username: username
-    });
-    this.setState({ username: Session.get().payload.username })
-    window.location.reload(); 
-    //this.props.UsernameTopCall(username)
-  
-    //console.log(session.isValid); // will be true if is not expired or innactive
-    //console.log(payload);
+  setUserInfo = (user) => {
+    if (user) {
+      console.log(user);
+      Session.setPayload({
+        username: user.Username,
+        UserID: user.UserID,
+        name: user.Name,
+        age: user.age,
+        staff: user.staff
+      });
+      this.setState({ username: Session.get().payload.name })
+      //window.location.reload();
+      //this.props.UsernameTopCall(username)
+      //console.log(session.isValid); // will be true if is not expired or innactive
+      //console.log(payload);
+    }
   }
 
   LogOut = () => {
     this.setState({ loggedin: false });
     Session.destroy();
     alert("You are logged out!");
-    window.location.reload(); 
+    window.location.reload();
     //console.log(Session.get());
   }
 
-  
+
 
   onOpenModal = () => {
     this.setState({ sign: true });
@@ -447,7 +452,7 @@ class Header extends Component {
               <input className="btn btn-md btn-primary btn-center" id="login_btn" type="submit" value="Login" 
               onClick = {this.Login}/>
                 </form>*/}
-                <ValidatedLogin LoginStatusCallBack={this.setLoginStatus} UsernameCallBack={this.setUsername} />
+                <ValidatedLogin LoginStatusCallBack={this.setLoginStatus} UserInfoCallBack={this.setUserInfo} />
               </div>
             </Modal>
           </>
