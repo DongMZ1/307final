@@ -1,3 +1,7 @@
+# Before run the repo:
+
+## `npm install` to download all dependencies! 
+
 # Backend using flask
 `pip install -r requirements.txt` to install dependencies 
 

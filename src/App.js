@@ -1,13 +1,15 @@
 import './App.css';
 // import IndexPage from './IndexPage';
 // import LoginPage from './Login/LoginPage';
-import RegisterPage from './Login/RegisterPage';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+// import RegisterPage from './Login/RegisterPage';
+import Welcome from './Login/Welcome'
+import { BrowserRouter as Router, Switch, Route, withRouter} from 'react-router-dom';
+// import { HashRouter as Router, Switch, Route, withRouter} from 'react-router-dom';
 import Header from './Header'
 import ScrollToTop from './ScrollToTop'
 import Footer from './Footer'
 import HomePage from './HomePage'
-import React from "react";
+import React, {useState} from "react";
 
 import AboutContacts from './About/AboutContacts'
 import AboutFacilities from './About/AboutFacilities'
@@ -53,19 +55,42 @@ import ProspectiveTransfer from './ProspectivePages/ProspectiveTransfer'
 
 import ResearchArea from './Research/ResearchArea'
 import ResearchTecReport from './Research/ResearchTecReport'
+import Editable from "./Editable";
+//import { Session } from 'bc-react-session';
+//import Cookies from 'js-cookie';
 
 // import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 function App() {
+  // const [logStatus, setlogStatus] = useState(false);
+  // const[username, setusername] = useState("");
+    //const session = Session.get();
+    //console.log("APP page session:", session);
+  // const { payload } = Session.get();
+  // setlogStatus(session.isValid);
+  // if(logStatus){
+  //   setusername(payload.username);
+  // }
+  // const setLoginStatus = (loggedin) => {
+  //   setlogStatus(loggedin);
+  // }
+  
+
+  // const setUsername = (username) => {
+  //   setusername(username);
+  // }
+  //console.log("asdfasdfasdf:", Cookies.get('username'))
+  
   return (
       <Router>
       <ScrollToTop />
-      <Header />
+      <Header/>
        <Switch>
          {/*homepage*/}
            <Route path = '/' component = {HomePage} exact />
          {/*prospectivePages*/}
           {/* <Route path = "/login" component = {LoginPage} />
            <Route path = "/register" component = {RegisterPage} /> */}
+           <Route path = "/welcome" component = {Welcome}/>
            <Route path = "/ProspectivePages/ProspectiveGeneralInfo" component = {ProspectiveGeneralInfo} />
            <Route path = "/ProspectivePages/ProspectiveCEGEP" component = {ProspectiveCEGEP} />
            <Route path = "/ProspectivePages/ProspectiveChoosingAMajor" component = {ProspectiveChoosingAMajor} />

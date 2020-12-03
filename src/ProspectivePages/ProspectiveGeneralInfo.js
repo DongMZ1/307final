@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Spring} from 'react-spring/renderprops'
 import "../static/bodycomponent.css";
+
 class ProspectiveGeneralInfo extends Component {
     constructor(props) {
         super(props);

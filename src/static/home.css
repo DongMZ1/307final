@@ -20,7 +20,7 @@
   /* height: auto; */
   place-items: center;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 50px;
   padding-bottom: 0;
   object-fit: cover;
 }
@@ -185,6 +185,11 @@ body {
     .back {
         width: 100%;
     }
+}
+
+#icons {
+  display: "inline-block";
+  margin-left: 85px;
 }
 
 .button_base {
