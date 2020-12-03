@@ -21,6 +21,7 @@ class Editable extends Component{
                   disabled={this.props.status}       // use true to disable editing
                   onChange={this.handleChange} // handle innerHTML change
                   tagName='article' // Use a custom HTML tag (uses a div by default)
+                  
                 />
       };
 }

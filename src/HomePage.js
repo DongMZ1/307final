@@ -17,9 +17,10 @@ class HomePage extends Component {
     const session = Session.get();
     console.log(session);
     this.state = {
-      loggedin: session.isValid
+      loggedin: (session.isValid? "true" : "false")
     };
   }
+  
   render() {
     const settings = {
       dot: true,
@@ -39,14 +40,13 @@ class HomePage extends Component {
               alt="First Slide"
             />
             <div className="overlay">
-              <div className="desc">
-                <Editable 
-                text="McGill Robotics is an engineering design team that builds robots for international 
+              <div className="desc" contenteditable = {this.state.loggedin}>
+                
+                McGill Robotics is an engineering design team that builds robots for international 
                 competitions as well as organizes RoboHacks annually. 
                 The team’s goal is to foster an interest in robotics 
-                through competition and to cultivate a relationship with the surrounding Montreal community."
-                status = {!this.state.loggedin}//true == cannot edit, false == editable
-                />
+                through competition and to cultivate a relationship with the surrounding Montreal community.
+                
                   
                   <br></br>
                   <button type="button" class="btn btn-primary" href="https://mcgillrobotics.com/">Read More</button>
@@ -62,13 +62,12 @@ class HomePage extends Component {
               alt="Second Slide"
             />
             <div className="overlay">
-              <div className="desc">
-              <Editable 
+              <div className="desc" contenteditable = {this.state.loggedin}>
+              
                 text="The truth is that doctors and radiologists can have error rates as high as 30% in reading chest X-Rays. 
                 In today’s world, an early and especially accurate COVID diagnosis is crucial. 
                 A late or incorrect diagnosis could see an infectious patient sent home..."
-                status = {!this.state.loggedin}//true == cannot edit, false == editable
-                />
+               
                 
                 <br></br>
                 <button type="button" class="btn btn-primary" href="https://www.cs.ubc.ca/news/2020/10/how-ai-helping-battle-against-covid-19">Read More</button>

@@ -70,9 +70,12 @@ class Header extends Component {
             }
           }
         );
-        alert("Congradulation! you are logged in!")
+        //alert("Congradulation! you are logged in!")
       //console.log(Session.get());
-      //Session.onExpiration((session) => session.destroy());
+      Session.onExpiration((session) =>{
+        session.destroy();
+        alert("Session Expires! Please login again!")
+      } );
       
     }
   }
@@ -310,15 +313,16 @@ class Header extends Component {
                             Welcome! {`${this.state.username}`}
                           </NavDropdown.Item>
                           <NavDropdown.Item >
+                            <Button variant="danger">Save Changes</Button>
+                          </NavDropdown.Item>
+                          <NavDropdown.Item >
                             <Button variant="outline-danger" id="logout" onClick={this.LogOut}>Logout</Button>
                           </NavDropdown.Item>
                         </>
 
                       ) : (
                           <>
-                            <NavDropdown.Item >
-                              <Button variant="light" id="signup" onClick={this.onOpenModal}>SignUp</Button>
-                            </NavDropdown.Item>
+
                             <NavDropdown.Item >
                               <Button disabled={this.state.loggedin} variant="light" id="login" onClick={this.onOpenModalLogin}>Login</Button>
                             </NavDropdown.Item>
@@ -385,71 +389,7 @@ class Header extends Component {
                 </div>
               </div>
             </div>
-            <Modal isOpen={sign & !this.state.loggedin}
-              ariaHideApp={false}
-              onRequestClose={this.onCloseModal}
-              shouldCloseOnOverlayClick={true}
-              animationType="fade"
-              transparent={true}
-              visible={this.props.visible}
-              style={
-                {
-                  overlay: {
-                    position: 'fixed',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    backgroundColor: 'rgba(0,0,0,0.5)'
-                  },
-                  content: {
-                    position: 'absolute',
-                    top: '20%',
-                    left: '35%',
-                    right: '35%',
-                    bottom: '20%',
-                    border: '1px solid #ccc',
-                    background: '#fff',
-                    overflow: 'auto',
-
-                    borderRadius: '4px',
-                    outline: 'none',
-
-                  }
-
-                }
-              }
-            >
-              <div className="modal-body">
-                <Button variant="outline-danger" id="x" onClick={this.onCloseModal}> X </Button>
-                <h2>Sign up</h2>
-                <form className="contact-form form-validate3" noValidate="novalidate" method="post">
-                  <div className="form-group">
-                    <input className="form-control" type="text" name="studentid" id="studentid" placeholder="Student ID" autocomplete="off"
-                      onChange={(event) => {
-                        this.setState({ StudentidReg: event.target.value });
-                      }}
-                      required />
-                  </div>
-                  <div className="form-group">
-                    <input className="form-control" type="email" name="username" id="username" placeholder="McGill E-mail" autocomplete="off"
-                      onChange={(event) => {
-                        this.setState({ UsernameReg: event.target.value });
-                      }}
-                      required />
-                  </div>
-                  <div className="form-group">
-                    <input type="password" name="password" id="password" className="form-control" placeholder="Password" autocomplete="off"
-                      onChange={(event) => {
-                        this.setState({ PasswordReg: event.target.value });
-                      }}
-                      required />
-                  </div>
-                  <input className="btn btn-md btn-primary btn-center" id="sign_up" type="submit" value="Sign Up" onClick={this.Register} />
-                </form>
-
-              </div>
-            </Modal>
+      
 
 
 
