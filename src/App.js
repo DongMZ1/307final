@@ -54,7 +54,7 @@ import ProspectiveTransfer from './ProspectivePages/ProspectiveTransfer'
 
 import ResearchArea from './Research/ResearchArea'
 import ResearchTecReport from './Research/ResearchTecReport'
-
+import Editable from "./Editable";
 
 // import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 function App() {

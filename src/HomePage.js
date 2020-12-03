@@ -7,12 +7,14 @@ import { FaUserGraduate, FaCalendarAlt, FaNewspaper } from "react-icons/fa";
 import bot  from './pictures/bot.jpg'; 
 import covid from './pictures/covid.jpg'; 
 import ml from './pictures/ml.jpg'; 
-
+import Editable from './Editable';
 
 class HomePage extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      loggedin: false
+    };
   }
   render() {
     const settings = {
@@ -34,8 +36,14 @@ class HomePage extends Component {
             />
             <div className="overlay">
               <div className="desc">
-                  McGill Robotics is an engineering design team that builds robots for international competitions as well as organizes RoboHacks annually. 
-                  The team’s goal is to foster an interest in robotics through competition and to cultivate a relationship with the surrounding Montreal community. 
+                <Editable 
+                text="McGill Robotics is an engineering design team that builds robots for international 
+                competitions as well as organizes RoboHacks annually. 
+                The team’s goal is to foster an interest in robotics 
+                through competition and to cultivate a relationship with the surrounding Montreal community."
+                status = {!this.state.loggedin}//true == cannot edit, false == editable
+                />
+                  
                   <br></br>
                   <button type="button" class="btn btn-primary" href="https://mcgillrobotics.com/">Read More</button>
               </div>
@@ -51,9 +59,13 @@ class HomePage extends Component {
             />
             <div className="overlay">
               <div className="desc">
-                The truth is that doctors and radiologists can have error rates as high as 30% in reading chest X-Rays. 
+              <Editable 
+                text="The truth is that doctors and radiologists can have error rates as high as 30% in reading chest X-Rays. 
                 In today’s world, an early and especially accurate COVID diagnosis is crucial. 
-                A late or incorrect diagnosis could see an infectious patient sent home...
+                A late or incorrect diagnosis could see an infectious patient sent home..."
+                status = {!this.state.loggedin}//true == cannot edit, false == editable
+                />
+                
                 <br></br>
                 <button type="button" class="btn btn-primary" href="https://www.cs.ubc.ca/news/2020/10/how-ai-helping-battle-against-covid-19">Read More</button>
               </div>
@@ -69,8 +81,11 @@ class HomePage extends Component {
             />
             <div className="overlay">
               <div className="desc">
-                McGill AI Society aims to make AI more accessible by hosting events, bootcamps, and workshops that 
-                give students an opportunity to learn about AI in a peer-based, supportive environment.
+              <Editable 
+                text="McGill AI Society aims to make AI more accessible by hosting events, bootcamps, and workshops that 
+                give students an opportunity to learn about AI in a peer-based, supportive environment."
+                status = {!this.state.loggedin}//true == cannot edit, false == editable
+                />
                 <br></br>
                 <button type="button" class="btn btn-primary" href="https://www.mcgillai.com/">Read More</button>
               </div>

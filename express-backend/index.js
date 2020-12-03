@@ -10,17 +10,17 @@ app.use(cors());
 const db = mysql.createConnection(
   {
     user:"cs307-group01",
-    host:"fall2020-comp307.cs.mcgill.ca",
+    host:"127.0.0.1",
     password: "ng8DCt2qSa7rXHEP",
-    port: 5432,
     database:"cs307-group01-DB"
   }
 );
 
-/*db.connect(function(err){
-    if(err) throw err;
-    console.log("Connected!");
-})*/
+
+// db.connect(function(err){
+//     if(err) throw err;
+//     console.log("Connected!");
+// })
 
 
 app.post("/register", (req,res) =>{
@@ -55,27 +55,27 @@ app.post('/login',(req,res) =>{
   }
   
 
-  /*
-  db.query(
-    "SELECT FROM users WHERE email = ? and passcode = ?; ",
-    [username,password],
-    (err, result) =>{
-      if(err){
-        console.log("login server running -!!!!!!!!!");
-        console.log("username is", username);
-        console.log("password is", password);
-        console.log({err: err});
-      }
-      else{
-        if (result){
-          res.send(result);
-        }
-        else{
-          res.send({message:"Wrong username/password"});
-        }
-      }
-    }
-  )*/
+  
+  // db.query(
+  //   "SELECT FROM users WHERE email = ? and passcode = ?; ",
+  //   [username,password],
+  //   (err, result) =>{
+  //     if(err){
+  //       console.log("login server running -!!!!!!!!!");
+  //       console.log("username is", username);
+  //       console.log("password is", password);
+  //       console.log({err: err});
+  //     }
+  //     else{
+  //       if (result){
+  //         res.send(result);
+  //       }
+  //       else{
+  //         res.send({message:"Wrong username/password"});
+  //       }
+  //     }
+  //   }
+  // )
 
 } );
 
@@ -85,6 +85,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
+/*const port = process.env.PORT || 5000;
+app.listen(port);
+console.log(port);
+*/
 app.listen(3001,()=>{
   console.log("running on 3001 server");
 });
