@@ -62,15 +62,9 @@ class Header extends Component {
     //this.props.LoginStatusTopCall(loggedin);
     if (loggedin) {
       this.setState({ loggedin: true });
-      Session.start(
-        {
-          payload: {
-            username: ""
-          }
-        }
-      );
+      Session.start();
       //alert("Congradulation! you are logged in!")
-      //console.log(Session.get());
+      console.log(Session.get());
       Session.onExpiration((session) => {
         session.destroy();
         alert("Session Expires! Please login again!")

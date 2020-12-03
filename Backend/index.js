@@ -3,8 +3,7 @@ const express = require('express');
 const mysql = require("mysql");
 const path = require('path');
 const app = express();
-// const csv = require('csv-parser');
-// const fs = require('fs');
+
 
 
 app.use(express.json());
@@ -52,14 +51,6 @@ app.post('/login',(req,res) =>{
   
   const username = req.body.username;
   const password = req.body.password;
-  
-  // if(username == "hello@m.com"){
-  //   res.send({username: username})
-  // }
-  // else{
-  //   res.send({message:"Wrong username/password, Please try again!"})
-  // }
-  
 
   
   db.query(
@@ -68,8 +59,8 @@ app.post('/login',(req,res) =>{
     (err, result) =>{
       if(err){
         console.log("SQL error!");
-        console.log("username is", username);
-        console.log("password is", password);
+        //console.log("username is", username);
+        //console.log("password is", password);
         console.log({err: err});
       }
       else{
@@ -104,8 +95,8 @@ console.log(port);
 //   console.log("running on school server");
 // });
 
-const port  = process.env.PORT;
-app.listen(3001,()=>{
+const port  = process.env.PORT || 3001;
+app.listen(port,()=>{
   console.log("running on port 3001");
 });
 

@@ -56,7 +56,7 @@ import ProspectiveTransfer from './ProspectivePages/ProspectiveTransfer'
 import ResearchArea from './Research/ResearchArea'
 import ResearchTecReport from './Research/ResearchTecReport'
 import Editable from "./Editable";
-//import { Session } from 'bc-react-session';
+import { Session } from 'bc-react-session';
 //import Cookies from 'js-cookie';
 
 // import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
@@ -79,6 +79,11 @@ function App() {
   //   setusername(username);
   // }
   //console.log("asdfasdfasdf:", Cookies.get('username'))
+  // const closeSession = ()=>{
+  //   Session.destroy();
+  // }
+  //   window.addEventListener("beforeunload", closeSession());
+    
   
   return (
       <Router>

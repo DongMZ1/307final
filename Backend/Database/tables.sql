@@ -10,7 +10,7 @@ CREATE TABLE users
     PRIMARY KEY(Username)
 );
 
-INSERT INTO users VALUES (1630081, 'student@mcgill.ca', 'John Watson', 'abcd1234',30, 1);
-INSERT INTO users VALUES (1630082, 'student1@mcgill.ca', 'Jack Watson', 'abcde1234',10, 0);
+INSERT INTO users VALUES (1630081, 'student@mcgill.ca', 'John Watson', 'qwert1203asdfg',30, 1);
+INSERT INTO users VALUES (1630082, 'student1@mcgill.ca', 'Jack Watson', 'asdfghj23456',10, 0);
 
 SELECT * FROM users;
