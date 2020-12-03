@@ -344,7 +344,7 @@ class Header extends Component {
                     />
                     <Button variant="outline-primary">Search</Button>
                   </Form>
-                </Navbar.Collapse >
+                </Navbar.Collapse>
               </Navbar>
               <div className="header">
                 <div className="headerleft">
@@ -389,10 +389,6 @@ class Header extends Component {
                 </div>
               </div>
             </div>
-      
-
-
-
             <Modal isOpen={login & !this.state.loggedin}
               onRequestClose={this.onCloseModalclose}
               ariaHideApp={false}

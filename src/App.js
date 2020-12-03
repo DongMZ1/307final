@@ -4,6 +4,7 @@ import './App.css';
 // import RegisterPage from './Login/RegisterPage';
 import Welcome from './Login/Welcome'
 import { BrowserRouter as Router, Switch, Route, withRouter} from 'react-router-dom';
+// import { HashRouter as Router, Switch, Route, withRouter} from 'react-router-dom';
 import Header from './Header'
 import ScrollToTop from './ScrollToTop'
 import Footer from './Footer'
