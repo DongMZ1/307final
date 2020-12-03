@@ -1,0 +1,112 @@
+const cors = require("cors");
+const express = require('express');
+const mysql = require("mysql");
+const path = require('path');
+const app = express();
+// const csv = require('csv-parser');
+// const fs = require('fs');
+
+
+app.use(express.json());
+app.use(cors())
+
+
+
+const db = mysql.createConnection(
+  {
+    user:"cs307-group01",
+    host:"localhost",
+    password: "ng8DCt2qSa7rXHEP",
+    database:"cs307-group01-DB",
+    port: 3306
+  }
+);
+
+
+db.connect(function(err){
+    if(err) throw err;
+    console.log("Connected!");
+})
+
+
+// app.post("/register", (req,res) =>{
+//   const studentid = req.body.studentid;
+//   const username = req.body.username;
+//   const password = req.body.password;
+
+
+//   db.query(
+//     "INSERT INTO users (student_id,email,passcode) VALUES (?,?,?);",
+//     [studentid,username,password],
+//     (err, result) =>{
+//       console.log(err);
+//     }
+//   )
+
+// });
+
+
+
+app.post('/login',(req,res) =>{
+
+  
+  const username = req.body.username;
+  const password = req.body.password;
+  
+  // if(username == "hello@m.com"){
+  //   res.send({username: username})
+  // }
+  // else{
+  //   res.send({message:"Wrong username/password, Please try again!"})
+  // }
+  
+
+  
+  db.query(
+    "SELECT Name, UserID, Username, age, staff FROM users WHERE Username = ? and password = ? ;",
+    [username,password],
+    (err, result) =>{
+      if(err){
+        console.log("SQL error!");
+        console.log("username is", username);
+        console.log("password is", password);
+        console.log({err: err});
+      }
+      else{
+        if (result.length>0){
+          //console.log("this is reault", JSON.stringify(result));
+          res.send(JSON.stringify(result));
+        }
+        else{
+          //console.log("user not found!");
+          res.send({message:"Wrong username/password"});
+        }
+      }
+    }
+  )
+
+} );
+
+// app.use(express.static(path.join(__dirname, 'build')));
+
+// app.get('/', function (req, res) {
+//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
+
+/*const port = process.env.PORT || 5000;
+app.listen(port);
+console.log(port);
+*/
+
+// var http = require('http');
+// server  = http.createServer(app).listen(8080);
+// server.listen((3306, "fall2020-comp307.cs.mcgill.ca"), ()=>{
+//   console.log("running on school server");
+// });
+
+const port  = process.env.PORT;
+app.listen(3001,()=>{
+  console.log("running on port 3001");
+});
+
+module.exports = app;
