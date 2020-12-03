@@ -73,11 +73,12 @@ app.post('/login',(req,res) =>{
         console.log({err: err});
       }
       else{
-        if (result){
-          console.log(JSON.stringify(result));
+        if (result.length>0){
+          //console.log("this is reault", JSON.stringify(result));
           res.send(JSON.stringify(result));
         }
         else{
+          //console.log("user not found!");
           res.send({message:"Wrong username/password"});
         }
       }

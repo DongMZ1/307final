@@ -26,7 +26,7 @@ function ValidatedLogin(props) {
           password: values.password,
         }).then((response) => {
           if (response.data.message) {
-            console.log(response.data.message);
+            //console.log(response.data.message);
             setFieldValue('LoginStatus', response.data.message);
             props.LoginStatusCallBack(false);
           }
@@ -34,7 +34,7 @@ function ValidatedLogin(props) {
             //console.log("username is ",response.data.username )
             //history.push("/welcome", { username: response.data.username });
             props.LoginStatusCallBack(true);
-            console.log("here is received data:", response.data);
+            //console.log("here is received data:", response.data);
             props.UserInfoCallBack(response.data[0]);
             //setFieldValue('LoginStatus', response.data);
           }

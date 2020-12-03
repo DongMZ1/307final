@@ -51,7 +51,8 @@ class Header extends Component {
       sign: false,
       login: false,
       loggedin: session.isValid,
-      username: payload.name
+      username: payload.name,
+      staff: payload.staff
     };
   }
 
@@ -64,7 +65,6 @@ class Header extends Component {
       Session.start(
         {
           payload: {
-            //logstatus: true,
             username: ""
           }
         }
@@ -82,7 +82,7 @@ class Header extends Component {
 
   setUserInfo = (user) => {
     if (user) {
-      console.log(user);
+      //console.log(user);
       Session.setPayload({
         username: user.Username,
         UserID: user.UserID,
@@ -317,9 +317,19 @@ class Header extends Component {
                           <NavDropdown.Item href="/welcome">
                             Welcome! {`${this.state.username}`}
                           </NavDropdown.Item>
-                          <NavDropdown.Item >
+                          {this.state.staff? (
+                            <>
+                            <NavDropdown.Item >
+                            You logged into a staff account!
+                          </NavDropdown.Item>
+                            <NavDropdown.Item >
                             <Button variant="danger">Save Changes</Button>
                           </NavDropdown.Item>
+                             </> 
+                          ):(<NavDropdown.Item >
+                            You logged into a student account! 
+                          </NavDropdown.Item>)}
+                          
                           <NavDropdown.Item >
                             <Button variant="outline-danger" id="logout" onClick={this.LogOut}>Logout</Button>
                           </NavDropdown.Item>
@@ -331,9 +341,10 @@ class Header extends Component {
                             <NavDropdown.Item >
                               <Button disabled={this.state.loggedin} variant="light" id="login" onClick={this.onOpenModalLogin}>Login</Button>
                             </NavDropdown.Item>
-                            <NavDropdown.Item >
+                            {/* <NavDropdown.Item >
                               <Button variant="dark" id="login" onClick={this.onOpenModalLogin}>Account Managers</Button>
-                            </NavDropdown.Item>
+                            </NavDropdown.Item> */}
+
                           </>
                         )
                       }
