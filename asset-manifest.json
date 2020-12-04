@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/DepolyReact/static/css/main.571d7467.chunk.css",
-    "main.js": "/DepolyReact/static/js/main.71872253.chunk.js",
-    "main.js.map": "/DepolyReact/static/js/main.71872253.chunk.js.map",
-    "runtime-main.js": "/DepolyReact/static/js/runtime-main.abdc962a.js",
-    "runtime-main.js.map": "/DepolyReact/static/js/runtime-main.abdc962a.js.map",
+    "main.css": "/DepolyReact/static/css/main.27b3dc43.chunk.css",
+    "main.js": "/DepolyReact/static/js/main.689cea17.chunk.js",
+    "main.js.map": "/DepolyReact/static/js/main.689cea17.chunk.js.map",
+    "runtime-main.js": "/DepolyReact/static/js/runtime-main.73c490f0.js",
+    "runtime-main.js.map": "/DepolyReact/static/js/runtime-main.73c490f0.js.map",
     "static/css/2.b30984d7.chunk.css": "/DepolyReact/static/css/2.b30984d7.chunk.css",
-    "static/js/2.e0dce622.chunk.js": "/DepolyReact/static/js/2.e0dce622.chunk.js",
-    "static/js/2.e0dce622.chunk.js.map": "/DepolyReact/static/js/2.e0dce622.chunk.js.map",
-    "static/js/3.b0465ef5.chunk.js": "/DepolyReact/static/js/3.b0465ef5.chunk.js",
-    "static/js/3.b0465ef5.chunk.js.map": "/DepolyReact/static/js/3.b0465ef5.chunk.js.map",
+    "static/js/2.e3dd6c45.chunk.js": "/DepolyReact/static/js/2.e3dd6c45.chunk.js",
+    "static/js/2.e3dd6c45.chunk.js.map": "/DepolyReact/static/js/2.e3dd6c45.chunk.js.map",
+    "static/js/3.fd0012a0.chunk.js": "/DepolyReact/static/js/3.fd0012a0.chunk.js",
+    "static/js/3.fd0012a0.chunk.js.map": "/DepolyReact/static/js/3.fd0012a0.chunk.js.map",
     "index.html": "/DepolyReact/index.html",
     "static/css/2.b30984d7.chunk.css.map": "/DepolyReact/static/css/2.b30984d7.chunk.css.map",
-    "static/css/main.571d7467.chunk.css.map": "/DepolyReact/static/css/main.571d7467.chunk.css.map",
-    "static/js/2.e0dce622.chunk.js.LICENSE.txt": "/DepolyReact/static/js/2.e0dce622.chunk.js.LICENSE.txt",
+    "static/css/main.27b3dc43.chunk.css.map": "/DepolyReact/static/css/main.27b3dc43.chunk.css.map",
+    "static/js/2.e3dd6c45.chunk.js.LICENSE.txt": "/DepolyReact/static/js/2.e3dd6c45.chunk.js.LICENSE.txt",
+    "static/media/Donate.bfeb8606.jpg": "/DepolyReact/static/media/Donate.bfeb8606.jpg",
     "static/media/admission.2744b067.png": "/DepolyReact/static/media/admission.2744b067.png",
     "static/media/bot.93d46a9a.jpg": "/DepolyReact/static/media/bot.93d46a9a.jpg",
     "static/media/brain.2e2630bc.gif": "/DepolyReact/static/media/brain.2e2630bc.gif",
@@ -38,10 +39,10 @@
     "static/media/research-theory.4cb4f778.jpg": "/DepolyReact/static/media/research-theory.4cb4f778.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.abdc962a.js",
+    "static/js/runtime-main.73c490f0.js",
     "static/css/2.b30984d7.chunk.css",
-    "static/js/2.e0dce622.chunk.js",
-    "static/css/main.571d7467.chunk.css",
-    "static/js/main.71872253.chunk.js"
+    "static/js/2.e3dd6c45.chunk.js",
+    "static/css/main.27b3dc43.chunk.css",
+    "static/js/main.689cea17.chunk.js"
   ]
 }
