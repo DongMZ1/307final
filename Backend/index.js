@@ -98,7 +98,7 @@ app.post('/changecontent',(req,res) =>{
         console.log({err: err});
       }
       else{
-        console.log("change content result:",result);
+        //console.log("change content result:",result);
         res.send({message:"change saved!"});
       }
     }
@@ -112,7 +112,7 @@ app.post('/CreatePage',(req,res) =>{
   const page = req.body.CustomPage;
   const username = req.body.Username;
 
-  console.log("changed page:",page);
+  //console.log("changed page:",page);
   
   db.query(
     "UPDATE users \
@@ -125,7 +125,7 @@ app.post('/CreatePage',(req,res) =>{
         console.log({err: err});
       }
       else{
-        console.log(result);
+        //console.log(result);
         res.send({message:"Customized Page saved!"});
       }
     }
@@ -148,7 +148,7 @@ app.post('/DeletePage',(req,res) =>{
         console.log({err: err});
       }
       else{
-        console.log(result);
+        //console.log(result);
         res.send({message:"Page Deleted!"});
       }
     }
