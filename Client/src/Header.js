@@ -164,61 +164,61 @@ class Header extends Component {
                     <Nav.Link href="/" id="btn-link">Home</Nav.Link>
                     {/*Prospective*/}
                     <NavDropdown title="Prospective" id="basic-nav-dropdown" onMouseOver={this.onMouseEnter.bind(this, 'dropdownPerspective')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownPerspective')} show={this.state.dropdownPerspective} toggle={this.toggle.bind(this, 'dropdownPerspective')}>
-                      <NavDropdown.Item href="/ProspectivePages/ProspectiveGeneralInfo">
+                      <NavDropdown.Item href="#/ProspectivePages/ProspectiveGeneralInfo">
                         General Info
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/ProspectivePages/ProspectiveWhyCS">
+                      <NavDropdown.Item href="#/ProspectivePages/ProspectiveWhyCS">
                         Why CS
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/ProspectivePages/ProspectiveCEGEP">
+                      <NavDropdown.Item href="#/ProspectivePages/ProspectiveCEGEP">
                         CEGEP
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/ProspectivePages/ProspectiveFreshman">
+                      <NavDropdown.Item href="#/ProspectivePages/ProspectiveFreshman">
                         Freshman
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/ProspectivePages/ProspectiveChoosingAMajor">
+                      <NavDropdown.Item href="#/ProspectivePages/ProspectiveChoosingAMajor">
                         Choosing A Major
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/ProspectivePages/ProspectiveTransfer">
+                      <NavDropdown.Item href="#/ProspectivePages/ProspectiveTransfer">
                         Transfer
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/ProspectivePages/ProspectiveInternship">
+                      <NavDropdown.Item href="#/ProspectivePages/ProspectiveInternship">
                         Internship
                     </NavDropdown.Item>
                       <NavDropdown.Divider />
-                      <NavDropdown.Item href="/ProspectivePages/ProspectiveUndergrad">
+                      <NavDropdown.Item href="#/ProspectivePages/ProspectiveUndergrad">
                         Undergrad addmission
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="ProspectiveGrad">
+                      <NavDropdown.Item href="#/ProspectivePages/ProspectiveGrad">
                         Grad addmission
                     </NavDropdown.Item>
                     </NavDropdown>
 
                     {/*academic */}
                     <NavDropdown title="Academic" id="AcademicButton" onMouseOver={this.onMouseEnter.bind(this, 'dropdownAcademic')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownAcademic')} show={this.state.dropdownAcademic} toggle={this.toggle.bind(this, 'dropdownAcademic')}>
-                      <NavDropdown.Item href="/Academic/AcademicUndergrad">
+                      <NavDropdown.Item href="#/Academic/AcademicUndergrad">
                         Undergraduate
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/Academic/AcademicGrad">
+                      <NavDropdown.Item href="#/Academic/AcademicGrad">
                         Graduate
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/Academic/AcademicCourses">
+                      <NavDropdown.Item href="#/Academic/AcademicCourses">
                         Courses
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/Academic/AcademicTeachingAss">
+                      <NavDropdown.Item href="#/Academic/AcademicTeachingAss">
                         Teaching Assistance
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/Academic/AcademicFunding">
+                      <NavDropdown.Item href="#/Academic/AcademicFunding">
                         Funding
                     </NavDropdown.Item>
                     </NavDropdown>
 
                     {/*Research */}
                     <NavDropdown title="Research" id="ResearchButton" onMouseOver={this.onMouseEnter.bind(this, 'dropdownResearch')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownResearch')} show={this.state.dropdownResearch} toggle={this.toggle.bind(this, 'dropdownResearch')}>
-                      <NavDropdown.Item href="/Research/ResearchArea">
+                      <NavDropdown.Item href="#/Research/ResearchArea">
                         Area
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/Research/ResearchTecReport">
+                      <NavDropdown.Item href="#/Research/ResearchTecReport">
                         Tech Report
                     </NavDropdown.Item>
                     </NavDropdown>
@@ -226,78 +226,78 @@ class Header extends Component {
                     {/*People */}
 
                     <NavDropdown title="People" id="PeopleButton" onMouseOver={this.onMouseEnter.bind(this, 'dropdownPeople')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownPeople')} show={this.state.dropdownPeople} toggle={this.toggle.bind(this, 'dropdownPeople')}>
-                      <NavDropdown.Item href="/People/PeopleFaculty">
+                      <NavDropdown.Item href="#/People/PeopleFaculty">
                         Faculty
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/People/PeopleStaff">
+                      <NavDropdown.Item href="#/People/PeopleStaff">
                         Staff
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/People/PeopleCommunity">
+                      <NavDropdown.Item href="#/People/PeopleCommunity">
                         Community
                     </NavDropdown.Item>
                     </NavDropdown>
 
                     {/*News */}
                     <NavDropdown title="News" id="news" onMouseOver={this.onMouseEnter.bind(this, 'dropdownNews')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownNews')} show={this.state.dropdownNews} toggle={this.toggle.bind(this, 'dropdownNews')}>
-                      <NavDropdown.Item href="/News/News">News</NavDropdown.Item>
-                      <NavDropdown.Item href="/News/Events">
+                      <NavDropdown.Item href="#/News/News">News</NavDropdown.Item>
+                      <NavDropdown.Item href="#/News/Events">
                         Events
                     </NavDropdown.Item>
                     </NavDropdown>
 
                     {/*Employment */}
                     <NavDropdown title="Employment" id="" onMouseOver={this.onMouseEnter.bind(this, 'dropdownEmployment')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownEmployment')} show={this.state.dropdownEmployment} toggle={this.toggle.bind(this, 'dropdownEmployment')}>
-                      <NavDropdown.Item href="/Employment/EmploymentFaculty">
+                      <NavDropdown.Item href="#/Employment/EmploymentFaculty">
                         Faculty
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/Employment/EmploymentLecturer">
+                      <NavDropdown.Item href="#/Employment/EmploymentLecturer">
                         Course Lecturer
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/Employment/EmploymentPP">
+                      <NavDropdown.Item href="#/Employment/EmploymentPP">
                         Priority Points
                     </NavDropdown.Item>
                       <NavDropdown.Divider />
-                      <NavDropdown.Item href="/Employment/EmploymentResearch">
+                      <NavDropdown.Item href="#/Employment/EmploymentResearch">
                         Research
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/Employment/EmploymentStudents">
+                      <NavDropdown.Item href="#/Employment/EmploymentStudents">
                         Students
                     </NavDropdown.Item>
                     </NavDropdown>
 
                     {/*Donate*/}
-                    <Nav.Link href="/Donate/Donate" id="btn-link">Donate</Nav.Link>
+                    <Nav.Link href="#/Donate/Donate" id="btn-link">Donate</Nav.Link>
 
                     {/*about */}
                     <NavDropdown title="About" id="" onMouseOver={this.onMouseEnter.bind(this, 'dropdownAbout')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownAbout')} show={this.state.dropdownAbout} toggle={this.toggle.bind(this, 'dropdownAbout')}>
-                      <NavDropdown.Item href="/About/AboutContacts">
+                      <NavDropdown.Item href="#/About/AboutContacts">
                         Contacts
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/About/AboutFacilities">
+                      <NavDropdown.Item href="#/About/AboutFacilities">
                         Facilities
                     </NavDropdown.Item>
                       <NavDropdown.Divider />
 
-                      <NavDropdown.Item href="/About/AboutVF">
+                      <NavDropdown.Item href="#/About/AboutVF">
                         Visitor Form
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/About/AboutRoomR">
+                      <NavDropdown.Item href="#/About/AboutRoomR">
                         Room Reservation
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/About/AboutWebM">
+                      <NavDropdown.Item href="#/About/AboutWebM">
                         WebMail
                     </NavDropdown.Item>
                       <NavDropdown.Divider />
 
-                      <NavDropdown.Item href="/About/AboutInternal">
+                      <NavDropdown.Item href="#/About/AboutInternal">
                         Internal
                     </NavDropdown.Item>
                       <NavDropdown.Divider />
 
-                      <NavDropdown.Item href="/About/AboutTechSupport">
+                      <NavDropdown.Item href="#/About/AboutTechSupport">
                         Tech Support
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="/About/AboutAdminInfor">
+                      <NavDropdown.Item href="#/About/AboutAdminInfor">
                         Admin Information
                     </NavDropdown.Item>
                     </NavDropdown>
