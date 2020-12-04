@@ -85,7 +85,8 @@ class Header extends Component {
         name: user.Name,
         age: user.age,
         staff: user.staff,
-        text: user.changetext
+        text: user.changetext,
+        page: user.CustomPage
       });
       this.setState({ username: Session.get().payload.name })
       window.location.reload();

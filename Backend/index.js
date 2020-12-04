@@ -54,7 +54,7 @@ app.post('/login',(req,res) =>{
 
   
   db.query(
-    "SELECT Name, UserID, Username, age, staff, changetext FROM users WHERE Username = ? and password = ? ;",
+    "SELECT Name, UserID, Username, age, staff, changetext, CustomPage FROM users WHERE Username = ? and password = ? ;",
     [username,password],
     (err, result) =>{
       if(err){
@@ -98,13 +98,64 @@ app.post('/changecontent',(req,res) =>{
         console.log({err: err});
       }
       else{
-        console.log(result);
+        console.log("change content result:",result);
         res.send({message:"change saved!"});
       }
     }
   )
 
 } );
+
+app.post('/CreatePage',(req,res) =>{
+
+  
+  const page = req.body.CustomPage;
+  const username = req.body.Username;
+
+  console.log("changed page:",page);
+  
+  db.query(
+    "UPDATE users \
+    SET CustomPage = ? \
+    WHERE Username = ?;",
+    [page, username],
+    (err, result) =>{
+      if(err){
+        console.log("SQL error!");
+        console.log({err: err});
+      }
+      else{
+        console.log(result);
+        res.send({message:"Customized Page saved!"});
+      }
+    }
+  )
+
+} );
+
+app.post('/DeletePage',(req,res) =>{
+
+  const username = req.body.Username;
+  
+  db.query(
+    "UPDATE users \
+    SET CustomPage = ? \
+    WHERE Username = ?;",
+    [null, username],
+    (err, result) =>{
+      if(err){
+        console.log("SQL error!");
+        console.log({err: err});
+      }
+      else{
+        console.log(result);
+        res.send({message:"Page Deleted!"});
+      }
+    }
+  )
+
+} );
+
 
 // app.use(express.static(path.join(__dirname, 'build')));
 
