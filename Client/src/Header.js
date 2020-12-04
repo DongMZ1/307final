@@ -51,57 +51,56 @@ class Header extends Component {
       sign: false,
       login: false,
       loggedin: session.isValid,
-      username: payload.username
+      username: payload.name,
+      staff: (payload.staff == 1? true:false)
     };
   }
 
-  
+
 
   setLoginStatus = (loggedin) => {
     //this.props.LoginStatusTopCall(loggedin);
-    this.setState({ loggedin: true });
     if (loggedin) {
-       
-      Session.start(
-        {
-            payload: {
-              //logstatus: true,
-              username: ""
-            }
-          }
-        );
-        //alert("Congradulation! you are logged in!")
-      //console.log(Session.get());
-      Session.onExpiration((session) =>{
+      this.setState({ loggedin: true });
+      Session.start();
+      //alert("Congradulation! you are logged in!")
+      console.log(Session.get());
+      Session.onExpiration((session) => {
         session.destroy();
         alert("Session Expires! Please login again!")
-      } );
-      
+      });
+
     }
   }
 
 
-  setUsername = (username) => {
-    Session.setPayload({
-      username: username
-    });
-    this.setState({ username: Session.get().payload.username })
-    window.location.reload(); 
-    //this.props.UsernameTopCall(username)
-  
-    //console.log(session.isValid); // will be true if is not expired or innactive
-    //console.log(payload);
+  setUserInfo = (user) => {
+    if (user) {
+      //console.log(user);
+      Session.setPayload({
+        username: user.Username,
+        UserID: user.UserID,
+        name: user.Name,
+        age: user.age,
+        staff: user.staff
+      });
+      this.setState({ username: Session.get().payload.name })
+      window.location.reload();
+      //this.props.UsernameTopCall(username)
+      //console.log(Session.get().payload.staff); // will be true if is not expired or innactive
+      
+    }
   }
 
   LogOut = () => {
     this.setState({ loggedin: false });
     Session.destroy();
     alert("You are logged out!");
-    window.location.reload(); 
+    window.location.reload();
     //console.log(Session.get());
   }
 
-  
+
 
   onOpenModal = () => {
     this.setState({ sign: true });
@@ -150,7 +149,7 @@ class Header extends Component {
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
         {(props) => (
-          <>
+          
             <div style={props}>
               <Navbar className="customized-nav" bg="light" expand="lg">
                 <Navbar.Brand>
@@ -166,12 +165,11 @@ class Header extends Component {
                     {/*Prospective*/}
                     <NavDropdown title="Prospective" id="basic-nav-dropdown" onMouseOver={this.onMouseEnter.bind(this, 'dropdownPerspective')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownPerspective')} show={this.state.dropdownPerspective} toggle={this.toggle.bind(this, 'dropdownPerspective')}>
                       <NavDropdown.Item href="#/ProspectivePages/ProspectiveGeneralInfo">
-                      {/* <NavDropdown.Item href={`${process.env.PUBLIC_URL}/ProspectivePages/ProspectiveGeneralInfo`}> */}
                         General Info
                     </NavDropdown.Item>
                       <NavDropdown.Item href="#/ProspectivePages/ProspectiveWhyCS">
                         Why CS
-                      </NavDropdown.Item>
+                    </NavDropdown.Item>
                       <NavDropdown.Item href="#/ProspectivePages/ProspectiveCEGEP">
                         CEGEP
                     </NavDropdown.Item>
@@ -313,9 +311,19 @@ class Header extends Component {
                           <NavDropdown.Item href="/welcome">
                             Welcome! {`${this.state.username}`}
                           </NavDropdown.Item>
-                          <NavDropdown.Item >
+                          {this.state.staff? (
+                            <>
+                            <NavDropdown.Item >
+                            You logged into a staff account!
+                          </NavDropdown.Item>
+                            <NavDropdown.Item >
                             <Button variant="danger">Save Changes</Button>
                           </NavDropdown.Item>
+                             </> 
+                          ):(<NavDropdown.Item >
+                            You logged into a student account! 
+                          </NavDropdown.Item>)}
+                          
                           <NavDropdown.Item >
                             <Button variant="outline-danger" id="logout" onClick={this.LogOut}>Logout</Button>
                           </NavDropdown.Item>
@@ -327,9 +335,10 @@ class Header extends Component {
                             <NavDropdown.Item >
                               <Button disabled={this.state.loggedin} variant="light" id="login" onClick={this.onOpenModalLogin}>Login</Button>
                             </NavDropdown.Item>
-                            <NavDropdown.Item >
+                            {/* <NavDropdown.Item >
                               <Button variant="dark" id="login" onClick={this.onOpenModalLogin}>Account Managers</Button>
-                            </NavDropdown.Item>
+                            </NavDropdown.Item> */}
+
                           </>
                         )
                       }
@@ -389,8 +398,7 @@ class Header extends Component {
                   </div>
                 </div>
               </div>
-            </div>
-            <Modal isOpen={login & !this.state.loggedin}
+              <Modal isOpen={login & !this.state.loggedin}
               onRequestClose={this.onCloseModalclose}
               ariaHideApp={false}
               shouldCloseOnOverlayClick={true}
@@ -448,10 +456,11 @@ class Header extends Component {
               <input className="btn btn-md btn-primary btn-center" id="login_btn" type="submit" value="Login" 
               onClick = {this.Login}/>
                 </form>*/}
-                <ValidatedLogin LoginStatusCallBack={this.setLoginStatus} UsernameCallBack={this.setUsername} />
+                <ValidatedLogin LoginStatusCallBack={this.setLoginStatus} UserInfoCallBack={this.setUserInfo} />
               </div>
             </Modal>
-          </>
+            </div>
+           
         )}
       </Spring>
     );
