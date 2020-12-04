@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Spring} from 'react-spring/renderprops'
+import "../static/bodycomponent.css"; 
 class EmploymentFaculty extends Component {
     constructor(props) {
         super(props);
@@ -25,7 +26,10 @@ class EmploymentFaculty extends Component {
 
                 </div>
                 <div class="col-sm-9">
-      <p>real content Major</p>
+                  <div className = "body">
+                    <h2>Faculty Postings@CS</h2>
+                    <p>There are currently no open faculty postings.</p>
+                  </div>
                 </div>
             </div>
              }

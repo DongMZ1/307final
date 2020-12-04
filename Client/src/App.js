@@ -38,6 +38,7 @@ import EmploymentStudents from './Employment/EmploymentStudents'
 
 import News from './News/News'
 import Events from './News/Events'
+import New1 from './News/N1'
 
 import PeopleFaculty from './People/PeopleFaculty'
 import PeopleStaff from './People/PeopleStaff'
@@ -56,6 +57,7 @@ import ProspectiveTransfer from './ProspectivePages/ProspectiveTransfer'
 import ResearchArea from './Research/ResearchArea'
 import ResearchTecReport from './Research/ResearchTecReport'
 import Editable from "./Editable";
+import N1 from './News/N1';
 //import { Session } from 'bc-react-session';
 //import Cookies from 'js-cookie';
 
@@ -122,6 +124,7 @@ function App() {
           {/*News*/}
           <Route exact path = "/News/News" component = {News} />
           <Route exact path = "/News/Events" component = {Events} />
+          <Route exact path = "/News/N1" component = {New1} />
           
           {/*Empolyment*/}
           <Route exact path = "/Employment/EmploymentFaculty" component = {EmploymentFaculty} />
