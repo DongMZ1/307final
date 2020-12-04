@@ -2,20 +2,8 @@
 
 ## `npm install` to download all dependencies! 
 
-# Backend using flask
 `pip install -r requirements.txt` to install dependencies 
 
-`pip install flask` install flask
-`pip install flask-mysqldb` install MySQLdb
-
-### `set FLASK_APP=./src/main.py` It is important!
-
-`set FLASK_DEBUG=1` debug mode active
-
-`flask run` shows the address as
- * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit) 
-
- open the address on your browser.
 
 # Getting Started with Create React App
 

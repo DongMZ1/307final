@@ -49,7 +49,6 @@ class Header extends Component {
       dropdownEmployment: false,
       dropdownAbout: false,
       dropdownAccount: false,
-      sign: false,
       login: false,
       loggedin: session.isValid,
       username: payload.name,
@@ -65,7 +64,7 @@ class Header extends Component {
       this.setState({ loggedin: true });
       Session.start();
       //alert("Congradulation! you are logged in!")
-      console.log(Session.get());
+      //console.log(Session.get());
       Session.onExpiration((session) => {
         session.destroy();
         alert("Session Expires! Please login again!")
@@ -83,12 +82,13 @@ class Header extends Component {
         UserID: user.UserID,
         name: user.Name,
         age: user.age,
-        staff: user.staff
+        staff: user.staff,
+        text: user.changetext
       });
       this.setState({ username: Session.get().payload.name })
       window.location.reload();
       //this.props.UsernameTopCall(username)
-      //console.log(Session.get().payload.staff); // will be true if is not expired or innactive
+      //console.log(Session.get()); // will be true if is not expired or innactive
       
     }
   }
@@ -309,16 +309,13 @@ class Header extends Component {
 
                       {this.state.loggedin ? (
                         <>
-                          <NavDropdown.Item href="/welcome">
+                          <NavDropdown.Item href="#/welcome">
                             Welcome! {`${this.state.username}`}
                           </NavDropdown.Item>
                           {this.state.staff? (
                             <>
                             <NavDropdown.Item >
                             You logged into a staff account!
-                          </NavDropdown.Item>
-                            <NavDropdown.Item >
-                            <Button variant="danger">Save Changes</Button>
                           </NavDropdown.Item>
                              </> 
                           ):(<NavDropdown.Item >
