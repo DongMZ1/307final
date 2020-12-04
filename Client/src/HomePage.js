@@ -14,10 +14,10 @@ class HomePage extends Component {
   
   constructor(props) {
     super(props);
-    const session = Session.get();
+    const {payload} = Session.get();
     //console.log(session);
     this.state = {
-      loggedin: (session.isValid? "true" : "false")
+      loggedin: (payload.staff? "true" : "false")
     };
   }
   

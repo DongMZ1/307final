@@ -8,14 +8,17 @@ import {SaveEdit} from './SaveEdit';
 
 
 const Welcome = () => {
-  const [logStatus, setlogStatus] = useState(false);
+  //const [staff, setstaff] = useState(false);
   const { payload } = Session.get();
   const session = Session.get();
   let history = useHistory();
-  let username = payload.username;
+  let username = payload.name;
   if(!session.isValid){
     history.push("/");
   }
+  // if(payload.staff){
+  //   setstaff(true);
+  // }
   return (
     
     <Spring
@@ -26,9 +29,10 @@ const Welcome = () => {
         <div class="row" style={props}>
           <ScrollToTopOnMount />
           <div >
-            <h1 id = "usercontent" contenteditable = "true"> Welcome! {username} ! You are succefully logged in ! 
-            You are able to change the content of page only! but not able to change the layout and theme of the page!
-            </h1>
+            <h1 id = "usercontent"> Welcome! {username}  </h1>
+            {payload.staff? (<h2>You logged into a staff account you have right to change content of this page! </h2>)
+            :(<h2>Welcome Student ! </h2>)}
+            
           </div>
           
         </div>

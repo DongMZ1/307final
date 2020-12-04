@@ -52,7 +52,7 @@ class Header extends Component {
       login: false,
       loggedin: session.isValid,
       username: payload.name,
-      staff: payload.staff
+      staff: (payload.staff == 1? true:false)
     };
   }
 
@@ -87,8 +87,8 @@ class Header extends Component {
       this.setState({ username: Session.get().payload.name })
       //window.location.reload();
       //this.props.UsernameTopCall(username)
-      //console.log(session.isValid); // will be true if is not expired or innactive
-      //console.log(payload);
+      console.log(Session.get().payload.staff); // will be true if is not expired or innactive
+      
     }
   }
 
@@ -149,7 +149,7 @@ class Header extends Component {
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
         {(props) => (
-          <>
+          
             <div style={props}>
               <Navbar className="customized-nav" bg="light" expand="lg">
                 <Navbar.Brand>
@@ -398,8 +398,7 @@ class Header extends Component {
                   </div>
                 </div>
               </div>
-            </div>
-            <Modal isOpen={login & !this.state.loggedin}
+              <Modal isOpen={login & !this.state.loggedin}
               onRequestClose={this.onCloseModalclose}
               ariaHideApp={false}
               shouldCloseOnOverlayClick={true}
@@ -460,7 +459,8 @@ class Header extends Component {
                 <ValidatedLogin LoginStatusCallBack={this.setLoginStatus} UserInfoCallBack={this.setUserInfo} />
               </div>
             </Modal>
-          </>
+            </div>
+           
         )}
       </Spring>
     );

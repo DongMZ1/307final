@@ -6,7 +6,8 @@ CREATE TABLE users
     Name VARCHAR(100) NOT NULL,
     password VARCHAR(100) NOT NULL,
     age INT,
-    staff BIT DEFAULT 0,
+    staff INT DEFAULT 0,
+    CONSTRAINT staff CHECK (staff IN (0,1)),
     PRIMARY KEY(Username)
 );
 
