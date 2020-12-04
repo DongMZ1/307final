@@ -11,6 +11,8 @@ import Modal from "react-modal";
 import "./static/Modal.css";
 import ValidatedLogin from "./Login/ValidatedLogin"
 import { Session } from 'bc-react-session';
+import Aos from "aos";
+import "aos/dist/aos.css";
 import {Link} from 'react-router-dom';
 //import 'static/login.css'
 //import { useState } from "react";
@@ -150,11 +152,10 @@ class Header extends Component {
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
         {(props) => (
-          
             <div style={props}>
               <Navbar className="customized-nav" bg="light" expand="lg">
                 <Navbar.Brand>
-                  <a href="http://www.google.ca">
+                  <a href="#">
                     <img src={logo} style={{ width: 200, marginTop: -7 }}></img>
                   </a>
                 </Navbar.Brand>
@@ -381,6 +382,7 @@ class Header extends Component {
                             <FaSchool
                               style={{ fontSize: "72px", marginBottom: "45px" }}
                             ></FaSchool>
+                            <hr></hr>
                           </div>
                         </div>
                         <div class="col-lg-5">
