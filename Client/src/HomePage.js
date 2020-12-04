@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { Component } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./static/home.css";
@@ -7,7 +7,7 @@ import { FaUserGraduate, FaCalendarAlt, FaNewspaper } from "react-icons/fa";
 import bot  from './pictures/bot.jpg'; 
 import covid from './pictures/covid.jpg'; 
 import ml from './pictures/ml.jpg'; 
-import Editable from './Editable';
+//import Editable from './Editable';
 import { Session } from 'bc-react-session';
 
 class HomePage extends Component {
@@ -83,12 +83,10 @@ class HomePage extends Component {
               alt="Third Slide"
             />
             <div className="overlay">
-              <div className="desc">
-              <Editable 
-                text="McGill AI Society aims to make AI more accessible by hosting events, bootcamps, and workshops that 
+              <div className="desc" contenteditable = {this.state.loggedin}>
+              
+                "McGill AI Society aims to make AI more accessible by hosting events, bootcamps, and workshops that 
                 give students an opportunity to learn about AI in a peer-based, supportive environment."
-                status = {!this.state.loggedin}//true == cannot edit, false == editable
-                />
                 <br></br>
                 <button type="button" class="btn btn-primary"><a href="https://www.mcgillai.com/" style={{color: "whitesmoke"}}>Read More</a></button>
               </div>

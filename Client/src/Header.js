@@ -48,7 +48,6 @@ class Header extends Component {
       dropdownEmployment: false,
       dropdownAbout: false,
       dropdownAccount: false,
-      sign: false,
       login: false,
       loggedin: session.isValid,
       username: payload.name,
@@ -309,16 +308,13 @@ class Header extends Component {
 
                       {this.state.loggedin ? (
                         <>
-                          <NavDropdown.Item href="/welcome">
+                          <NavDropdown.Item href="#/welcome">
                             Welcome! {`${this.state.username}`}
                           </NavDropdown.Item>
                           {this.state.staff? (
                             <>
                             <NavDropdown.Item >
                             You logged into a staff account!
-                          </NavDropdown.Item>
-                            <NavDropdown.Item >
-                            <Button variant="danger">Save Changes</Button>
                           </NavDropdown.Item>
                              </> 
                           ):(<NavDropdown.Item >
