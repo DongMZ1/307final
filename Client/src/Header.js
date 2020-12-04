@@ -85,9 +85,9 @@ class Header extends Component {
         staff: user.staff
       });
       this.setState({ username: Session.get().payload.name })
-      //window.location.reload();
+      window.location.reload();
       //this.props.UsernameTopCall(username)
-      console.log(Session.get().payload.staff); // will be true if is not expired or innactive
+      //console.log(Session.get().payload.staff); // will be true if is not expired or innactive
       
     }
   }
