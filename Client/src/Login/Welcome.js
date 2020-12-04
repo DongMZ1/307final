@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { Session } from 'bc-react-session';
 import { Button } from "react-bootstrap";
 import Axios from "axios";
-
+import "../static/bodycomponent.css"; 
 
 const Welcome = () => {
   //const [staff, setstaff] = useState("false");
@@ -35,6 +35,7 @@ const Welcome = () => {
 
           </div>
           <div class="col-sm-9">
+            <div className ="body">
             <h1 > Welcome! {username}, You are in your private page. </h1>
             {payload.staff ? (<h2>You logged into a staff account you have right to change content of this page! </h2>)
               : (<h2>Welcome Student ! </h2>)}
@@ -43,7 +44,7 @@ const Welcome = () => {
             <p> Your age is <span id="userage" contenteditable={staff}>{payload.age}</span></p>
             {payload.staff ? (<Button variant="light" onClick={saveChange}>Save Changes</Button>)
               : (<></>)}
-            
+            </div>
 
           </div>
         </>
