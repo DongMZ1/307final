@@ -88,7 +88,7 @@ function App() {
   return (
       <Router>
       <ScrollToTop />
-      <Header/>
+      <Header />
        <Switch>
          {/*homepage*/}
            <Route path = '/' component = {HomePage} exact />
