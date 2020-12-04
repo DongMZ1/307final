@@ -64,7 +64,7 @@ class Header extends Component {
       this.setState({ loggedin: true });
       Session.start();
       //alert("Congradulation! you are logged in!")
-      console.log(Session.get());
+      //console.log(Session.get());
       Session.onExpiration((session) => {
         session.destroy();
         alert("Session Expires! Please login again!")
@@ -82,12 +82,13 @@ class Header extends Component {
         UserID: user.UserID,
         name: user.Name,
         age: user.age,
-        staff: user.staff
+        staff: user.staff,
+        text: user.changetext
       });
       this.setState({ username: Session.get().payload.name })
       window.location.reload();
       //this.props.UsernameTopCall(username)
-      //console.log(Session.get().payload.staff); // will be true if is not expired or innactive
+      //console.log(Session.get()); // will be true if is not expired or innactive
       
     }
   }
