@@ -33,7 +33,7 @@ class HomePage extends Component {
     Aos.init({ duration: 3000 });
     return (
       <div className="home">
-        <Carousel data-aos="fade-left">
+        <Carousel data-aos="zoom-out">
           <Carousel.Item className="wrapper" interval={2000}>
             <img
               src={bot}
