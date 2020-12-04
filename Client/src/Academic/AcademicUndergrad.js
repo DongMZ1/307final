@@ -67,8 +67,8 @@ class AcademicUndergrad extends Component {
                 </Button>
                 <Collapse in={this.state.Undergraduate}>
                   <div class="nav flex-column nav-pills" id="ColUnder" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" id="" data-toggle="pill" href="AcademicUndergrad" role="tab">Overview</a>
-                    <a class="nav-link" id="" data-toggle="pill" href="Auinfor" role="tab">Information for incoming students</a>
+                    <a class="nav-link active" id="" data-toggle="pill" href="#Academic/AcademicUndergrad" role="tab">Overview</a>
+                    <a class="nav-link" id="" data-toggle="pill" href="#Academic/Auinfor" role="tab">Information for incoming students</a>
                     <a class="nav-link" id="" data-toggle="pill" href="" role="tab">Remote Learning</a>
                     <a class="nav-link" id="" data-toggle="pill" href="" role="tab">FAQ</a>
                     <a class="nav-link" id="" data-toggle="pill" href="" role="tab">Advising</a>

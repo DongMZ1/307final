@@ -16,8 +16,8 @@ class ResearchTecReport extends Component {
             <div class="col-sm-3">
   
             <div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical">
-  <a class="nav-link" id="" data-toggle="pill" href="ResearchArea" role="tab">Research Area</a>
-  <a class="nav-link active" id="" data-toggle="pill" href="ResearchTecReport" role="tab">Research Tech Report</a>
+  <a class="nav-link" id="" data-toggle="pill" href="#Research/ResearchArea" role="tab">Research Area</a>
+  <a class="nav-link active" id="" data-toggle="pill" href="#Research/ResearchTecReport" role="tab">Research Tech Report</a>
 </div>
 
             </div>
