@@ -60,15 +60,17 @@ const saveChange = () =>{
   var age = parseInt(document.getElementById('userage').innerText);
   var name = document.getElementById('username').innerText;
   if(Number.isInteger(age) == false){
-    alert("Input age must be integer!");
     age = Session.get().payload.age;
+    console.log("changed age is still:", age);
+    alert("Input age must be integer!");
+    
   }
   //console.log("changed content:", text);
   var username = Session.get().payload.username;
   Axios.post("http://fall2020-comp307.cs.mcgill.ca:3001/changecontent", {
     Username: username,
     changedname: name,
-    channgedage :  age,
+    changedage :  age,
     changetext: text
   }).then((response) => {
     if (response.data.message) {
