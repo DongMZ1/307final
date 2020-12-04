@@ -11,6 +11,7 @@ import Modal from "react-modal";
 import "./static/Modal.css";
 import ValidatedLogin from "./Login/ValidatedLogin"
 import { Session } from 'bc-react-session';
+import {Link} from 'react-router-dom';
 //import 'static/login.css'
 //import { useState } from "react";
 //import Axios from "axios";
