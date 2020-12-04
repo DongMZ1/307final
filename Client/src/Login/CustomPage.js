@@ -34,9 +34,9 @@ const CustomPage = () => {
 
                     </div>
                     <div class="col-sm-9">
-                        <div className="body" id = "CustomArea">
-                        <Markup content={content}/>
-                            
+                        <div className="body" id="CustomArea">
+                            <Markup content={content} />
+
                             <Button variant="light" href="#/welcome">Back to your Profile Page</Button>
 
                         </div>

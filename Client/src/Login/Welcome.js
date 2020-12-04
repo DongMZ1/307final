@@ -9,7 +9,7 @@ import "../static/bodycomponent.css";
 //import InputField from "./InputField";
 
 const Welcome = () => {
-  const [show, setshow] = useState("false");
+  const [show, setshow] = useState(false);
   var staff = "false";
   //var show = false;
   const { payload } = Session.get();
@@ -23,7 +23,7 @@ const Welcome = () => {
   if (payload.staff) {
     staff = "true";
   }
-  const showPage = () =>{
+  const showPage = () => {
     setshow(!show);
   }
 
@@ -51,29 +51,29 @@ const Welcome = () => {
                   <Button variant="light" onClick={saveChange}>Save Changes</Button>
                   <br />
                   <br />
-                  
-              <Button variant="light" onClick={showPage}>{show?(<>Go back</>):(<>I want to Create my own page</>)}</Button>
-              <br/>
-              <br/>
-              {show?(
-                <>
-                <textarea rows="4" cols="50" name="custompage" id="CustomPage">
-                </textarea>
-                <br />
-                <br />
-                <Button variant="light" onClick={createPage}>Create Page</Button>
-                <br />
-                <br />
-                {payload.page ? (<><Button href="#/CustomPage">Go to your Page</Button>
+
+                  <Button variant="light" onClick={showPage}>{show ? (<>Go back</>) : (<>I want to Create my own page</>)}</Button>
                   <br />
                   <br />
-                  <Button onClick={DeletePage}>Delete Page</Button>
-                </>) : (<></>)}
-                </>
+                  {show ? (
+                    <>
+                      <textarea rows="4" cols="50" name="custompage" id="CustomPage">
+                      </textarea>
+                      <br />
+                      <br />
+                      <Button variant="light" onClick={createPage}>Create Page</Button>
+                      <br />
+                      <br />
+                      {payload.page ? (<><Button href="#/CustomPage">Go to your Page</Button>
+                        <br />
+                        <br />
+                        <Button onClick={DeletePage}>Delete Page</Button>
+                      </>) : (<></>)}
+                    </>
 
-              ):(<></>)}
+                  ) : (<></>)}
 
-                  
+
 
                 </>
               ) : (<></>)}
@@ -87,6 +87,7 @@ const Welcome = () => {
   );
 
 }
+
 
 const createPage = () => {
   var page = document.getElementById('CustomPage').value;

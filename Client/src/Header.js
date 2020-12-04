@@ -314,7 +314,7 @@ class Header extends Component {
                         <NavDropdown.Item href="#/welcome">
                           Welcome! {`${this.state.username}`}
                         </NavDropdown.Item>
-                        {this.state.staff ? (
+                        {/* {this.state.staff ? (
                           <>
                             <NavDropdown.Item >
                               You logged into a staff account!
@@ -322,7 +322,7 @@ class Header extends Component {
                           </>
                         ) : (<NavDropdown.Item >
                           You logged into a student account!
-                        </NavDropdown.Item>)}
+                        </NavDropdown.Item>)} */}
 
                         <NavDropdown.Item >
                           <Button variant="outline-danger" id="logout" onClick={this.LogOut}>Logout</Button>
