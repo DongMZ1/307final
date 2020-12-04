@@ -38,6 +38,7 @@ import EmploymentStudents from './Employment/EmploymentStudents'
 
 import News from './News/News'
 import Events from './News/Events'
+import New1 from './News/N1'
 
 import PeopleFaculty from './People/PeopleFaculty'
 import PeopleStaff from './People/PeopleStaff'
@@ -56,6 +57,7 @@ import ProspectiveTransfer from './ProspectivePages/ProspectiveTransfer'
 import ResearchArea from './Research/ResearchArea'
 import ResearchTecReport from './Research/ResearchTecReport'
 import Editable from "./Editable";
+import N1 from './News/N1';
 //import { Session } from 'bc-react-session';
 //import Cookies from 'js-cookie';
 
@@ -86,63 +88,63 @@ function App() {
       <Header />
        <Switch>
          {/*homepage*/}
-           <Route path = '/' component = {HomePage} exact />
+           <Route exact path = '/' component = {HomePage} />
          {/*prospectivePages*/}
-          {/* <Route path = "/login" component = {LoginPage} />
-           <Route path = "/register" component = {RegisterPage} /> */}
-           <Route path = "/welcome" component = {Welcome}/>
-           <Route path = "/ProspectivePages/ProspectiveGeneralInfo" component = {ProspectiveGeneralInfo} />
-           <Route path = "/ProspectivePages/ProspectiveCEGEP" component = {ProspectiveCEGEP} />
-           <Route path = "/ProspectivePages/ProspectiveChoosingAMajor" component = {ProspectiveChoosingAMajor} />
-           <Route path = "/ProspectivePages/ProspectiveFreshman" component = {ProspectiveFreshman} />
-           <Route path = "/ProspectivePages/ProspectiveGrad" component = {ProspectiveGrad} />
-           <Route path = "/ProspectivePages/ProspectiveInternship" component = {ProspectiveInternship} />
-           <Route path = "/ProspectivePages/ProspectiveUndergrad" component = {ProspectiveUndergrad} />
-           <Route path = "/ProspectivePages/ProspectiveWhyCS" component = {ProspectiveWhyCS} />
-           <Route path = "/ProspectivePages/ProspectiveTransfer" component = {ProspectiveTransfer} />
+          {/* <Route exact path = "/login" component = {LoginPage} />
+           <Route exact path = "/register" component = {RegisterPage} /> */}
+           <Route exact path = "/welcome" component = {Welcome} />
+           <Route exact path = "/ProspectivePages/ProspectiveGeneralInfo" component = {ProspectiveGeneralInfo} />
+           <Route exact path = "/ProspectivePages/ProspectiveCEGEP" component = {ProspectiveCEGEP} />
+           <Route exact path = "/ProspectivePages/ProspectiveChoosingAMajor" component = {ProspectiveChoosingAMajor} />
+           <Route exact path = "/ProspectivePages/ProspectiveFreshman" component = {ProspectiveFreshman} />
+           <Route exact path = "/ProspectivePages/ProspectiveGrad" component = {ProspectiveGrad} />
+           <Route exact path = "/ProspectivePages/ProspectiveInternship" component = {ProspectiveInternship} />
+           <Route exact path = "/ProspectivePages/ProspectiveUndergrad" component = {ProspectiveUndergrad} />
+           <Route exact path = "/ProspectivePages/ProspectiveWhyCS" component = {ProspectiveWhyCS} />
+           <Route exact path = "/ProspectivePages/ProspectiveTransfer" component = {ProspectiveTransfer} />
         
 
          {/*Academic*/}
-           <Route path={`${process.env.PUBLIC_URL}/Academic/AcademicUndergrad`} component={AcademicUndergrad}></Route>
-           {/* <Route path = "/Academic/AcademicUndergrad" component = {AcademicUndergrad} /> */}
-           <Route path = "/Academic/AcademicGrad" component = {AcademicGrad} />
-           <Route path = "/Academic/AcademicFunding" component = {AcademicFunding} />
-           <Route path = "/Academic/AcademicTeachingAss" component = {AcademicTeachingAss} />
-           <Route path = "/Academic/AcademicCourses" component = {AcademicCourses} />
-           <Route path = "/Academic/AUinfor" component = {AUinfor} />
+           <Route exact path = "/Academic/AcademicUndergrad" component = {AcademicUndergrad} />
+           <Route exact path = "/Academic/AcademicGrad" component = {AcademicGrad} />
+           <Route exact path = "/Academic/AcademicFunding" component = {AcademicFunding} />
+           <Route exact path = "/Academic/AcademicTeachingAss" component = {AcademicTeachingAss} />
+           <Route exact path = "/Academic/AcademicCourses" component = {AcademicCourses} />
+           <Route exact path = "/Academic/AUinfor" component = {AUinfor} />
 
           {/*Research*/}
-          <Route path = "/Research/ResearchArea" component = {ResearchArea} />
-          <Route path = "/Research/ResearchTecReport" component = {ResearchTecReport} />
+          <Route exact path = "/Research/ResearchArea" component = {ResearchArea} />
+          <Route exact path = "/Research/ResearchTecReport" component = {ResearchTecReport} />
 
           {/*People*/}
-          <Route path = "/People/PeopleFaculty" component = {PeopleFaculty} />
-          <Route path = "/People/PeopleStaff" component = {PeopleStaff} />
-          <Route path = "/People/PeopleCommunity" component = {PeopleCommunity} />
+          <Route exact path = "/People/PeopleFaculty" component = {PeopleFaculty} />
+          <Route exact path = "/People/PeopleStaff" component = {PeopleStaff} />
+          <Route exact path = "/People/PeopleCommunity" component = {PeopleCommunity} />
 
           {/*News*/}
-          <Route path = "/News/News" component = {News} />
-          <Route path = "/News/Events" component = {Events} />
+          <Route exact path = "/News/News" component = {News} />
+          <Route exact path = "/News/Events" component = {Events} />
+          <Route exact path = "/News/N1" component = {New1} />
           
           {/*Empolyment*/}
-          <Route path = "/Employment/EmploymentFaculty" component = {EmploymentFaculty} />
-          <Route path = "/Employment/EmploymentLecturer" component = {EmploymentLecturer} />
-          <Route path = "/Employment/EmploymentPP" component = {EmploymentPP} />
-          <Route path = "/Employment/EmploymentResearch" component = {EmploymentResearch} />
-          <Route path = "/Employment/EmploymentStudents" component = {EmploymentStudents} />
+          <Route exact path = "/Employment/EmploymentFaculty" component = {EmploymentFaculty} />
+          <Route exact path = "/Employment/EmploymentLecturer" component = {EmploymentLecturer} />
+          <Route exact path = "/Employment/EmploymentPP" component = {EmploymentPP} />
+          <Route exact path = "/Employment/EmploymentResearch" component = {EmploymentResearch} />
+          <Route exact path = "/Employment/EmploymentStudents" component = {EmploymentStudents} />
 
           {/*Donate*/}
-          <Route path = "/Donate/Donate" component = {Donate} />
+          <Route exact path = "/Donate/Donate" component = {Donate} />
 
            {/*about*/}
-           <Route path = "/About/AboutContacts" component = {AboutContacts} />
-           <Route path = "/About/AboutFacilities" component = {AboutFacilities} />
-           <Route path = "/About/AboutVF" component = {AboutVF} />
-           <Route path = "/About/AboutRoomR" component = {AboutRoomR} />
-           <Route path = "/About/AboutWebM" component = {AboutWebM} />
-           <Route path = "/About/AboutInternal" component = {AboutInternal} />
-           <Route path = "/About/AboutTechSupport" component = {AboutTechSupport} />
-           <Route path = "/About/AboutAdminInfor" component = {AboutAdminInfor} />
+           <Route exact path = "/About/AboutContacts" component = {AboutContacts} />
+           <Route exact path = "/About/AboutFacilities" component = {AboutFacilities} />
+           <Route exact path = "/About/AboutVF" component = {AboutVF} />
+           <Route exact path = "/About/AboutRoomR" component = {AboutRoomR} />
+           <Route exact path = "/About/AboutWebM" component = {AboutWebM} />
+           <Route exact path = "/About/AboutInternal" component = {AboutInternal} />
+           <Route exact path = "/About/AboutTechSupport" component = {AboutTechSupport} />
+           <Route exact path = "/About/AboutAdminInfor" component = {AboutAdminInfor} />
 
        </Switch>
        <Footer />
