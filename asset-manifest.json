@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/DepolyReact/static/css/main.27b3dc43.chunk.css",
-    "main.js": "/DepolyReact/static/js/main.21ecc030.chunk.js",
-    "main.js.map": "/DepolyReact/static/js/main.21ecc030.chunk.js.map",
+    "main.js": "/DepolyReact/static/js/main.c7054008.chunk.js",
+    "main.js.map": "/DepolyReact/static/js/main.c7054008.chunk.js.map",
     "runtime-main.js": "/DepolyReact/static/js/runtime-main.73c490f0.js",
     "runtime-main.js.map": "/DepolyReact/static/js/runtime-main.73c490f0.js.map",
     "static/css/2.b30984d7.chunk.css": "/DepolyReact/static/css/2.b30984d7.chunk.css",
@@ -43,6 +43,6 @@
     "static/css/2.b30984d7.chunk.css",
     "static/js/2.182c56df.chunk.js",
     "static/css/main.27b3dc43.chunk.css",
-    "static/js/main.21ecc030.chunk.js"
+    "static/js/main.c7054008.chunk.js"
   ]
 }
