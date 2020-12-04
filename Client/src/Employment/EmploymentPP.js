@@ -16,11 +16,11 @@ class EmploymentPP extends Component {
                 <div class="col-sm-3">
       
                 <div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical">
-      <a class="nav-link" id="" data-toggle="pill" href="EmploymentFaculty" role="tab">Empolyment Faculty</a>
-      <a class="nav-link" id="" data-toggle="pill" href="EmploymentLecturer" role="tab">Empolyment Course Lecturer</a>
-      <a class="nav-link active" id="" data-toggle="pill" href="EmploymentPP" role="tab">Empolyment Priority Points</a>
-      <a class="nav-link" id="" data-toggle="pill" href="EmploymentResearch" role="tab">Empolyment Research</a>
-      <a class="nav-link" id="" data-toggle="pill" href="EmploymentStudents" role="tab">Empolyment Students</a>
+      <a class="nav-link" id="" data-toggle="pill" href="#Employment/EmploymentFaculty" role="tab">Empolyment Faculty</a>
+      <a class="nav-link" id="" data-toggle="pill" href="#Employment/EmploymentLecturer" role="tab">Empolyment Course Lecturer</a>
+      <a class="nav-link active" id="" data-toggle="pill" href="#Employment/EmploymentPP" role="tab">Empolyment Priority Points</a>
+      <a class="nav-link" id="" data-toggle="pill" href="#Employment/EmploymentResearch" role="tab">Empolyment Research</a>
+      <a class="nav-link" id="" data-toggle="pill" href="#Employment/EmploymentStudents" role="tab">Empolyment Students</a>
     </div>
 
                 </div>

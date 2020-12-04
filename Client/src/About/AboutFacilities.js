@@ -16,14 +16,14 @@ class AboutFacilities extends Component {
                 <div class="col-sm-3">
       
                 <div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical">
-      <a class="nav-link" id="" data-toggle="pill" href="AboutContacts" role="tab">Contacts</a>
-      <a class="nav-link active" id="" data-toggle="pill" href="AboutFacilities" role="tab">Facilities</a>
-      <a class="nav-link" id="" data-toggle="pill" href="AboutVF" role="tab">Visitor Form</a>
-      <a class="nav-link" id="" data-toggle="pill" href="AboutRoomR" role="tab">Room Reservation</a>
-      <a class="nav-link" id="" data-toggle="pill" href="AboutWebM" role="tab">Web Mail</a>
-      <a class="nav-link" id="" data-toggle="pill" href="AboutInternal" role="tab">Internal</a>
-      <a class="nav-link" id="" data-toggle="pill" href="AboutTechSupport" role="tab">Tech Support</a>
-      <a class="nav-link" id="" data-toggle="pill" href="AboutAdminInfor" role="tab">Admin Infor</a>
+      <a class="nav-link" id="" data-toggle="pill" href="#About/AboutContacts" role="tab">Contacts</a>
+      <a class="nav-link active" id="" data-toggle="pill" href="#About/AboutFacilities" role="tab">Facilities</a>
+      <a class="nav-link" id="" data-toggle="pill" href="#About/AboutVF" role="tab">Visitor Form</a>
+      <a class="nav-link" id="" data-toggle="pill" href="#About/AboutRoomR" role="tab">Room Reservation</a>
+      <a class="nav-link" id="" data-toggle="pill" href="#About/AboutWebM" role="tab">Web Mail</a>
+      <a class="nav-link" id="" data-toggle="pill" href="#About/AboutInternal" role="tab">Internal</a>
+      <a class="nav-link" id="" data-toggle="pill" href="#About/AboutTechSupport" role="tab">Tech Support</a>
+      <a class="nav-link" id="" data-toggle="pill" href="#About/AboutAdminInfor" role="tab">Admin Infor</a>
     </div>
 
                 </div>

@@ -16,8 +16,8 @@ class Events extends Component {
                 <div class="col-sm-3">
       
                 <div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical">
-      <a class="nav-link" id="" data-toggle="pill" href="News" role="tab">News</a>
-      <a class="nav-link active" id="" data-toggle="pill" href="Events" role="tab">Events</a>
+      <a class="nav-link" id="" data-toggle="pill" href="#News/News" role="tab">News</a>
+      <a class="nav-link active" id="" data-toggle="pill" href="#News/Events" role="tab">Events</a>
     </div>
 
                 </div>

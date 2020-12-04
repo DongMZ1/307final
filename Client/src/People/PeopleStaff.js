@@ -16,9 +16,9 @@ class PeopleStaff extends Component {
             <div class="col-sm-3">
   
             <div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical">
-  <a class="nav-link" id="" data-toggle="pill" href="PeopleFaculty" role="tab">People Faculty</a>
-  <a class="nav-link active" id="" data-toggle="pill" href="PeopleStaff" role="tab">People Staff</a>
-  <a class="nav-link" id="" data-toggle="pill" href="PeopleCommunity" role="tab">People Community</a>
+  <a class="nav-link" id="" data-toggle="pill" href="#People/PeopleFaculty" role="tab">People Faculty</a>
+  <a class="nav-link active" id="" data-toggle="pill" href="#People/PeopleStaff" role="tab">People Staff</a>
+  <a class="nav-link" id="" data-toggle="pill" href="#People/PeopleCommunity" role="tab">People Community</a>
 </div>
 
             </div>

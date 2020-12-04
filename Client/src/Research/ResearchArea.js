@@ -34,8 +34,8 @@ class ResearchArea extends Component {
             <div class="col-md-2" style={{backgroundColor: "aliceblue"}}>
               <div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical">
                 <div class="tab-name">Research</div>
-                <a class="nav-link active" id="" data-toggle="pill" href="ProspectiveGeneralInfo" role="tab">Research Area</a>
-                <a class="nav-link" id="" data-toggle="pill" href="ProspectiveWhyCS" role="tab">Academic Graduate</a>
+                <a class="nav-link active" id="" data-toggle="pill" href="#Research/ResearchArea" role="tab">Research Area</a>
+                <a class="nav-link" id="" data-toggle="pill" href="#Research/ResearchTecReport" role="tab">Academic Graduate</a>
               </div>
             </div>
             <div class="col-md-10 right-column">
