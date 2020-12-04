@@ -11,9 +11,9 @@ editables.forEach(el => {
 
 // once on load
 
-for (var key in localStorage) {
-  if (key.includes("dataStorage-")) {
-    const id = key.replace("dataStorage-","");
-    document.querySelector("#" + id).innerHTML = localStorage.getItem(key);
-  }
-}
+// for (var key in localStorage) {
+//   if (key.includes("dataStorage-")) {
+//     const id = key.replace("dataStorage-","");
+//     document.querySelector("#" + id).innerHTML = localStorage.getItem(key);
+//   }
+// }

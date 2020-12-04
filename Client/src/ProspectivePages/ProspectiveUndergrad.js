@@ -16,15 +16,15 @@ class ProspectiveUndergrad extends Component {
         <div class="col-sm-3">
 
         <div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical">
-      <a class="nav-link" id="" data-toggle="pill" href="ProspectiveGeneralInfo" role="tab">General Info</a>
-      <a class="nav-link" id="" data-toggle="pill" href="ProspectiveWhyCS" role="tab">Why CS</a>
-      <a class="nav-link" id="" data-toggle="pill" href="ProspectiveCEGEP" role="tab">CEGEP</a>
-      <a class="nav-link" id="" data-toggle="pill" href="ProspectiveFreshman" role="tab">Freshman</a>
-      <a class="nav-link" id="" data-toggle="pill" href="ProspectiveChoosingAMajor" role="tab">Choosing A Major</a>
-      <a class="nav-link" id="" data-toggle="pill" href="ProspectiveTransfer" role="tab">Transfer</a>
-      <a class="nav-link" id="" data-toggle="pill" href="ProspectiveInternship" role="tab">Internship</a>
-      <a class="nav-link active" id="" data-toggle="pill" href="ProspectiveUndergrad" role="tab">Undergraduate Admission</a>
-      <a class="nav-link" id="" data-toggle="pill" href="ProspectiveGrad" role="tab">Graduate Admission</a>
+        <a class="nav-link" id="" data-toggle="pill" href="#/ProspectivePages/ProspectiveGeneralInfo" role="tab">General Info</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="#/ProspectivePages/ProspectiveWhyCS" role="tab">Why CS</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="#/ProspectivePages/ProspectiveCEGEP" role="tab">CEGEP</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="#/ProspectivePages/ProspectiveFreshman" role="tab">Freshman</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="#/ProspectivePages/ProspectiveChoosingAMajor" role="tab">Choosing A Major</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="#/ProspectivePages/ProspectiveTransfer" role="tab">Transfer</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="#/ProspectivePages/ProspectiveInternship" role="tab">Internship</a>
+                  <a class="nav-link active" id="" data-toggle="pill" href="#/ProspectivePages/ProspectiveUndergrad" role="tab">Undergraduate Admission</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="#/ProspectivePages/ProspectiveGrad" role="tab">Graduate Admission</a>
     </div>
 
 
