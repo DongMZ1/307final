@@ -109,15 +109,12 @@
 
 .coverText {
     font-family: 'Yellowtail';
-    width: 400px;
-    height: 300px;
+    /* width: 400px;
+    height: 300px; */
+    width: 60%; 
+    height: auto;
     margin-top: 100px;
     margin-left: 25%;
     position: absolute;
     text-align: center;
 }
-
-
-/* div {
-    background: linear-gradient(to bottom right, #ffffff 0%, #ccffff 100%);
-} */
