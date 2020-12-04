@@ -38,7 +38,7 @@ const Welcome = () => {
                 {payload.staff ? (<h2>You logged into a staff account you have right to change content of this page! </h2>)
                   : (<h2>Welcome Student ! </h2>)}
                 <p id="usercontent" contenteditable={staff}>This content you can change!</p>
-                <Button variant="danger" >Save Changes</Button>
+                {/* <Button variant="danger" >Save Changes</Button> */}
               
           </div>
         </>
