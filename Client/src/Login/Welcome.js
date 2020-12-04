@@ -10,21 +10,18 @@ import "../static/bodycomponent.css";
 
 const Welcome = () => {
   
-  var staff = "false";
-  //var show = false;
   const { payload } = Session.get();
   const session = Session.get();
   //console.log(session);
   let history = useHistory();
   let username = payload.name;
   const [show, setshow] = useState(payload.page? true : false);
+  const [staff, setstaff] = useState(payload.staff? "true":"false");
+
   if (!session.isValid) {
     history.push("/");
   }
-  if (payload.staff) {
-    staff = "true";
-  }
- 
+
   const showPage = () =>{
     setshow(!show);
   }
