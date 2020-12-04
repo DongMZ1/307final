@@ -102,3 +102,9 @@ a:not([href]):not([class]) {
     border: none;
     background: transparent;
 }
+
+/* for People/Contact */
+
+.rt-td {
+    font-size: 15px;
+}

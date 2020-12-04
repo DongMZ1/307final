@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Spring} from 'react-spring/renderprops'
 import "../static/bodycomponent.css";
-import { HashRouter as Router, Switch, Route, withRouter} from 'react-router-dom';
 
 class ProspectiveGeneralInfo extends Component {
     constructor(props) {
