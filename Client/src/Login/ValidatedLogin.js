@@ -21,12 +21,12 @@ function ValidatedLogin(props) {
     <Formik
       initialValues={{ email: "", password: "", LoginStatus: "" }}
       onSubmit={(values, { setSubmitting, setFieldValue, setErrors }) => {
-        Axios.post("http://fall2020-comp307.cs.mcgill.ca:3001/login", {
+        Axios.post("http://localhost:3001/login", {
           username: values.email,
           password: values.password,
         }).then((response) => {
           if (response.data.message) {
-            //console.log(response.data.message);
+            //console.log("what??")
             setFieldValue('LoginStatus', response.data.message);
             props.LoginStatusCallBack(false);
           }
@@ -34,8 +34,7 @@ function ValidatedLogin(props) {
             //console.log("username is ",response.data.username )
             //history.push("/welcome", { username: response.data.username });
             props.LoginStatusCallBack(true);
-            //console.log("here is received data:", response.data);
-            props.UserInfoCallBack(response.data[0]);
+            props.UsernameCallBack(response.data.username)
             //setFieldValue('LoginStatus', response.data);
           }
           //console.log(response);

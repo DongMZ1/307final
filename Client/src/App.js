@@ -3,7 +3,7 @@ import './App.css';
 // import LoginPage from './Login/LoginPage';
 // import RegisterPage from './Login/RegisterPage';
 import Welcome from './Login/Welcome'
-import { BrowserRouter as Router, Switch, Route, withRouter} from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, withRouter} from 'react-router-dom';
 // import { HashRouter as Router, Switch, Route, withRouter} from 'react-router-dom';
 import Header from './Header'
 import ScrollToTop from './ScrollToTop'
@@ -56,7 +56,7 @@ import ProspectiveTransfer from './ProspectivePages/ProspectiveTransfer'
 import ResearchArea from './Research/ResearchArea'
 import ResearchTecReport from './Research/ResearchTecReport'
 import Editable from "./Editable";
-import { Session } from 'bc-react-session';
+//import { Session } from 'bc-react-session';
 //import Cookies from 'js-cookie';
 
 // import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
@@ -79,11 +79,6 @@ function App() {
   //   setusername(username);
   // }
   //console.log("asdfasdfasdf:", Cookies.get('username'))
-  // const closeSession = ()=>{
-  //   Session.destroy();
-  // }
-  //   window.addEventListener("beforeunload", closeSession());
-    
   
   return (
       <Router>
@@ -108,7 +103,8 @@ function App() {
         
 
          {/*Academic*/}
-           <Route path = "/Academic/AcademicUndergrad" component = {AcademicUndergrad} />
+           <Route path={`${process.env.PUBLIC_URL}/Academic/AcademicUndergrad`} component={AcademicUndergrad}></Route>
+           {/* <Route path = "/Academic/AcademicUndergrad" component = {AcademicUndergrad} /> */}
            <Route path = "/Academic/AcademicGrad" component = {AcademicGrad} />
            <Route path = "/Academic/AcademicFunding" component = {AcademicFunding} />
            <Route path = "/Academic/AcademicTeachingAss" component = {AcademicTeachingAss} />
