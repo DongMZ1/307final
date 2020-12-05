@@ -148,7 +148,7 @@ class Header extends Component {
 
 
   render() {
-
+    Aos.init({interval: 3000});
     const { login, sign } = this.state;
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
