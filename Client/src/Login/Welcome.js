@@ -39,9 +39,9 @@ const Welcome = () => {
           </div>
           <div class="custom-content">
             <div className="body">
-              <h1 className="user"> Welcome! {username}, You are in your private page. </h1>
+              <h1 className="user"> Welcome, {username}! You are in your private page. </h1>
               <br/>
-              {payload.staff ? (<h2 className="userright">You logged into a staff account you have right to change content of this page! </h2>)
+              {payload.staff ? (<h2 className="userright">You've logged into a staff account and now have the right to change the content of this page! </h2>)
                 : (<h2>Welcome Student ! </h2>)}
                 <br/>
                 <br/>
@@ -57,32 +57,28 @@ const Welcome = () => {
                   <br />
                   <br />
                   
-              <Button class="btn btn-outline-primary" variant="secondary" onClick={showPage}>{show?(<>Go back</>):(<>I want to Create my own page</>)}</Button>
-              <br/>
-              <br/>
-              {show?(
-                <>
-                <textarea placeholder="Enter your HTML here..." rows="10" cols="80" name="custompage" id="CustomPage">
-                  {payload.page}
-                </textarea>
-                <br />
-                <br />
-                <Button variant="secondary" onClick={createPage}>Create Page</Button>
-                <br />
-                <br />
-                {payload.page ? (<><Button variant = "warning" href="#/CustomPage">Go to your Page</Button>
-                  <br />
-                  <br />
-                  <Button  variant = "danger" onClick={DeletePage}>Delete Page</Button>
-                </>) : (<></>)}
-                </>
-
-              ):(<></>)}
-
-                  
-
-                </>
-              ) : (<></>)}
+                  <Button class="btn btn-outline-primary" variant="secondary" onClick={showPage}>{show?(<>Go back</>):(<>I want to Create my own page</>)}</Button>
+                  <br/>
+                  <br/>
+                  {show?(
+                    <>
+                    <textarea rows="4" cols="50" name="custompage" id="CustomPage">
+                      {payload.page}
+                    </textarea>
+                    <br />
+                    <br />
+                    <Button variant="secondary" onClick={createPage}>Create Page</Button>
+                    <br />
+                    <br />
+                    {payload.page ? (<><Button variant = "warning" href="#/CustomPage">Go to your Page</Button>
+                      <br />
+                      <br />
+                      <Button  variant = "danger" onClick={DeletePage}>Delete Page</Button>
+                    </>) : (<></>)}
+                    </>
+                  ):(<></>)}
+                    </>
+                  ) : (<></>)}
             </div>
 
           </div>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Spring } from "react-spring/renderprops";
 import "../static/bodycomponent.css";
-import DonatePicture from "../pictures/Donate.jpg";
+import DonatePicture from "../pictures/donate.jpg";
 import "../static/header.css";
 class Donate extends Component {
   constructor(props) {
