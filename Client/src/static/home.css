@@ -31,6 +31,7 @@
   .caption {
     background-color: rgba(0, 0, 0, 0.433); 
     z-index: 0;
+    height: 20%;
   }
 
  .carousel-control-prev-icon {

@@ -41,13 +41,10 @@ class HomePage extends Component {
             />
             <div className="overlay">
               <div className="desc" contenteditable = {this.state.loggedin}>
-                
                 McGill Robotics is an engineering design team that builds robots for international 
                 competitions as well as organizes RoboHacks annually. 
                 The team’s goal is to foster an interest in robotics 
                 through competition and to cultivate a relationship with the surrounding Montreal community.
-                
-                  
                   <br></br>
                   <button type="button" class="btn btn-primary"><a href="https://mcgillrobotics.com/" style={{color: "whitesmoke"}}>Read More</a></button>
               </div>
