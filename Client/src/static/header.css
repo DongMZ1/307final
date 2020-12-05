@@ -86,6 +86,11 @@
 
 .coverText {
     padding-top: 20%;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-size: 4em;
+    max-height: 30%;
+    white-space: pre-line;
 }
 
 .customized-nav{
@@ -113,6 +118,10 @@
     height: 100vh;
     /* background-color: rgba(245, 245, 245, 0.836); */
     background: linear-gradient(to bottom right, #ffffff 0%, #ccffff 100%);
+}
+
+ a{
+    font-size: 18px !important;
 }
 
 .dropdown, #btn-link {

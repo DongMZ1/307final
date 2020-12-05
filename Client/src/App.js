@@ -6,10 +6,11 @@ import Welcome from './Login/Welcome'
 import { HashRouter as Router, Switch, Route, withRouter} from 'react-router-dom';
 // import { HashRouter as Router, Switch, Route, withRouter} from 'react-router-dom';
 import Header from './Header'
+// import Loader from './Loader'
 import ScrollToTop from './ScrollToTop'
 import Footer from './Footer'
 import HomePage from './HomePage'
-import React, {useState} from "react";
+import React, {Component, useState, useEffect } from "react";
 
 import AboutContacts from './About/AboutContacts'
 import AboutFacilities from './About/AboutFacilities'
@@ -57,102 +58,114 @@ import ProspectiveTransfer from './ProspectivePages/ProspectiveTransfer'
 import ResearchArea from './Research/ResearchArea'
 import ResearchTecReport from './Research/ResearchTecReport';
 import CustomPage from './Login/CustomPage';
-import Editable from "./Editable";
-import N1 from './News/N1';
+import "./static/bodycomponent.css";
 //import { Session } from 'bc-react-session';
 //import Cookies from 'js-cookie';
 
-// import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-function App() {
-  // const [logStatus, setlogStatus] = useState(false);
-  // const[username, setusername] = useState("");
-    //const session = Session.get();
-    //console.log("APP page session:", session);
-  // const { payload } = Session.get();
-  // setlogStatus(session.isValid);
-  // if(logStatus){
-  //   setusername(payload.username);
+class App extends Component {
+  // constructor(props){
+  //   super(props);
+  //   this.state={
+  //     isLoading: false
+  //   }
   // }
-  // const setLoginStatus = (loggedin) => {
-  //   setlogStatus(loggedin);
+  // componentWillReceiveProps(nextProps) {
+  //   this.setState({ isLoading: nextProps.isLoading });
+
+
+  // componentDidMount() {
+  //   // this simulates an async action, after which the component will render the content
+  //   setTimeout(() => {
+  //     this.setState({ loading: false });
+  //  }, 2000);
   // }
+
+  render() {
+    // const { loading } = this.state;
+    // if(loading) { // if your component doesn't have to wait for an async action, remove this block 
+    //   return null; // render null when app is not ready
+    // }else{
+
+      return (
+        <div>
+          <Router>
+          <ScrollToTop />
+          <Header />
+          <Switch>
+            {/*homepage*/}
+              <Route exact path = '/' component = {HomePage} />
+            {/*prospectivePages*/}
+              {/* <Route exact path = "/login" component = {LoginPage} />
+              <Route exact path = "/register" component = {RegisterPage} /> */}
+              <Route exact path = "/welcome" component = {Welcome} />
+              <Route exact path = "/CustomPage" component = {CustomPage} />
+              <Route exact path = "/ProspectivePages/ProspectiveGeneralInfo" component = {ProspectiveGeneralInfo} />
+              <Route exact path = "/ProspectivePages/ProspectiveCEGEP" component = {ProspectiveCEGEP} />
+              <Route exact path = "/ProspectivePages/ProspectiveChoosingAMajor" component = {ProspectiveChoosingAMajor} />
+              <Route exact path = "/ProspectivePages/ProspectiveFreshman" component = {ProspectiveFreshman} />
+              <Route exact path = "/ProspectivePages/ProspectiveGrad" component = {ProspectiveGrad} />
+              <Route exact path = "/ProspectivePages/ProspectiveInternship" component = {ProspectiveInternship} />
+              <Route exact path = "/ProspectivePages/ProspectiveUndergrad" component = {ProspectiveUndergrad} />
+              <Route exact path = "/ProspectivePages/ProspectiveWhyCS" component = {ProspectiveWhyCS} />
+              <Route exact path = "/ProspectivePages/ProspectiveTransfer" component = {ProspectiveTransfer} />
+            
   
-
-  // const setUsername = (username) => {
-  //   setusername(username);
-  // }
-  //console.log("asdfasdfasdf:", Cookies.get('username'))
+            {/*Academic*/}
+              <Route exact path = "/Academic/AcademicUndergrad" component = {AcademicUndergrad} />
+              <Route exact path = "/Academic/AcademicGrad" component = {AcademicGrad} />
+              <Route exact path = "/Academic/AcademicFunding" component = {AcademicFunding} />
+              <Route exact path = "/Academic/AcademicTeachingAss" component = {AcademicTeachingAss} />
+              <Route exact path = "/Academic/AcademicCourses" component = {AcademicCourses} />
+              <Route exact path = "/Academic/AUinfor" component = {AUinfor} />
   
-  return (
-      <Router>
-      <ScrollToTop />
-      <Header />
-       <Switch>
-         {/*homepage*/}
-           <Route exact path = '/' component = {HomePage} />
-         {/*prospectivePages*/}
-          {/* <Route exact path = "/login" component = {LoginPage} />
-           <Route exact path = "/register" component = {RegisterPage} /> */}
-           <Route exact path = "/welcome" component = {Welcome} />
-           <Route exact path = "/CustomPage" component = {CustomPage} />
-           <Route exact path = "/ProspectivePages/ProspectiveGeneralInfo" component = {ProspectiveGeneralInfo} />
-           <Route exact path = "/ProspectivePages/ProspectiveCEGEP" component = {ProspectiveCEGEP} />
-           <Route exact path = "/ProspectivePages/ProspectiveChoosingAMajor" component = {ProspectiveChoosingAMajor} />
-           <Route exact path = "/ProspectivePages/ProspectiveFreshman" component = {ProspectiveFreshman} />
-           <Route exact path = "/ProspectivePages/ProspectiveGrad" component = {ProspectiveGrad} />
-           <Route exact path = "/ProspectivePages/ProspectiveInternship" component = {ProspectiveInternship} />
-           <Route exact path = "/ProspectivePages/ProspectiveUndergrad" component = {ProspectiveUndergrad} />
-           <Route exact path = "/ProspectivePages/ProspectiveWhyCS" component = {ProspectiveWhyCS} />
-           <Route exact path = "/ProspectivePages/ProspectiveTransfer" component = {ProspectiveTransfer} />
-        
+              {/*Research*/}
+              <Route exact path = "/Research/ResearchArea" component = {ResearchArea} />
+              <Route exact path = "/Research/ResearchTecReport" component = {ResearchTecReport} />
+  
+              {/*People*/}
+              <Route exact path = "/People/PeopleFaculty" component = {PeopleFaculty} />
+              <Route exact path = "/People/PeopleStaff" component = {PeopleStaff} />
+              <Route exact path = "/People/PeopleCommunity" component = {PeopleCommunity} />
+  
+              {/*News*/}
+              <Route exact path = "/News/News" component = {News} />
+              <Route exact path = "/News/Events" component = {Events} />
+              <Route exact path = "/News/N1" component = {New1} />
+              
+              {/*Empolyment*/}
+              <Route exact path = "/Employment/EmploymentFaculty" component = {EmploymentFaculty} />
+              <Route exact path = "/Employment/EmploymentLecturer" component = {EmploymentLecturer} />
+              <Route exact path = "/Employment/EmploymentPP" component = {EmploymentPP} />
+              <Route exact path = "/Employment/EmploymentResearch" component = {EmploymentResearch} />
+              <Route exact path = "/Employment/EmploymentStudents" component = {EmploymentStudents} />
+  
+              {/*Donate*/}
+              <Route exact path = "/Donate/Donate" component = {Donate} />
+  
+              {/*about*/}
+              <Route exact path = "/About/AboutContacts" component = {AboutContacts} />
+              <Route exact path = "/About/AboutFacilities" component = {AboutFacilities} />
+              <Route exact path = "/About/AboutVF" component = {AboutVF} />
+              <Route exact path = "/About/AboutRoomR" component = {AboutRoomR} />
+              <Route exact path = "/About/AboutWebM" component = {AboutWebM} />
+              <Route exact path = "/About/AboutInternal" component = {AboutInternal} />
+              <Route exact path = "/About/AboutTechSupport" component = {AboutTechSupport} />
+              <Route exact path = "/About/AboutAdminInfor" component = {AboutAdminInfor} />
+  
+            </Switch>
+            <Footer />
+            </Router>
+          </div>
+      );
 
-         {/*Academic*/}
-           <Route exact path = "/Academic/AcademicUndergrad" component = {AcademicUndergrad} />
-           <Route exact path = "/Academic/AcademicGrad" component = {AcademicGrad} />
-           <Route exact path = "/Academic/AcademicFunding" component = {AcademicFunding} />
-           <Route exact path = "/Academic/AcademicTeachingAss" component = {AcademicTeachingAss} />
-           <Route exact path = "/Academic/AcademicCourses" component = {AcademicCourses} />
-           <Route exact path = "/Academic/AUinfor" component = {AUinfor} />
+    // }
 
-          {/*Research*/}
-          <Route exact path = "/Research/ResearchArea" component = {ResearchArea} />
-          <Route exact path = "/Research/ResearchTecReport" component = {ResearchTecReport} />
-
-          {/*People*/}
-          <Route exact path = "/People/PeopleFaculty" component = {PeopleFaculty} />
-          <Route exact path = "/People/PeopleStaff" component = {PeopleStaff} />
-          <Route exact path = "/People/PeopleCommunity" component = {PeopleCommunity} />
-
-          {/*News*/}
-          <Route exact path = "/News/News" component = {News} />
-          <Route exact path = "/News/Events" component = {Events} />
-          <Route exact path = "/News/N1" component = {New1} />
-          
-          {/*Empolyment*/}
-          <Route exact path = "/Employment/EmploymentFaculty" component = {EmploymentFaculty} />
-          <Route exact path = "/Employment/EmploymentLecturer" component = {EmploymentLecturer} />
-          <Route exact path = "/Employment/EmploymentPP" component = {EmploymentPP} />
-          <Route exact path = "/Employment/EmploymentResearch" component = {EmploymentResearch} />
-          <Route exact path = "/Employment/EmploymentStudents" component = {EmploymentStudents} />
-
-          {/*Donate*/}
-          <Route exact path = "/Donate/Donate" component = {Donate} />
-
-           {/*about*/}
-           <Route exact path = "/About/AboutContacts" component = {AboutContacts} />
-           <Route exact path = "/About/AboutFacilities" component = {AboutFacilities} />
-           <Route exact path = "/About/AboutVF" component = {AboutVF} />
-           <Route exact path = "/About/AboutRoomR" component = {AboutRoomR} />
-           <Route exact path = "/About/AboutWebM" component = {AboutWebM} />
-           <Route exact path = "/About/AboutInternal" component = {AboutInternal} />
-           <Route exact path = "/About/AboutTechSupport" component = {AboutTechSupport} />
-           <Route exact path = "/About/AboutAdminInfor" component = {AboutAdminInfor} />
-
-       </Switch>
-       <Footer />
-       </Router>
-  );
+  }
 }
+// function demoAsyncCall() {
+//   return new Promise((resolve) => setTimeout(() => resolve(), 5500));
+// }
+// the setTimeout simulates the time it takes react to load, and is not part of the solution
 
 export default App;
 

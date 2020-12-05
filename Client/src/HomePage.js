@@ -43,8 +43,6 @@ class HomePage extends Component {
               <div className="desc" contenteditable = {this.state.loggedin}>
                 McGill Robotics is an engineering design team that builds robots for international 
                 competitions as well as organizes RoboHacks annually. 
-                The team’s goal is to foster an interest in robotics 
-                through competition and to cultivate a relationship with the surrounding Montreal community.
                   <br></br>
                   <button type="button" class="btn btn-primary"><a href="https://mcgillrobotics.com/" style={{color: "whitesmoke"}}>Read More</a></button>
               </div>
@@ -60,12 +58,8 @@ class HomePage extends Component {
             />
             <div className="overlay">
               <div className="desc" contenteditable = {this.state.loggedin}>
-              
-                text="The truth is that doctors and radiologists can have error rates as high as 30% in reading chest X-Rays. 
                 In today’s world, an early and especially accurate COVID diagnosis is crucial. 
-                A late or incorrect diagnosis could see an infectious patient sent home..."
-               
-                
+                A late or incorrect diagnosis could see an infectious patient sent home...
                 <br></br>
                 <button type="button" class="btn btn-primary"><a href="https://www.cs.ubc.ca/news/2020/10/how-ai-helping-battle-against-covid-19" style={{color: "whitesmoke"}}>Read More</a></button>
               </div>
@@ -81,9 +75,8 @@ class HomePage extends Component {
             />
             <div className="overlay">
               <div className="desc" contenteditable = {this.state.loggedin}>
-              
-                "McGill AI Society aims to make AI more accessible by hosting events, bootcamps, and workshops that 
-                give students an opportunity to learn about AI in a peer-based, supportive environment."
+                McGill AI Society aims to make AI more accessible by hosting events, bootcamps, and workshops that 
+                give students an opportunity to learn about AI in a peer-based, supportive environment
                 <br></br>
                 <button type="button" class="btn btn-primary"><a href="https://www.mcgillai.com/" style={{color: "whitesmoke"}}>Read More</a></button>
               </div>

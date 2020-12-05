@@ -11,6 +11,10 @@ import "aos/dist/aos.css";
 
 import "../static/bodycomponent.css";
 
+const messageSent = () => {
+  alert("message sent!")
+}
+
 class AboutContacts extends Component {
     constructor(props) {
         super(props);
@@ -29,13 +33,13 @@ class AboutContacts extends Component {
                 <div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical">
                   <div class="tab-name">About</div>
                   <a class="nav-link active" id="" data-toggle="pill" href="#About/AboutContacts" role="tab">Contacts</a>
-      <a class="nav-link" id="" data-toggle="pill" href="#About/AboutFacilities" role="tab">Facilities</a>
-      <a class="nav-link" id="" data-toggle="pill" href="#About/AboutVF" role="tab">Visitor Form</a>
-      <a class="nav-link" id="" data-toggle="pill" href="#About/AboutRoomR" role="tab">Room Reservation</a>
-      <a class="nav-link" id="" data-toggle="pill" href="#About/AboutWebM" role="tab">Web Mail</a>
-      <a class="nav-link" id="" data-toggle="pill" href="#About/AboutInternal" role="tab">Internal</a>
-      <a class="nav-link" id="" data-toggle="pill" href="#About/AboutTechSupport" role="tab">Tech Support</a>
-      <a class="nav-link" id="" data-toggle="pill" href="#About/AboutAdminInfor" role="tab">Admin Infor</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="#About/AboutFacilities" role="tab">Facilities</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="#About/AboutVF" role="tab">Visitor Form</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="#About/AboutRoomR" role="tab">Room Reservation</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="#About/AboutWebM" role="tab">Web Mail</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="#About/AboutInternal" role="tab">Internal</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="#About/AboutTechSupport" role="tab">Tech Support</a>
+                  <a class="nav-link" id="" data-toggle="pill" href="#About/AboutAdminInfor" role="tab">Admin Infor</a>
                 </div>
               </div>
               <div class="col-md-10 right-column">
@@ -177,6 +181,56 @@ class AboutContacts extends Component {
                             <Button variant="primary" href="https://www.mcgill.ca/admissions/">Admission</Button>
                           </Card.Body>
                       </Card>
+                    </div>
+                  </div>
+                  <hr></hr>
+                  <div class="container">
+                    <div className="row">
+                      <h2>Got any questions about the website? Shoot us a message!</h2>
+                    </div>
+                      <div class="col-lg-7" id="contact-form">
+                        <form
+                          class="form-horizontal"
+                          action="https://formspree.io/f/xknpqwol"
+                          method="POST"
+                        >
+                        <fieldset>
+                          <div class="form-group">
+                            <div class="col-md-12">
+                              <input
+                                name="name"
+                                placeholder="Name"
+                                class="form-control"
+                                type="text"
+                              ></input>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-md-12">
+                              <input
+                                name="email"
+                                placeholder="E-Mail Address"
+                                class="form-control"
+                                type="text"
+                              ></input>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-md-12 inputGroupContainer">
+                              <textarea
+                                class="form-control"
+                                name="message"
+                                placeholder="Message"
+                              ></textarea>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-md-12">
+                              <button type="submit" class="btn btn-outline-primary">Send</button>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>
                     </div>
                   </div>
                 </div>

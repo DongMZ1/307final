@@ -1,3 +1,20 @@
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    background-color: #F8F8F8AD;
+}
+
+.loader {
+    left: 50%;
+    top: 30%;
+    z-index: 1000;
+    position: absolute;
+}
+
+
 .body {
     font-family: 'Times New Roman', Times, serif;
     background-color: aliceblue;
@@ -214,3 +231,16 @@ textarea {
         display: inline;
     }
 }
+
+#contact-form {
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.521) 0px 5px 5px 2px;
+    background: rgba(108, 196, 211, 0.411);;
+    border-radius: 4px;
+    padding: 20px;
+    top:10px;
+    margin-top: 40px;
+    font-weight: bold;
+    font-family: 'Quicksand', 'sans-serif';
+    margin-bottom: 80px;
+  }

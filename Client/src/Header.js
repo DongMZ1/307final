@@ -357,7 +357,7 @@ class Header extends Component {
               </Navbar.Collapse>
             </Navbar>
             <div className="header">
-              <div className="headerleft">
+              {/* <div className="headerleft"> */}
                 <div
                   class="container-fluid"
                   style={{ padding: "20px", marginTop: "10px" }}
@@ -374,14 +374,9 @@ class Header extends Component {
                       <div class="col-lg-7">
                         <div className="coverText" data-aos="zoom-in">
                           <h3>School of Computer Science</h3>
-                          <br />
-                          <span
-                            style={{ fontFamily: "unset", fontSize: "72px" }}
-                          >
                             @ McGill{" "}
-                          </span>
                           <FaSchool
-                            style={{ fontSize: "72px", marginBottom: "45px" }}
+                            style={{ marginBottom: "0.4em" }}
                           ></FaSchool>
                           <hr></hr>
                         </div>
@@ -392,10 +387,10 @@ class Header extends Component {
                         </div>
                       </div>
                     </div>
-                    <div class="row">
+                    {/* <div class="row">
                       <div class="col-lg-12"></div>
-                    </div>
-                  </div>
+                    </div> */}
+                  {/* </div> */}
                 </div>
               </div>
             </div>
