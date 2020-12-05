@@ -32,6 +32,7 @@ a:not([href]):not([class]) {
 }
 
 .custom-content .userInput {
+    font-family: "Comic Sans MS";
     color: rgb(0, 102, 255);
     font-size: 20px;
     display: inline-block;
@@ -42,6 +43,20 @@ a:not([href]):not([class]) {
     padding: 0px 2px 0px 2px;
     border: 1px solid rgb(0, 153, 255);
     cursor: text;
+}
+
+.user{
+    font-family: "Comic Sans MS";
+    font-weight: lighter;
+    
+    /* color: gray; */
+}
+.userright{
+    font-family: "Comic Sans MS";
+    font-weight: lighter;
+    font-size: 18px;
+    color: gray;
+
 }
 
 .tab-name {

@@ -39,19 +39,25 @@ const Welcome = () => {
           </div>
           <div class="custom-content">
             <div className="body">
-              <h1 > Welcome! {username}, You are in your private page. </h1>
-              {payload.staff ? (<h2>You logged into a staff account you have right to change content of this page! </h2>)
+              <h1 className="user"> Welcome! {username}, You are in your private page. </h1>
+              <br/>
+              {payload.staff ? (<h2 className="userright">You logged into a staff account you have right to change content of this page! </h2>)
                 : (<h2>Welcome Student ! </h2>)}
-              <p id="usercontent" contenteditable={staff}>{payload.text}</p>
-              <p> Your name is <span className="userInput" id="username" contenteditable={staff}>{payload.name}</span></p>
-              <p> Your age is <span className="userInput" id="userage" contenteditable={staff}>{payload.age}</span></p>
+                <br/>
+                <br/>
+              <p id="usercontent" className="user" contenteditable={staff}>{payload.text}</p>
+              <br/>
+              <p className="user"> Your name is <span className="userInput" id="username" contenteditable={staff}>{payload.name}</span></p>
+              <br/>
+              <p className="user"> Your age is <span className="userInput" id="userage" contenteditable={staff}>{payload.age}</span></p>
+              <br/>
               {payload.staff ? (
                 <>
-                  <Button class="btn btn-outline-primary" variant="light" onClick={saveChange}>Save Changes</Button>
+                  <Button class="btn btn-outline-primary" variant="secondary" onClick={saveChange}>Save Changes</Button>
                   <br />
                   <br />
                   
-              <Button class="btn btn-outline-primary" variant="light" onClick={showPage}>{show?(<>Go back</>):(<>I want to Create my own page</>)}</Button>
+              <Button class="btn btn-outline-primary" variant="secondary" onClick={showPage}>{show?(<>Go back</>):(<>I want to Create my own page</>)}</Button>
               <br/>
               <br/>
               {show?(
@@ -60,13 +66,13 @@ const Welcome = () => {
                 </textarea>
                 <br />
                 <br />
-                <Button variant="light" onClick={createPage}>Create Page</Button>
+                <Button variant="secondary" onClick={createPage}>Create Page</Button>
                 <br />
                 <br />
-                {payload.page ? (<><Button href="#/CustomPage">Go to your Page</Button>
+                {payload.page ? (<><Button variant = "warning" href="#/CustomPage">Go to your Page</Button>
                   <br />
                   <br />
-                  <Button onClick={DeletePage}>Delete Page</Button>
+                  <Button  variant = "danger" onClick={DeletePage}>Delete Page</Button>
                 </>) : (<></>)}
                 </>
 
