@@ -12,7 +12,7 @@ const Welcome = () => {
   
   const { payload } = Session.get();
   const session = Session.get();
-  //console.log(session);
+  console.log(session);
   let history = useHistory();
   let username = payload.name;
   const [show, setshow] = useState(payload.page? true : false);
