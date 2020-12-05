@@ -9,7 +9,7 @@
 }
 
 p {
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 a:not([href]):not([class]) {
@@ -130,7 +130,7 @@ a:not([href]):not([class]) {
 }
 
 
-.research-image {
+#research-image {
     width: 65%;
     height: auto;
     border-radius: 50%;
@@ -140,8 +140,8 @@ a:not([href]):not([class]) {
 }
 
 .list-group-item {
-    padding: 0; 
-    border: none;
+    padding: 0 !important;
+    border: none !important;
     background: transparent;
 }
 
