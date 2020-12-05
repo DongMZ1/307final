@@ -15,7 +15,7 @@ class Donate extends Component {
           <div style={props}>
             <ScrollToTopOnMount />
             <div className="body">
-              <img src={DonatePicture} style={{ padding: "10%" }}></img>
+              <img id = "donateP" src={DonatePicture} style={{ padding: "10%" }}></img>
               <br></br>
               <h2>Grace Hopper Celebration</h2>
               <p>
