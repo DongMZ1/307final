@@ -55,7 +55,8 @@ import ProspectiveWhyCS from './ProspectivePages/ProspectiveWhyCS'
 import ProspectiveTransfer from './ProspectivePages/ProspectiveTransfer'
 
 import ResearchArea from './Research/ResearchArea'
-import ResearchTecReport from './Research/ResearchTecReport'
+import ResearchTecReport from './Research/ResearchTecReport';
+import CustomPage from './Login/CustomPage';
 import Editable from "./Editable";
 import N1 from './News/N1';
 //import { Session } from 'bc-react-session';
@@ -93,6 +94,7 @@ function App() {
           {/* <Route exact path = "/login" component = {LoginPage} />
            <Route exact path = "/register" component = {RegisterPage} /> */}
            <Route exact path = "/welcome" component = {Welcome} />
+           <Route exact path = "/CustomPage" component = {CustomPage} />
            <Route exact path = "/ProspectivePages/ProspectiveGeneralInfo" component = {ProspectiveGeneralInfo} />
            <Route exact path = "/ProspectivePages/ProspectiveCEGEP" component = {ProspectiveCEGEP} />
            <Route exact path = "/ProspectivePages/ProspectiveChoosingAMajor" component = {ProspectiveChoosingAMajor} />
