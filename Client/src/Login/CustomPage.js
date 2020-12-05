@@ -37,7 +37,7 @@ const CustomPage = () => {
                         <div className="body" id="CustomArea">
                             <Markup content={content} />
 
-                            <Button variant="light" href="#/welcome">Back to your Profile Page</Button>
+                            <Button variant="warning" href="#/welcome">Back to your Profile Page</Button>
 
                         </div>
 

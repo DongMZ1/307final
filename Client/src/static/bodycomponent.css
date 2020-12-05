@@ -47,9 +47,12 @@ a:not([href]):not([class]) {
 
 .user{
     font-family: "Comic Sans MS";
-    font-weight: lighter;
+    /* font-size: 20px; */
     
     /* color: gray; */
+}
+.user-content {
+    font-size: 20px;
 }
 .userright{
     font-family: "Comic Sans MS";

@@ -45,11 +45,11 @@ const Welcome = () => {
                 : (<h2>Welcome Student ! </h2>)}
                 <br/>
                 <br/>
-              <p id="usercontent" className="user" contenteditable={staff}>{payload.text}</p>
+              <p id="usercontent" className="user user-content" contenteditable={staff}>{payload.text}</p>
               <br/>
-              <p className="user"> Your name is <span className="userInput" id="username" contenteditable={staff}>{payload.name}</span></p>
+              <p className="user user-content"> Your name is <span className="userInput" id="username" contenteditable={staff}>{payload.name}</span></p>
               <br/>
-              <p className="user"> Your age is <span className="userInput" id="userage" contenteditable={staff}>{payload.age}</span></p>
+              <p className="user user-content"> Your age is <span className="userInput" id="userage" contenteditable={staff}>{payload.age}</span></p>
               <br/>
               {payload.staff ? (
                 <>
