@@ -10,10 +10,12 @@ import Axios from "axios";
 import { useHistory } from "react-router-dom";
 import PropTypes from 'prop-types';
 
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 
 function ValidatedLogin(props) {
-
+  Aos.init();
   let history = useHistory();
 
   const ValidatedLoginForm = () => (

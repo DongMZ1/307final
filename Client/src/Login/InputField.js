@@ -6,9 +6,11 @@ import { Session } from 'bc-react-session';
 import { Button } from "react-bootstrap";
 import Axios from "axios";
 import "../static/bodycomponent.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const InputField = () => {
-
+    Aos.init();
     return (
         
             <form>

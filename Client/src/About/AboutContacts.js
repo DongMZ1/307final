@@ -6,6 +6,8 @@ import program from '../pictures/program.png';
 import contact from '../pictures/contact.png';
 import gradadm from '../pictures/gradadm.png';
 import gradprogram from '../pictures/gradprogram.png';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import "../static/bodycomponent.css";
 
@@ -15,6 +17,7 @@ class AboutContacts extends Component {
         this.state = {  }
     }
     render() { 
+      Aos.init();
         return ( 
           <Spring
             from={{ opacity: 0 }}

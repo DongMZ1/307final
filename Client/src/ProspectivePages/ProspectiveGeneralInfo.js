@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Spring} from 'react-spring/renderprops'
 import "../static/bodycomponent.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 class ProspectiveGeneralInfo extends Component {
     constructor(props) {
@@ -8,6 +10,7 @@ class ProspectiveGeneralInfo extends Component {
         this.state = {  }
     }
     render() { 
+      Aos.init();
         return (  
           <Spring
           from={{ opacity: 0 }}

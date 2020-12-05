@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import {Spring} from 'react-spring/renderprops'
 import {Button, Collapse} from 'react-bootstrap'
 import "../static/bodycomponent.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 class AcademicCourses extends Component {
   constructor(props) {
     super(props);
@@ -51,6 +54,7 @@ handleUndergraduate() {
 
 
     render() { 
+      Aos.init();
         return (
           <Spring
           from={{ opacity: 0 }}

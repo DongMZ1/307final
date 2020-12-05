@@ -1,15 +1,18 @@
 import React, { Component } from "react";
 import { Spring } from "react-spring/renderprops";
 import "../static/bodycomponent.css";
-import DonatePicture from "../pictures/Donate.jpg";
+import DonatePicture from "../pictures/donate.jpg";
 import "../static/header.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 class Donate extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
   render() {
-    const backg = {};
+    Aos.init();
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
         {(props) => (

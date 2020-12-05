@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import { Spring } from "react-spring/renderprops";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 class AboutRoomR extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
   render() {
+    Aos.init();
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
         {(props) => (

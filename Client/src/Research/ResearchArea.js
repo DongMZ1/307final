@@ -14,7 +14,8 @@ import theory from "../pictures/research-theory.jpg";
 import graph from "../pictures/research-graph.jpg";
 import game from "../pictures/research-game.jpg";
 import "../static/bodycomponent.css";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 class ResearchArea extends Component {
     constructor(props) {
@@ -23,6 +24,7 @@ class ResearchArea extends Component {
         };
     }
     render() { 
+      Aos.init();
         return ( 
           <Spring
           from={{ opacity: 0 }}

@@ -50,19 +50,65 @@ textarea {
 
 .user{
     font-family: "Comic Sans MS";
-    /* font-size: 20px; */
-    
-    /* color: gray; */
 }
+
 .user-content {
     font-size: 20px;
 }
+
 .userright{
     font-family: "Comic Sans MS";
     font-weight: lighter;
     font-size: 18px;
     color: gray;
+}
 
+#customized{
+    width: 100vw;
+    background-color: aliceblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+/* buttons for the custmoized page */
+
+.btn-rounded {
+    border-radius: 5rem;
+ }
+
+.btn-rounded {
+    border-radius: 5rem;
+}
+
+.btn-iconed {
+    transition: 0.15s ease-in-out;
+    padding-left: 1.3rem;
+    padding-right: 1.5rem;
+}
+
+.btn-iconed [class~=oi], .btn-iconed [class~=fa], .btn-iconed [class~=typcn]::before, .btn-iconed [class~=mdi]::before, .btn-iconed [class~=icon]::before {
+    opacity: 0;
+    transform-origin: left right;
+    transform: translateX(-10px) scale(1.25);
+    transition: 0.15s ease-out;
+}
+
+.btn-iconed [class=spn] {
+    position: relative;
+    left: -9px;
+    transform-origin: left right;
+    transform: translateX(-9px);
+    transition: 0.2s ease-in-out;
+}
+
+.btn-iconed:hover [class~=fa], .btn-iconed:hover [class~="typcn"]::before {
+    opacity: 1;
+    transform: translateX(0px) scale(0.75);
+}
+
+.btn-iconed:hover [class=spn] {
+    left: 0px;
 }
 
 .tab-name {

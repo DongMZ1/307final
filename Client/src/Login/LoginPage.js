@@ -2,8 +2,11 @@
 import './login.css'
 import { useState } from "react";
 import Axios from "axios";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function LoginPage() {
+        Aos.init();
         const [username, setUsername] = useState("");
         const [password, setPassword] = useState("");
         const [LoginStatus, setLoginStatus] = useState("");

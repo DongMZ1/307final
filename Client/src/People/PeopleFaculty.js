@@ -5,6 +5,9 @@ import "../static/bodycomponent.css";
 import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
 import kemme from "../pictures/kemme.jpg";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 
 let mydata = [
   {
@@ -54,6 +57,7 @@ export default class PeopleFaculty extends Component {
   }
 
   render() {
+    Aos.init();
     const { data } = this.state;
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>

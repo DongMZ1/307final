@@ -7,9 +7,13 @@ import { Button } from "react-bootstrap";
 import Axios from "axios";
 import "../static/bodycomponent.css";
 //import InputField from "./InputField";
+import 'font-awesome/css/font-awesome.min.css'; 
+import "bootstrap/dist/css/bootstrap.min.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Welcome = () => {
-  
+  Aos.init();
   const { payload } = Session.get();
   const session = Session.get();
   //console.log(session);
@@ -35,7 +39,6 @@ const Welcome = () => {
         <>
           <div class="row" style={props}>
             <ScrollToTopOnMount />
-
           </div>
           <div class="custom-content">
             <div className="body">
@@ -53,11 +56,16 @@ const Welcome = () => {
               <br/>
               {payload.staff ? (
                 <>
-                  <Button class="btn btn-outline-primary" variant="secondary" onClick={saveChange}>Save Changes</Button>
+                  <button role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded" onClick={saveChange} href="#/welcome">
+                    <i class="fa fa-check"></i>
+                    <span class="spn">Save Changes</span>
+                  </button>
                   <br />
                   <br />
-                  
-                  <Button class="btn btn-outline-primary" variant="secondary" onClick={showPage}>{show?(<>Go back</>):(<>I want to Create my own page</>)}</Button>
+                  <button role="button" class="btn btn-outline-secondary btn-lg btn-iconed btn-rounded" onClick={saveChange} href="#/welcome">
+                    <i class="fa fa-arrow-left"></i>
+                    <span class="spn">Go Back</span>
+                  </button>
                   <br/>
                   <br/>
                   {show?(
@@ -67,14 +75,26 @@ const Welcome = () => {
                     </textarea>
                     <br />
                     <br />
-                    <Button variant="secondary" onClick={createPage}>Create Page</Button>
+                    <button role="button" onClick={createPage} class="btn btn-outline-secondary btn-lg btn-iconed btn-rounded" href="#/welcome">
+                      <i class="fa fa-pencil"></i>
+                      <span class="spn">Create Page</span>
+                    </button>
                     <br />
                     <br />
-                    {payload.page ? (<><Button variant = "warning" href="#/CustomPage">Go to your Page</Button>
+                    {payload.page ? (
+                      <div>
+                      <a type="button" href="#/CustomPage" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                        <i class="fa fa-arrow-right"></i>
+                        <span class="spn">Go To Your Page</span>
+                      </a>
                       <br />
                       <br />
-                      <Button  variant = "danger" onClick={DeletePage}>Delete Page</Button>
-                    </>) : (<></>)}
+                      <a type="button" class="btn btn-outline-danger btn-lg btn-iconed btn-rounded" onClick={DeletePage}>
+                        <i class="fa fa-trash"></i>
+                        <span class="spn">Delete Page</span>
+                      </a>
+                      </div>
+                    ) : (<></>)}
                     </>
                   ):(<></>)}
                     </>
