@@ -53,11 +53,13 @@ const Welcome = () => {
               <br/>
               {payload.staff ? (
                 <>
-                  <Button class="btn btn-outline-primary" variant="secondary" onClick={saveChange}>Save Changes</Button>
+                  <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded" onClick={saveChange}>
+                    <i class="fa fa-check"></i>
+                    <span class="spn">Save Changes</span>
+                  </a>
                   <br />
                   <br />
-                  
-                  <Button class="btn btn-outline-primary" variant="secondary" onClick={showPage}>{show?(<>Go back</>):(<>I want to Create my own page</>)}</Button>
+                  <a class="btn btn-outline-secondary btn-lg btn-iconed btn-rounded" onClick={showPage}>{show?(<><i class="fa fa-arrow-left"></i>Go back</>):(<><i class="fa fa-pencil"></i>Create my own page</>)}</a>
                   <br/>
                   <br/>
                   {show?(
