@@ -7,13 +7,9 @@ import { Button } from "react-bootstrap";
 import Axios from "axios";
 import "../static/bodycomponent.css";
 //import InputField from "./InputField";
-import 'font-awesome/css/font-awesome.min.css'; 
-import "bootstrap/dist/css/bootstrap.min.css";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 const Welcome = () => {
-  Aos.init();
+  
   const { payload } = Session.get();
   const session = Session.get();
   //console.log(session);
@@ -39,6 +35,7 @@ const Welcome = () => {
         <>
           <div class="row" style={props}>
             <ScrollToTopOnMount />
+
           </div>
           <div class="custom-content">
             <div className="body">
@@ -67,31 +64,19 @@ const Welcome = () => {
                   <br/>
                   {show?(
                     <>
-                    <textarea placeholder="Enter your HTML here..." rows="8" cols="60" name="custompage" id="CustomPage">
+                    <textarea placeholder="Enter your HTML here..." rows="8" cols="80" name="custompage" id="CustomPage">
                       {payload.page}
                     </textarea>
                     <br />
                     <br />
-                    <button role="button" onClick={createPage} class="btn btn-outline-secondary btn-lg btn-iconed btn-rounded" href="#/welcome">
-                      <i class="fa fa-pencil"></i>
-                      <span class="spn">Create Page</span>
-                    </button>
+                    <Button variant="secondary" onClick={createPage}>Create Page</Button>
                     <br />
                     <br />
-                    {payload.page ? (
-                      <div>
-                      <a type="button" href="#/CustomPage" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                        <i class="fa fa-arrow-right"></i>
-                        <span class="spn">Go To Your Page</span>
-                      </a>
+                    {payload.page ? (<><Button variant = "warning" href="#/CustomPage">Go to your Page</Button>
                       <br />
                       <br />
-                      <a type="button" class="btn btn-outline-danger btn-lg btn-iconed btn-rounded" onClick={DeletePage}>
-                        <i class="fa fa-trash"></i>
-                        <span class="spn">Delete Page</span>
-                      </a>
-                      </div>
-                    ) : (<></>)}
+                      <Button  variant = "danger" onClick={DeletePage}>Delete Page</Button>
+                    </>) : (<></>)}
                     </>
                   ):(<></>)}
                     </>
