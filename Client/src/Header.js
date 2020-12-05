@@ -425,7 +425,7 @@ class Header extends Component {
                     border: '1px solid #ccc',
                     background: '#fff',
                     overflow: 'auto',
-
+                    fontSize:"15px",
                     borderRadius: '4px',
                     outline: 'none',
 
