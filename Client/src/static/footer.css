@@ -37,6 +37,7 @@
   font-size: 15px;
   line-height: 20px;
   color: #737373;
+  width:100% !important
 }
 .site-footer hr {
   border-top-color: #bbb;
