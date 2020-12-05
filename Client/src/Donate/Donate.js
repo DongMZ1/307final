@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Spring } from "react-spring/renderprops";
 import "../static/bodycomponent.css";
 import DonatePicture from "../pictures/Donate.jpg";
+import "../static/header.css";
 class Donate extends Component {
   constructor(props) {
     super(props);
@@ -17,6 +18,15 @@ class Donate extends Component {
             <div className="body">
               <img id = "donateP" src={DonatePicture} style={{ padding: "10%" }}></img>
               <br></br>
+              <div id = "donatePspace" style ={{display: "none"}}>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+              </div>
               <h2>Grace Hopper Celebration</h2>
               <p>
                 Help us send McGill students to the Grace Hopper Celebration of
