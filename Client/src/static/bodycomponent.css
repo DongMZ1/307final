@@ -30,7 +30,10 @@ a:not([href]):not([class]) {
     text-align: left;
     margin-left: 20%;
 }
-
+textarea {
+    box-sizing: border-box;
+    max-width: 80%;
+  }
 .custom-content .userInput {
     font-family: "Comic Sans MS";
     color: rgb(0, 102, 255);

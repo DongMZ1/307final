@@ -62,7 +62,7 @@ const Welcome = () => {
               <br/>
               {show?(
                 <>
-                <textarea rows="4" cols="50" name="custompage" id="CustomPage">
+                <textarea placeholder="Enter your HTML here..." rows="10" cols="80" name="custompage" id="CustomPage">
                   {payload.page}
                 </textarea>
                 <br />
