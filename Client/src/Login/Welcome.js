@@ -44,8 +44,8 @@ const Welcome = () => {
             <div className="body">
               <h1 className="user"> Welcome, {username}! You are in your private page. </h1>
               <br/>
-              {payload.staff ? (<h2 className="userright">You've logged into a staff account and now have the right to change the content of this page! </h2>)
-                : (<h2>Welcome Student ! </h2>)}
+              {payload.staff ? (<h2 className="userright">You've logged into a staff account and now have the right to change content of this page! </h2>)
+                : (<h2 className="userright">You've logged into a student account. You do not have the right to change content of this page!</h2>)}
                 <br/>
                 <br/>
               <p id="usercontent" className="user user-content" contenteditable={staff}>{payload.text}</p>
@@ -70,7 +70,7 @@ const Welcome = () => {
                   <br/>
                   {show?(
                     <>
-                    <textarea rows="4" cols="50" name="custompage" id="CustomPage">
+                    <textarea placeholder="Enter your HTML here..." rows="8" cols="60" name="custompage" id="CustomPage">
                       {payload.page}
                     </textarea>
                     <br />
