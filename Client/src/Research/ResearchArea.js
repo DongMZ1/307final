@@ -13,7 +13,6 @@ import se from "../pictures/research-se.jpg";
 import theory from "../pictures/research-theory.jpg";
 import graph from "../pictures/research-graph.jpg";
 import game from "../pictures/research-game.jpg";
-
 import "../static/bodycomponent.css";
 
 
@@ -127,12 +126,12 @@ class ResearchArea extends Component {
                     </Accordion>
                   </div>
                   <div className="col-4">
-                    <Card.Img variant="bottom" className="research-image" src={ai} />
+                    <Card.Img variant="bottom" id="research-image" src={ai} />
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-4">
-                    <Card.Img variant="bottom" className="research-image" src={bio} />
+                    <Card.Img variant="bottom" id="research-image" src={bio} />
                   </div>
                   <div className="col-8">
                   <h3>Bioinformatics and Computational Biology</h3>
@@ -216,12 +215,12 @@ class ResearchArea extends Component {
                     </Accordion>
                   </div>
                   <div className="col-4">
-                    <Card.Img variant="bottom" className="research-image" src={game} />
+                    <Card.Img variant="bottom" id="research-image" src={game} />
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-4">
-                    <Card.Img variant="bottom" className="research-image" src={graph} />
+                    <Card.Img variant="bottom" id="research-image" src={graph} />
                   </div>
                   <div className="col-8">
                   <h3>Computer Graphics </h3>
@@ -317,13 +316,13 @@ class ResearchArea extends Component {
                     </Accordion>
                   </div>
                   <div className="col-4">
-                    <Card.Img variant="bottom" className="research-image" src={network} />
+                    <Card.Img variant="bottom" id="research-image" src={network} />
                   </div>
                 </div>
 
                 <div className="row">
                   <div className="col-4">
-                    <Card.Img variant="bottom" className="research-image" src={robot} />
+                    <Card.Img variant="bottom" id="research-image" src={robot} />
                   </div>
                   <div className="col-8">
                   <h3>Robotics</h3>
@@ -416,13 +415,13 @@ class ResearchArea extends Component {
                     </Accordion>
                   </div>
                   <div className="col-4">
-                    <Card.Img variant="bottom" className="research-image" src={lang} />
+                    <Card.Img variant="bottom" id="research-image" src={lang} />
                   </div>
                 </div>
 
                 <div className="row">
                   <div className="col-4">
-                    <Card.Img variant="bottom" className="research-image" src={graph} />
+                    <Card.Img variant="bottom" id="research-image" src={graph} />
                   </div>
                   <div className="col-8">
                   <h3>Human Factors in Copmuting</h3>
@@ -503,13 +502,13 @@ class ResearchArea extends Component {
                     </Accordion>
                   </div>
                   <div className="col-4">
-                    <Card.Img variant="bottom" className="research-image" src={compute} />
+                    <Card.Img variant="bottom" id="research-image" src={compute} />
                   </div>
                 </div>
 
                 <div className="row">
                   <div className="col-4">
-                    <Card.Img variant="bottom" className="research-image" src={se} />
+                    <Card.Img variant="bottom" id="research-image" src={se} />
                   </div>
                   <div className="col-8">
                   <h3>Software Engineering</h3>
@@ -613,7 +612,7 @@ class ResearchArea extends Component {
                     </Accordion>
                   </div>
                   <div className="col-4">
-                    <Card.Img variant="bottom" className="research-image" src={theory} />
+                    <Card.Img variant="bottom" id="research-image" src={theory} />
                   </div>
                 </div>
               </div>
