@@ -1,7 +1,7 @@
 .customized-nav{
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%;
     z-index:1000;
 }
 
@@ -19,8 +19,8 @@
 }
 
 .header {
-    width: 100vw; 
-    height: 100vh;
+    width: 100%; 
+    height: 100%;
     /* background-color: rgba(245, 245, 245, 0.836); */
     background: linear-gradient(to bottom right, #ffffff 0%, #ccffff 100%);
 }
@@ -93,7 +93,7 @@
     -webkit-flex-direction: column; 
     flex-direction: column; 
     float: right;
-    margin-top: 20vh;
+    margin-top: 20%;
   }
   
   .flex-item {
