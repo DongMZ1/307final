@@ -215,9 +215,17 @@ textarea {
 }
 
 /* for People/Contact */
-
+.rt-th {
+    color: grey;
+    font-size: 20px;
+}
+.rt-th:hover {
+    background-color: rgba(122, 226, 245, 0.705);
+    color: black;
+    font-size: 20px;
+}
 .rt-td {
-    font-size: 15px;
+    font-size: 18px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -243,4 +251,16 @@ textarea {
     font-weight: bold;
     font-family: 'Quicksand', 'sans-serif';
     margin-bottom: 80px;
-  }
+}
+
+#facultypic {
+    width: 150px;
+    height: 150px;
+    border-radius: 60%;
+    left: 0;
+}
+ 
+.faculty-content {
+    color: rgb(18, 91, 155);
+    padding-left: 15px;
+}

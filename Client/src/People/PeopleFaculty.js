@@ -1,53 +1,17 @@
 import React, { Component } from "react";
 import { Spring } from "react-spring/renderprops";
-import "../static/bodycomponent.css";
 // Import React Table
 import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
 import kemme from "../pictures/kemme.jpg";
+import blanchette from "../pictures/blanchette.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import mydata from "./info.js";
 
-
-let mydata = [
-  {
-    firstName: "Bettina",
-    lastName: "Kemme",
-    position: "Director of the School",
-    field: "Databases, Networks, Parallel and Distributed Systems, Computer Games",
-    office: "McConnell 109N/318 (Director)",
-    phone:  "+1-514-398-8930",
-    email: "kemme@cs.mcgill.ca"
-  },
-  {
-    firstName: "Mathieu",
-    lastName: "Blanchette",
-    position: "Associate Director of Research",
-    field: "Bioinformatics, Computational Biology",
-    office: "Trottier 3107",
-    phone:  "+1-514-398-5209",
-    email: "blanchem@cs.mcgill.ca"
-  },
-  {
-    firstName: "Oana",
-    lastName: "Balmau",
-    position: "Professor",
-    field: "Computer Systems, Storage and Persistent Memory,  Storage Systems for Data Science, Data Management for IoT ",
-    office: "website: oana.balmau@cs.mcgill.ca",
-    phone:  "+1-514-398-8930",
-    email: "oana.balmau@cs.mcgill.ca"
-  },
-  {
-    firstName: "Jackie Chi Kit",
-    lastName: "Cheung",
-    position: "Professor",
-    field: "Computational Linguistics, Natural Language Processing",
-    office: "website: oana.balmau@cs.mcgill.ca",
-    phone:  "+1-514-398-8930",
-    email: "oana.balmau@cs.mcgill.ca"
-  },
-];
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../static/bodycomponent.css";
+import { Navbar, Nav, NavDropdown, Form, Button, FormControl } from "react-bootstrap";
 export default class PeopleFaculty extends Component {
   constructor(props) {
     super(props);
@@ -103,25 +67,1499 @@ export default class PeopleFaculty extends Component {
             </div>
             <div class="col-md-10 right-column">
               <div className="body">
+                <div class="container">
+                  <h2>Director of School</h2>
+                  <div class="row">
+                    <div class="col-xs-1 col-md-3">
+                      <img src={kemme} id="facultypic"></img>
+                    </div>
+                    <div class="col-xs-11 col-md-9">
+                      <div class="faculty-content">
+                        <br></br>
+                        <h3>Bettina Kemme</h3>
+                        <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                          <i class="fa fa-arrow-right"></i>
+                          <span class="spn">Website</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <hr></hr>
+                  <h2>Associate Director of Research</h2>
+                  <div class="row">
+                    <div class="col-xs-1 col-md-3">
+                      <img src={blanchette} id="facultypic"></img>
+                    </div>
+                    <div class="col-xs-11 col-md-9">
+                      <div class="faculty-content">
+                        <br></br>
+                        <h3>Mathieu Blanchette</h3>
+                        <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                          <i class="fa fa-arrow-right"></i>
+                          <span class="spn">Website</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <hr></hr>
+                  <h2>Professors</h2>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr></hr>
+                  <h2>Faculty Lecturers</h2>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <hr></hr>
+                  <h2>Associate Members</h2>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <hr></hr>
+                  <h2>Adjunct Professors</h2>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <hr></hr>
+                  <h2>Emeritus Professors</h2>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <hr></hr>
+                  <h2>In Memoriam</h2>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={blanchette} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Mathieu Blanchette</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                </div>
+                <div class="container">
                 <ReactTable
                   data={data}
                   columns={[
                     {
-                      Header: "Name",
                       columns: [
-                        {
-                          Header: "Photo",
-                          id: "photo",
-                          width: 100,
-                          height: 100,
-                          Cell: (row) => {
-                            return <div><img height={50} src={kemme}/></div>
-                          },
-                        },
                         {
                           Header: "First Name",
                           id: "firstName",
-                          width: 100, 
+                          width: 150, 
                           accessor: (d) => d.firstName,
                           sortMethod: (a, b) => {
                             if (a === b) {
@@ -135,21 +1573,21 @@ export default class PeopleFaculty extends Component {
                         {
                           Header: "Last Name",
                           id: "lastName",
-                          width: 100, 
+                          width: 150, 
                           accessor: (d) => d.lastName,
                           sortMethod: (a, b) => {
                             if (a === b) {
                               return 0;
                             }
-                            const aReverse = a.split("").reverse().join("");
-                            const bReverse = b.split("").reverse().join("");
+                            const aReverse = a.split("").join("");
+                            const bReverse = b.split("").join("");
                             return aReverse > bReverse ? -1 : 1;
                           },
                         },
                         {
                           Header: "Position",
                           id: "position",
-                          width: 200, 
+                          width: 250, 
                           accessor: (d) => d.position,
                           sortMethod: (a, b) => {
                             if (a === b) {
@@ -177,15 +1615,29 @@ export default class PeopleFaculty extends Component {
                         {
                           Header: "Office",
                           id: "office",
-                          Cell: (row) => {
-                            return <div><img height={34} src={kemme}/></div>
+                          width: 200,
+                          accessor: (d) => d.office,
+                          sortMethod: (a, b) => {
+                            if (a === b) {
+                              return 0;
+                            }
+                            const aReverse = a.split("").reverse().join("");
+                            const bReverse = b.split("").reverse().join("");
+                            return aReverse > bReverse ? 1 : -1;
                           },
                         },
                         {
                           Header: "Phone",
                           id: "phone",
-                          Cell: (row) => {
-                            return <div><img height={34} src={kemme}/></div>
+                          width: 200,
+                          accessor: (d) => d.phone,
+                          sortMethod: (a, b) => {
+                            if (a === b) {
+                              return 0;
+                            }
+                            const aReverse = a.split("").reverse().join("");
+                            const bReverse = b.split("").reverse().join("");
+                            return aReverse > bReverse ? 1 : -1;
                           },
                         },
                       ],
@@ -194,6 +1646,7 @@ export default class PeopleFaculty extends Component {
                   defaultPageSize={10}
                   className="-striped -highlight"
                 />
+                </div>
               </div>
             </div>
           </div>
