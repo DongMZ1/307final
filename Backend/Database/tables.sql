@@ -5,11 +5,11 @@ CREATE TABLE users
     Username VARCHAR(100) NOT NULL,
     Name VARCHAR(100) NOT NULL,
     password VARCHAR(100) NOT NULL,
-    age INT,
-    staff INT DEFAULT 0,
+    age INT NOT NULL,
+    staff INT DEFAULT 0 NOT NULL,
     CONSTRAINT staff CHECK (staff IN (0,1)),
-    changetext TEXT,
-    CustomPage LONGTEXT,
+    changetext TEXT DEFAULT NULL,
+    CustomPage LONGTEXT DEFAULT NULL,
     PRIMARY KEY(Username, UserID)
 );
 
