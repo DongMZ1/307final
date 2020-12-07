@@ -5,6 +5,7 @@ import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
 import kemme from "../pictures/kemme.jpg";
 import blanchette from "../pictures/blanchette.jpg";
+import defaultpic from "../pictures/default.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import mydata from "./info.js";
@@ -77,7 +78,7 @@ export default class PeopleFaculty extends Component {
                       <div class="faculty-content">
                         <br></br>
                         <h3>Bettina Kemme</h3>
-                        <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                        <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded" href="https://www.cs.mcgill.ca/~kemme/">
                           <i class="fa fa-arrow-right"></i>
                           <span class="spn">Website</span>
                         </a>
@@ -107,12 +108,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Oana Balmau</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -124,49 +125,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <br></br>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Xiao-Wen Chang</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -181,12 +145,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Jackie Chi Kit Cheung</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -198,49 +162,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <br></br>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Claude Crepeau</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -255,12 +182,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Luc Dubach</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -272,49 +199,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <br></br>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Gregory Dudek</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -329,12 +219,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Jin Guo</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -346,12 +236,49 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>William L.Hamilton</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>s
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Hamed Hatami</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Jorg kienzie</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -366,12 +293,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Paul Kry</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -383,49 +310,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <br></br>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Michael Langer</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -440,12 +330,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Yue Li</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -457,49 +347,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <br></br>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Hsiu-Chin Lin</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -514,12 +367,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Xue Liu</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -531,49 +384,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <br></br>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Muthucumaru Maheswaran</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -588,12 +404,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>David Meger</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -605,49 +421,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <br></br>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Prakash Panangaden</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -662,12 +441,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Elizabeth Patitsas</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -679,49 +458,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <br></br>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Brigitte Pientka</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -736,12 +478,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Brigitte Pientka</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -753,12 +495,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Joelle Pineau</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -773,12 +515,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Doina Precup</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -790,12 +532,271 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Reihaneh Rabbany</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Siamak Ravanbakhsh</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Siva Reddy</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Bruce Reed</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Blake Richards</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Robert Robere</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Martin Robillard</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>David Rolnick</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Derek Ruths</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Xujie Si</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Kaleem Siddiqi</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Clark Verbrugge</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Adrian Vetta</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Jerome Waldispuhi</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Giulia Alberini</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -811,12 +812,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>David Becerra</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -828,12 +829,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Joseph D'Silva</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -847,12 +848,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Joseph Vybihal</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -864,12 +865,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Louigi Addario-Berry</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -886,12 +887,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Sylvain Baillet</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -903,48 +904,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Guillaume Bourque</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -958,12 +923,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Benjamin Fung</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -975,48 +940,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Simon Gravel</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1030,12 +959,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Derek Nowrouzezahrais</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1047,12 +976,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Timothy O'Donnell</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1066,12 +995,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Peter Savadjiev</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1083,12 +1012,84 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Dirk Schlimm</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Thomas Shultz</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Morgan Sonderegger</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Yi Yang</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Marc G.Bellemare</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1105,12 +1106,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Fernando Diaz</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1122,49 +1123,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <br></br>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Tristan Glatard</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1179,12 +1143,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Geoffrey Gordon</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1196,49 +1160,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <br></br>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Michael Hallett</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1253,12 +1180,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Wenbo He</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1270,49 +1197,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <br></br>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Nicolas Le Roux</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1327,12 +1217,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Annie Louis</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1344,12 +1234,123 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Ioannis Rekleitis</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Adriana Romero Soriano</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Bruce Shepherd</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Danny Tarlow</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Adam Trischler</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>David Avis</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Renato De Mori</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1366,12 +1367,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Tim Merrett</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1383,49 +1384,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <br></br>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
-                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
-                              <i class="fa fa-arrow-right"></i>
-                              <span class="spn">Website</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
-                        </div>
-                        <div class="col">
-                          <div class="faculty-content">
-                            <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Monty Newborn</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1440,12 +1404,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Chris Paige</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1457,12 +1421,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Gerald Ratzer</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1477,12 +1441,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Denis Therien</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1494,12 +1458,86 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Nathan Friedman</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Carl Tropper</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Yang Cai</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br></br>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Patrick Hayden</h3>
+                            <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
+                              <i class="fa fa-arrow-right"></i>
+                              <span class="spn">Website</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col">
+                          <img src={defaultpic} id="facultypic"></img>
+                        </div>
+                        <div class="col">
+                          <div class="faculty-content">
+                            <br></br>
+                            <h3>Hans Vangheluwe</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1516,12 +1554,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Laurie Hendren</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>
@@ -1533,12 +1571,12 @@ export default class PeopleFaculty extends Component {
                     <div class="col-6">
                       <div class="row">
                         <div class="col">
-                          <img src={blanchette} id="facultypic"></img>
+                          <img src={defaultpic} id="facultypic"></img>
                         </div>
                         <div class="col">
                           <div class="faculty-content">
                             <br></br>
-                            <h3>Mathieu Blanchette</h3>
+                            <h3>Godfried Toussaint</h3>
                             <a role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded">
                               <i class="fa fa-arrow-right"></i>
                               <span class="spn">Website</span>

@@ -8,6 +8,7 @@ import { HashRouter as Router, Switch, Route, withRouter} from 'react-router-dom
 import Header from './Header'
 // import Loader from './Loader'
 import ScrollToTop from './ScrollToTop'
+import Search from './Search'
 import Footer from './Footer'
 import HomePage from './HomePage'
 import React, {Component, useState, useEffect } from "react";
@@ -99,6 +100,7 @@ class App extends Component {
               <Route exact path = "/register" component = {RegisterPage} /> */}
               <Route exact path = "/welcome" component = {Welcome} />
               <Route exact path = "/CustomPage" component = {CustomPage} />
+              <Route exact path = "/Search" component = {Search} />
               <Route exact path = "/ProspectivePages/ProspectiveGeneralInfo" component = {ProspectiveGeneralInfo} />
               <Route exact path = "/ProspectivePages/ProspectiveCEGEP" component = {ProspectiveCEGEP} />
               <Route exact path = "/ProspectivePages/ProspectiveChoosingAMajor" component = {ProspectiveChoosingAMajor} />

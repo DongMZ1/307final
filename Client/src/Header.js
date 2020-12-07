@@ -54,11 +54,10 @@ class Header extends Component {
       login: false,
       loggedin: session.isValid,
       username: payload.name,
-      staff: (payload.staff == 1 ? true : false)
+      staff: (payload.staff == 1 ? true : false),
+      searchInput: ''
     };
   }
-
-
 
   setLoginStatus = (loggedin) => {
     //this.props.LoginStatusTopCall(loggedin);
@@ -145,8 +144,6 @@ class Header extends Component {
   onMouseLeave(menuItem) {
     this.setState({ [menuItem]: false })
   }
-
-
 
   render() {
     Aos.init({interval: 3000});
@@ -346,14 +343,14 @@ class Header extends Component {
 
                   </NavDropdown>
                 </Nav>
-
-                <Form inline>
+                <Form inline action="#/Search">
                   <FormControl
                     type="text"
                     placeholder="Search"
                     className="mr-sm-2"
+                    action="#/Search"
                   />
-                  <Button variant="outline-primary">Search</Button>
+                  <Button variant="outline-primary" href="#/Search">Search</Button>
                 </Form>
               </Navbar.Collapse>
             </Navbar>
