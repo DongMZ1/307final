@@ -168,11 +168,9 @@ app.listen(port);
 console.log(port);
 */
 
-
-
 //const port  = process.env.PORT || 3001;
-app.listen(80,()=>{
-  console.log("running on port 80");
+app.listen(3001,()=>{
+  console.log("running on port 3001");
 });
 
 module.exports = app;
