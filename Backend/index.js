@@ -157,25 +157,19 @@ app.post('/DeletePage',(req,res) =>{
 } );
 
 
-// app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
-// app.get('/', function (req, res) {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// });
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 /*const port = process.env.PORT || 5000;
 app.listen(port);
 console.log(port);
 */
 
-// var http = require('http');
-// server  = http.createServer(app).listen(8080);
-// server.listen((3306, "fall2020-comp307.cs.mcgill.ca"), ()=>{
-//   console.log("running on school server");
-// });
-
-const port  = process.env.PORT || 3001;
-app.listen(port,()=>{
+//const port  = process.env.PORT || 3001;
+app.listen(3001,()=>{
   console.log("running on port 3001");
 });
 

@@ -162,7 +162,7 @@ class Header extends Component {
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                   {/*Home*/}
-                  <Nav.Link href="/" id="btn-link">Home</Nav.Link>
+                  <Nav.Link href="#/" id="btn-link">Home</Nav.Link>
                   {/*Prospective*/}
                   <NavDropdown title="Prospective" id="basic-nav-dropdown" onMouseOver={this.onMouseEnter.bind(this, 'dropdownPerspective')} onMouseLeave={this.onMouseLeave.bind(this, 'dropdownPerspective')} show={this.state.dropdownPerspective} toggle={this.toggle.bind(this, 'dropdownPerspective')}>
                     <NavDropdown.Item href="#/ProspectivePages/ProspectiveGeneralInfo">

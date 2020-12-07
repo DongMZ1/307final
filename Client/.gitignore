@@ -10,7 +10,8 @@ node_modules
 /.eslintcache
 # testing
 /coverage
-
+debug.log*
+*.log
 # production
 /build
 build

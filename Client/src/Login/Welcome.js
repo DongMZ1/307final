@@ -121,7 +121,7 @@ const createPage = () => {
       Session.setPayload({
         page: page
       });
-      console.log("Session:", Session.get());
+      //console.log("Session:", Session.get());
       alert(response.data.message);
       window.location.reload();
     }
@@ -154,8 +154,7 @@ const saveChange = () => {
   if (Number.isInteger(age) == false) {
     age = Session.get().payload.age;
     console.log("changed age is still:", age);
-    alert("Input age must be integer!");
-
+    alert("Input age must be integer! Your age is not changed");
   }
   //console.log("changed content:", text);
   var username = Session.get().payload.username;
