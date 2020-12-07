@@ -333,10 +333,6 @@ class Header extends Component {
                           <NavDropdown.Item >
                             <Button disabled={this.state.loggedin} variant="light" id="login" onClick={this.onOpenModalLogin}>Login</Button>
                           </NavDropdown.Item>
-                          {/* <NavDropdown.Item >
-                              <Button variant="dark" id="login" onClick={this.onOpenModalLogin}>Account Managers</Button>
-                            </NavDropdown.Item> */}
-
                         </>
                       )
                     }
@@ -385,10 +381,6 @@ class Header extends Component {
                         </div>
                       </div>
                     </div>
-                    {/* <div class="row">
-                      <div class="col-lg-12"></div>
-                    </div> */}
-                  {/* </div> */}
                 </div>
               </div>
             </div>
@@ -430,26 +422,6 @@ class Header extends Component {
               <div className="modal-body">
                 <Button variant="outline-danger" id="x" onClick={this.onCloseModalclose}> X </Button>
                 <h2>Login</h2>
-                {/*<form className="contact-form form-validate4" novalidate="novalidate" action="/" method = "post">
-              <div className="form-group">
-                <input className="form-control" type="email" name="username" id="username" placeholder="E-mail" autocomplete="off"
-                  onChange={
-                    (event) => {
-                      this.setState({username : event.target.value});
-                    }} required />
-              </div>
-              <div className="form-group">
-                <input type="password" name="password" id="password" className="form-control" placeholder="Password" autocomplete="off"
-                 onChange={
-                  (event) => {
-                    this.setState({password : event.target.value});
-                  }}
-                required />
-                </div>
-              <div class="msg">{this.state.LoginStatus}</div>
-              <input className="btn btn-md btn-primary btn-center" id="login_btn" type="submit" value="Login" 
-              onClick = {this.Login}/>
-                </form>*/}
                 <ValidatedLogin LoginStatusCallBack={this.setLoginStatus} UserInfoCallBack={this.setUserInfo} />
               </div>
             </Modal>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Spring } from "react-spring/renderprops";
 import "../static/bodycomponent.css";
-import DonatePicture from "../pictures/Donate.jpg";
+import DonatePicture from "../pictures/donate.jpg";
 import "../static/header.css";
 import Aos from "aos";
 import "aos/dist/aos.css";

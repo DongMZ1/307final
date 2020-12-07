@@ -7,7 +7,6 @@ import bio from "../pictures/research-bio.jpg";
 import compute from "../pictures/research-compute.jpg";
 import robot from "../pictures/research-robot.jpg";
 import lang from "../pictures/research-lang.jpg";
-import human from "../pictures/research-human.png";
 import network from "../pictures/research-network.jpg";
 import se from "../pictures/research-se.jpg";
 import theory from "../pictures/research-theory.jpg";
