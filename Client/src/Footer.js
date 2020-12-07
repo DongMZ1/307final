@@ -19,9 +19,9 @@ class Footer extends Component {
                         <div class="col-xs-6 col-md-3">
                             <h6><b>Quick Links</b></h6>
                             <ul class="footer-links">
-                            <li><a href="">About Us</a></li>
-                            <li><a href="">Contact Us</a></li>
-                            <li><a href="">Contribute</a></li>
+                            <li><a href="#/About/AboutContacts">About Us</a></li>
+                            <li><a href="#/About/AboutContacts">Contact Us</a></li>
+                            <li><a href="#/About/AboutContacts">Contribute</a></li>
                             </ul>
                         </div>
                         <div class="col-xs-6 col-md-2">
