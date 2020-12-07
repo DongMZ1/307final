@@ -54,11 +54,10 @@ class Header extends Component {
       login: false,
       loggedin: session.isValid,
       username: payload.name,
-      staff: (payload.staff == 1 ? true : false)
+      staff: (payload.staff == 1 ? true : false),
+      searchInput: ''
     };
   }
-
-
 
   setLoginStatus = (loggedin) => {
     //this.props.LoginStatusTopCall(loggedin);
@@ -145,8 +144,6 @@ class Header extends Component {
   onMouseLeave(menuItem) {
     this.setState({ [menuItem]: false })
   }
-
-
 
   render() {
     Aos.init({interval: 3000});
@@ -336,24 +333,20 @@ class Header extends Component {
                           <NavDropdown.Item >
                             <Button disabled={this.state.loggedin} variant="light" id="login" onClick={this.onOpenModalLogin}>Login</Button>
                           </NavDropdown.Item>
-                          {/* <NavDropdown.Item >
-                              <Button variant="dark" id="login" onClick={this.onOpenModalLogin}>Account Managers</Button>
-                            </NavDropdown.Item> */}
-
                         </>
                       )
                     }
 
                   </NavDropdown>
                 </Nav>
-
-                <Form inline>
+                <Form inline action="#/Search">
                   <FormControl
                     type="text"
                     placeholder="Search"
                     className="mr-sm-2"
+                    action="#/Search"
                   />
-                  <Button variant="outline-primary">Search</Button>
+                  <Button variant="outline-primary" href="#/Search">Search</Button>
                 </Form>
               </Navbar.Collapse>
             </Navbar>
@@ -388,10 +381,6 @@ class Header extends Component {
                         </div>
                       </div>
                     </div>
-                    {/* <div class="row">
-                      <div class="col-lg-12"></div>
-                    </div> */}
-                  {/* </div> */}
                 </div>
               </div>
             </div>
@@ -433,26 +422,6 @@ class Header extends Component {
               <div className="modal-body">
                 <Button variant="outline-danger" id="x" onClick={this.onCloseModalclose}> X </Button>
                 <h2>Login</h2>
-                {/*<form className="contact-form form-validate4" novalidate="novalidate" action="/" method = "post">
-              <div className="form-group">
-                <input className="form-control" type="email" name="username" id="username" placeholder="E-mail" autocomplete="off"
-                  onChange={
-                    (event) => {
-                      this.setState({username : event.target.value});
-                    }} required />
-              </div>
-              <div className="form-group">
-                <input type="password" name="password" id="password" className="form-control" placeholder="Password" autocomplete="off"
-                 onChange={
-                  (event) => {
-                    this.setState({password : event.target.value});
-                  }}
-                required />
-                </div>
-              <div class="msg">{this.state.LoginStatus}</div>
-              <input className="btn btn-md btn-primary btn-center" id="login_btn" type="submit" value="Login" 
-              onClick = {this.Login}/>
-                </form>*/}
                 <ValidatedLogin LoginStatusCallBack={this.setLoginStatus} UserInfoCallBack={this.setUserInfo} />
               </div>
             </Modal>
