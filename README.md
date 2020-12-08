@@ -2,7 +2,9 @@
 
 ## `npm install` to download all dependencies! 
 
-`pip install -r requirements.txt` to install dependencies 
+`cd Backend` & `npm start`
+
+`pip install -r requirements.txt` 
 
 
 # Getting Started with Create React App
