@@ -15,7 +15,6 @@ class HomePage extends Component {
   constructor(props) {
     super(props);
     const {payload} = Session.get();
-    //console.log(session);
     this.state = {
       loggedin: (payload.staff? "true" : "false")
     };
