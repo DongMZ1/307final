@@ -1,12 +1,7 @@
 import './App.css';
-// import IndexPage from './IndexPage';
-// import LoginPage from './Login/LoginPage';
-// import RegisterPage from './Login/RegisterPage';
 import Welcome from './Login/Welcome'
 import { HashRouter as Router, Switch, Route, withRouter} from 'react-router-dom';
-// import { HashRouter as Router, Switch, Route, withRouter} from 'react-router-dom';
 import Header from './Header'
-// import Loader from './Loader'
 import ScrollToTop from './ScrollToTop'
 import Search from './Search'
 import Footer from './Footer'
@@ -60,33 +55,9 @@ import ResearchArea from './Research/ResearchArea'
 import ResearchTecReport from './Research/ResearchTecReport';
 import CustomPage from './Login/CustomPage';
 import "./static/bodycomponent.css";
-//import { Session } from 'bc-react-session';
-//import Cookies from 'js-cookie';
 
 class App extends Component {
-  // constructor(props){
-  //   super(props);
-  //   this.state={
-  //     isLoading: false
-  //   }
-  // }
-  // componentWillReceiveProps(nextProps) {
-  //   this.setState({ isLoading: nextProps.isLoading });
-
-
-  // componentDidMount() {
-  //   // this simulates an async action, after which the component will render the content
-  //   setTimeout(() => {
-  //     this.setState({ loading: false });
-  //  }, 2000);
-  // }
-
   render() {
-    // const { loading } = this.state;
-    // if(loading) { // if your component doesn't have to wait for an async action, remove this block 
-    //   return null; // render null when app is not ready
-    // }else{
-
       return (
         <div>
           <Router>
@@ -95,9 +66,6 @@ class App extends Component {
           <Switch>
             {/*homepage*/}
               <Route exact path = '/' component = {HomePage} />
-            {/*prospectivePages*/}
-              {/* <Route exact path = "/login" component = {LoginPage} />
-              <Route exact path = "/register" component = {RegisterPage} /> */}
               <Route exact path = "/welcome" component = {Welcome} />
               <Route exact path = "/CustomPage" component = {CustomPage} />
               <Route exact path = "/Search" component = {Search} />
@@ -159,15 +127,8 @@ class App extends Component {
             </Router>
           </div>
       );
-
-    // }
-
   }
 }
-// function demoAsyncCall() {
-//   return new Promise((resolve) => setTimeout(() => resolve(), 5500));
-// }
-// the setTimeout simulates the time it takes react to load, and is not part of the solution
 
 export default App;
 
