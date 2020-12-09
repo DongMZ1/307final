@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Spring} from 'react-spring/renderprops'
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Accordion, Card } from "react-bootstrap";
+import { Accordion, Card } from "react-bootstrap";
 import ai from "../pictures/research-ai.jpg";
 import bio from "../pictures/research-bio.jpg";
 import compute from "../pictures/research-compute.jpg";
