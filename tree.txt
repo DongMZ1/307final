@@ -1,6 +1,4 @@
-Folder PATH listing for volume Local Disk
-Volume serial number is 8471-B1A1
-C:.
+.
 │   .DS_Store
 │   .gitignore
 │   package-lock.json
