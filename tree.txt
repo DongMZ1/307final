@@ -1,66 +1,33 @@
 Folder PATH listing for volume Local Disk
 Volume serial number is 8471-B1A1
 C:.
-│   .DS_Store
 │   .gitignore
 │   package-lock.json
-│   package.json
-│   README.md
-│   tree.txt
-│   
+│   package.json...
 ├───Backend
-│   │   .gitignore
-│   │   index.js
-│   │   package-lock.json
-│   │   package.json
-│   │   
-│   ├───build
-|   |
-|   |
-│   │               
-│   └───Database
-│           data.sql
-│           showtable.sql
-│           tables.sql
-│           
+│   │   index.js...
+│   ├───build              
+│   └───Database   
 └───Client
-    │   .gitignore
-    │   debug.log
-    │   package-lock.json
     │   package.json
-    │   requirements.txt
-    │   
+    │   requirements.txt... 
     ├───public
-    |
     └───src
-        │   App.css
         │   App.js
-        │   Editable.js
         │   Footer.js
         │   Header.js
         │   HomePage.js
-        │   index.css
         │   index.js...
-        │   
-        ├───About
-        │       
+        ├───About       
         ├───Academic
-        │       
         ├───Donate
-        │       
-        ├───Employment
-        │           
+        ├───Employment  
         ├───Login
-        │       
         ├───News
         ├───People
-        │       
         ├───pictures
-        │       
         ├───ProspectivePages
-        │       
         ├───Research
-        │       
         └───static
 
                 
